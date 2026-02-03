@@ -1,0 +1,236 @@
+You are designing a new website for Grand Oaks Property Maintenance, a professional tree removal and certified arborist service based in Pasco County, Florida.
+
+The site must feel:
+
+Modern
+
+Clean
+
+Premium but approachable
+
+Highly usable on mobile
+
+Conversion-focused (calls + estimates)
+
+This is a mobile-first design. Desktop layouts should scale up naturally, but mobile experience is the top priority.
+
+🎨 Design & UI Requirements
+
+Mobile-first layout (optimize for phone screens first)
+
+Rounded corners throughout (cards, buttons, sections)
+
+Clean spacing and generous padding
+
+Modern typography (strong headline + clean body font)
+
+Subtle shadows (soft, not heavy)
+
+Clear visual hierarchy
+
+Smooth scrolling feel
+
+Minimal animations (optional: subtle fade or lift on hover/scroll)
+
+📱 Navigation & CTA Behavior (VERY IMPORTANT)
+Header
+
+Sticky top header
+
+Logo on the left
+
+“Call Now” button on the right
+
+Hamburger menu for navigation
+
+Mobile Floating CTA
+
+Persistent bottom sticky bar on mobile
+
+Two large buttons:
+
+Call Now
+
+Get Free Estimate
+
+These buttons should remain visible while scrolling
+
+Phone Number
+
+Display consistently as: (813) 860-7086
+
+All call buttons should visually indicate tap-to-call (no logic needed yet)
+
+🧩 Homepage Section Structure (DESIGN ONLY)
+
+Build the homepage with the following sections in this order:
+
+1. Hero Section
+
+Headline: “Tree Removal & Certified Arborist Services”
+
+Subheadline: “Safe, professional tree care in Pasco County, FL”
+
+Primary CTA: Call Now
+
+Secondary CTA: Get Free Estimate
+
+Trust indicators (icons or bullets):
+
+Certified Arborist
+
+Fully Insured
+
+Free Estimates
+
+Background image with overlay for readability
+
+2. Services Grid
+
+Card-based layout
+
+Mobile: 2 columns
+
+Desktop: 3–4 columns
+
+Services:
+
+Tree Removal
+
+Tree Trimming
+
+Stump Grinding
+
+Land Clearing
+
+Emergency Tree Service
+
+Each card:
+
+Image
+
+Title
+
+Short one-line description
+
+3. Why Choose Us
+
+Icon + text cards
+
+Short, punchy benefits:
+
+Certified Arborist
+
+Safety-First Equipment
+
+Locally Owned & Operated
+
+Customer Satisfaction
+
+4. Work Gallery / Proof
+
+Image carousel or grid
+
+Before & after photos
+
+Crew in action
+
+Emphasize professionalism and cleanup
+
+5. Reviews Section
+
+Clean review cards
+
+Star ratings (visual only)
+
+Short testimonial text
+
+Button: “View All Reviews”
+
+6. Service Areas
+
+Headline: “Proudly Serving Pasco County & Nearby Areas”
+
+Simple list of cities/areas
+
+Optional lightweight map placeholder (visual only)
+
+7. Free Estimate Form (VISUAL ONLY)
+
+Short form layout:
+
+Name
+
+Phone
+
+Service Needed (dropdown)
+
+Message
+
+No submission logic
+
+CTA button: “Get My Free Estimate”
+
+Text note: “Prefer calling? (813) 860-7086”
+
+8. FAQ Section
+
+Accordion style
+
+Sample questions:
+
+Are you insured?
+
+Do you offer emergency services?
+
+Do you handle cleanup?
+
+How fast can you come out?
+
+9. Footer
+
+Logo
+
+Phone number (tap-to-call styling)
+
+Service links
+
+Service area
+
+Social icons
+
+Clean, modern layout
+
+🛑 What NOT to Include
+
+❌ No backend logic
+
+❌ No form submissions
+
+❌ No API integrations
+
+❌ No CMS
+
+❌ No authentication
+
+This is pure UI / UX / layout / design structure only.
+
+🧱 Technical Notes (Optional)
+
+Use React or Next.js
+
+Tailwind preferred for styling
+
+Components should be modular and reusable
+
+Placeholder images and dummy content are fine
+
+🎯 Primary Success Criteria
+
+Site feels premium and modern on mobile
+
+Calling the business is effortless from anywhere
+
+Clear visual flow and hierarchy
+
+Clean, confident local-service brand presence
