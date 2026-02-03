@@ -20,7 +20,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-[100dvh] md:min-h-[80vh] flex flex-col justify-center overflow-hidden">
+    <section className="relative w-full min-h-[550px] md:min-h-[80vh] flex flex-col justify-center overflow-hidden">
       {/* Background Image Carousel */}
       <div className="absolute inset-0 w-full h-full z-0 bg-black">
         <AnimatePresence mode="popLayout">
@@ -40,16 +40,16 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center md:items-start text-center md:text-left pt-24 pb-20 md:pt-20 md:pb-10 h-full justify-center">
+      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center md:items-start text-center md:text-left pt-12 pb-12 md:pt-20 md:pb-10 h-full justify-center">
         
         {/* Mobile: Top Badge - More compact */}
-        <div className="inline-flex items-center gap-1.5 bg-brand-green/90 text-white px-3 py-1 rounded-full text-xs md:text-sm font-semibold mb-4 md:mb-6 backdrop-blur-sm shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-700">
+        <div className="inline-flex items-center gap-1.5 bg-brand-green/90 text-white px-3 py-1 rounded-full text-xs md:text-sm font-semibold mb-3 md:mb-6 backdrop-blur-sm shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-700">
           <ShieldCheck className="w-3.5 h-3.5 md:w-4 md:h-4" />
           <span>Licensed & Fully Insured in Pasco County</span>
         </div>
 
         {/* Headline - Responsive sizing */}
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4 md:mb-6 drop-shadow-lg max-w-5xl animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-3 md:mb-6 drop-shadow-lg max-w-5xl animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
           Complete Property <br className="hidden md:block" />
           Maintenance Services <br />
           <span className="text-brand-orange block mt-1 md:inline">Built for Florida Properties</span>
@@ -79,7 +79,7 @@ export default function Hero() {
         </div>
 
         {/* Trust Indicators - Grid on mobile for better space usage */}
-        <div className="mt-8 md:mt-12 grid grid-cols-2 md:flex md:flex-wrap gap-2 md:gap-6 w-full md:w-auto animate-in fade-in slide-in-from-bottom-12 duration-700 delay-500 text-left md:text-left">
+        <div className="mt-6 md:mt-12 grid grid-cols-2 md:flex md:flex-wrap gap-2 md:gap-6 w-full md:w-auto animate-in fade-in slide-in-from-bottom-12 duration-700 delay-500 text-left md:text-left">
           {[
             "Certified Arborist", 
             "Licensed & Insured", 
