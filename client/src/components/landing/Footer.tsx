@@ -13,18 +13,19 @@ export default function Footer() {
               className="h-20 w-auto object-contain mb-6 invert brightness-0 grayscale opacity-80" 
             />
             <p className="text-gray-400 text-sm leading-relaxed">
-              Grand Oaks Property Maintenance is your trusted local partner for professional tree care in Pasco County. Safety, integrity, and quality in every cut.
+              Grand Oaks Property Maintenance is your trusted local partner for professional tree care, land clearing, and property development in Pasco County.
             </p>
           </div>
 
           <div>
             <h4 className="font-bold text-lg mb-6 text-brand-green">Services</h4>
             <ul className="space-y-3 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Tree Removal</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Tree Trimming</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Stump Grinding</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Land Clearing</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Emergency Service</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Tree Services</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Land Clearing & Forestry</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Site Prep & Development</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Property Cleanup</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Grounds & Lawn</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Driveways</a></li>
             </ul>
           </div>
 

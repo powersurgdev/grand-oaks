@@ -4,29 +4,34 @@ import { ArrowRight } from "lucide-react";
 
 const services = [
   {
-    title: "Tree Removal",
-    desc: "Safe removal of hazardous, dead, or unwanted trees of any size.",
+    title: "Tree Services",
+    desc: "Complete tree care including removal, trimming, stump grinding, and emergency storm response.",
     image: "/images/service-removal.jpg"
   },
   {
-    title: "Tree Trimming",
-    desc: "Expert pruning to promote tree health, safety, and aesthetics.",
-    image: "/images/service-trimming.jpg"
+    title: "Land Clearing & Forestry",
+    desc: "Professional forestry mulching and large-scale land clearing for lots of any size.",
+    image: "/images/service-forestry.jpg"
   },
   {
-    title: "Stump Grinding",
-    desc: "Complete stump removal to reclaim your yard and prevent pests.",
-    image: "/images/service-stump.jpg"
+    title: "Site Prep & Property Development",
+    desc: "Excavation, grading, and site preparation to get your property ready for construction.",
+    image: "/images/service-siteprep.jpg"
   },
   {
-    title: "Land Clearing",
-    desc: "Efficient lot clearing for new construction or property usage.",
-    image: "/images/service-clearing.jpg"
+    title: "Property Cleanup & Maintenance",
+    desc: "Overgrown lot cleanup, debris removal, and restoring neglected properties to pristine condition.",
+    image: "/images/service-cleanup.jpg"
   },
   {
-    title: "Emergency Service",
-    desc: "24/7 rapid response for storm damage and dangerous fallen trees.",
-    image: "/images/service-emergency.jpg"
+    title: "Grounds & Lawn Services",
+    desc: "Routine lawn care, mowing, and landscape maintenance for residential and commercial properties.",
+    image: "/images/service-grounds.jpg"
+  },
+  {
+    title: "Driveways & Ground Surfaces",
+    desc: "Installation and repair of gravel driveways, culverts, and ground surface grading.",
+    image: "/images/service-driveways.jpg"
   }
 ];
 
@@ -37,10 +42,10 @@ export default function Services() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-brand-green text-sm font-bold tracking-widest uppercase mb-3">Our Services</h2>
           <h3 className="text-3xl md:text-5xl font-extrabold text-brand-charcoal mb-4">
-            Professional Tree Care Solutions
+            Complete Property Solutions
           </h3>
           <p className="text-gray-600 text-lg">
-            From routine maintenance to complex removals, our certified team handles it all with precision and safety.
+            Grand Oaks offers more than just tree care. We provide comprehensive property maintenance and development services for homeowners and businesses.
           </p>
         </div>
 
@@ -56,7 +61,7 @@ export default function Services() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
               </div>
               <CardHeader className="pb-2">
-                <CardTitle className="text-2xl font-bold text-brand-green">{service.title}</CardTitle>
+                <CardTitle className="text-xl md:text-2xl font-bold text-brand-green leading-tight">{service.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col justify-between">
                 <CardDescription className="text-base text-gray-600 mb-6">

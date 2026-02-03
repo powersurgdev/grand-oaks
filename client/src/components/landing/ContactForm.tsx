@@ -81,11 +81,12 @@ export default function ContactForm() {
                     <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="removal">Tree Removal</SelectItem>
-                    <SelectItem value="trimming">Tree Trimming</SelectItem>
-                    <SelectItem value="stump">Stump Grinding</SelectItem>
-                    <SelectItem value="clearing">Land Clearing</SelectItem>
-                    <SelectItem value="emergency">Emergency Service</SelectItem>
+                    <SelectItem value="tree-services">Tree Services</SelectItem>
+                    <SelectItem value="land-clearing">Land Clearing & Forestry</SelectItem>
+                    <SelectItem value="site-prep">Site Prep & Property Development</SelectItem>
+                    <SelectItem value="cleanup">Property Cleanup & Maintenance</SelectItem>
+                    <SelectItem value="grounds">Grounds & Lawn Services</SelectItem>
+                    <SelectItem value="driveways">Driveways & Ground Surfaces</SelectItem>
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
