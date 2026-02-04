@@ -38,7 +38,7 @@ export default function Header() {
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
           <img 
-            src="/logo-text.png" 
+            src="/logo-full.png" 
             alt="Grand Oaks Property Maintenance" 
             className={cn(
               "w-auto object-contain transition-all duration-300",
