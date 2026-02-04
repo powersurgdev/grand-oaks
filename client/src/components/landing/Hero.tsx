@@ -40,7 +40,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center md:items-start text-center md:text-left pt-12 pb-12 md:pt-20 md:pb-10 h-full justify-center">
+      <div className="relative z-20 container mx-auto px-4 flex flex-col items-center md:items-start text-center md:text-left pt-32 pb-12 md:pt-40 md:pb-10 h-full justify-center">
         
         {/* Mobile: Top Badge - More compact */}
         <div className="inline-flex items-center gap-1.5 bg-brand-green/90 text-white px-3 py-1 rounded-full text-xs md:text-sm font-semibold mb-3 md:mb-6 backdrop-blur-sm shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-700">
