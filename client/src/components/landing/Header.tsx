@@ -42,7 +42,7 @@ export default function Header() {
             alt="Grand Oaks Property Maintenance" 
             className={cn(
               "w-auto object-contain transition-all duration-300",
-              isScrolled ? "h-14 md:h-16" : "h-20 md:h-32 drop-shadow-md"
+              isScrolled ? "h-8 md:h-9" : "h-10 md:h-16 drop-shadow-md"
             )}
           />
         </a>
