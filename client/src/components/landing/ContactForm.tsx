@@ -55,7 +55,7 @@ export default function ContactForm() {
             </div>
           </div>
 
-          <Card className="shadow-xl border-none rounded-3xl overflow-hidden">
+          <Card id="estimate-form" className="shadow-xl border-none rounded-3xl overflow-hidden scroll-mt-32">
             <CardHeader className="bg-brand-green text-white p-8">
               <CardTitle className="text-2xl text-white">Contact Us Today</CardTitle>
               <CardDescription className="text-brand-offwhite/80">

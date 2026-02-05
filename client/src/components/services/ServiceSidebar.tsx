@@ -59,7 +59,7 @@ export default function ServiceSidebar() {
           className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-bold rounded-xl h-12 relative z-10"
           asChild
         >
-          <a href="#contact-section">Get Free Estimate</a>
+          <a href="#estimate-form">Get Free Estimate</a>
         </Button>
 
         <div className="mt-6 flex items-center justify-center gap-2 text-xs text-brand-offwhite/80 relative z-10">

@@ -6,7 +6,7 @@ import { Phone, CheckCircle2 } from "lucide-react";
 
 export default function ServiceContact() {
   return (
-    <div id="contact-section" className="bg-gray-50 rounded-3xl p-8 md:p-10 border border-gray-100">
+    <div id="estimate-form" className="bg-gray-50 rounded-3xl p-8 md:p-10 border border-gray-100 scroll-mt-32">
       <div className="text-center mb-8">
         <h3 className="text-2xl font-extrabold text-brand-charcoal mb-2">Get Your Free Estimate</h3>
         <p className="text-gray-600">Fast response. Honest pricing. Professional service.</p>

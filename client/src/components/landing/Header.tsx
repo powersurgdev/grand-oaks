@@ -143,7 +143,7 @@ export default function Header() {
             size="lg"
             asChild
           >
-            <a href="#contact">Free Estimate</a>
+            <a href="#estimate-form">Free Estimate</a>
           </Button>
         </div>
 
@@ -215,7 +215,7 @@ export default function Header() {
                     asChild
                     onClick={() => setIsOpen(false)}
                   >
-                    <a href="#contact">Get Free Estimate</a>
+                    <a href="#estimate-form">Get Free Estimate</a>
                   </Button>
                 </div>
               </div>
