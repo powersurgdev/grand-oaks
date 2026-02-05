@@ -49,7 +49,7 @@ export default function Hero() {
         </div>
 
         {/* Headline - Responsive sizing */}
-        <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-3 md:mb-6 drop-shadow-lg max-w-5xl animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 uppercase">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-3 md:mb-6 drop-shadow-lg max-w-5xl animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 uppercase">
           Expert Tree Removal <br />
           <span className="text-brand-orange">& Arborist Care</span>
         </h1>
@@ -63,14 +63,14 @@ export default function Hero() {
         <div className="flex flex-col w-full sm:w-auto sm:flex-row gap-3 md:gap-4 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-300">
           <Button 
             size="xl" 
-            className="w-full sm:w-auto h-12 md:h-16 text-base md:text-lg font-bold bg-brand-orange hover:bg-brand-orange/90 text-white rounded-xl md:rounded-2xl shadow-xl transition-transform active:scale-95"
+            className="w-full sm:w-auto h-11 md:h-16 text-sm md:text-lg font-bold bg-brand-orange hover:bg-brand-orange/90 text-white rounded-xl md:rounded-2xl shadow-xl transition-transform active:scale-95"
             asChild
           >
             <a href="tel:8138607086">Call Now (813) 860-7086</a>
           </Button>
           <Button 
             size="xl" 
-            className="w-full sm:w-auto h-12 md:h-16 text-base md:text-lg font-bold bg-white text-brand-green hover:bg-gray-100 rounded-xl md:rounded-2xl shadow-xl transition-transform active:scale-95"
+            className="w-full sm:w-auto h-11 md:h-16 text-sm md:text-lg font-bold bg-white text-brand-green hover:bg-gray-100 rounded-xl md:rounded-2xl shadow-xl transition-transform active:scale-95"
             asChild
           >
             <a href="#contact">Get Free Estimate</a>
