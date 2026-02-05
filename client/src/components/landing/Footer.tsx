@@ -8,9 +8,9 @@ export default function Footer() {
           
           <div className="col-span-1 md:col-span-1">
              <img 
-              src="/logo.png" 
+              src="/logo-footer.png" 
               alt="Grand Oaks Logo" 
-              className="h-20 w-auto object-contain mb-6 invert brightness-0 grayscale opacity-80" 
+              className="h-32 w-auto object-contain mb-6" 
             />
             <p className="text-gray-400 text-sm leading-relaxed">
               Grand Oaks Property Maintenance is your trusted local partner for professional tree care, land clearing, and property development in Pasco County.
