@@ -67,7 +67,7 @@ export default function Header() {
                     <>
                       <NavigationMenuTrigger 
                         className={cn(
-                          "bg-transparent text-lg font-medium transition-colors p-0 h-auto hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent",
+                          "bg-transparent text-lg font-medium transition-colors h-auto hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent px-3 py-2",
                           isScrolled 
                             ? "text-brand-charcoal hover:text-brand-green data-[state=open]:text-brand-green" 
                             : "text-white hover:text-brand-orange data-[state=open]:text-brand-orange drop-shadow-md"
