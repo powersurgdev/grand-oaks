@@ -1,32 +1,38 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 const services = [
   {
     title: "Tree Removal",
     desc: "Safe removal of hazardous, dead, or unwanted trees of any size using professional climbing or crane techniques.",
-    image: "/images/service-removal.jpg"
+    image: "/images/service-removal.jpg",
+    link: "/services/tree-removal"
   },
   {
     title: "Tree Trimming",
     desc: "Expert pruning to promote tree health, safety, and aesthetics, performed by certified arborists.",
-    image: "/images/service-trimming.jpg"
+    image: "/images/service-trimming.jpg",
+    link: "/services/tree-trimming"
   },
   {
     title: "Stump Grinding",
     desc: "Complete stump removal to reclaim your yard and prevent pests, leaving your property clean and level.",
-    image: "/images/service-stump.jpg"
+    image: "/images/service-stump.jpg",
+    link: "/services/stump-grinding"
   },
   {
     title: "Land Clearing",
     desc: "Efficient lot clearing and forestry mulching for new construction, pasture restoration, or property usage.",
-    image: "/images/service-clearing.jpg"
+    image: "/images/service-clearing.jpg",
+    link: "/services/land-clearing"
   },
   {
     title: "Emergency Tree Services",
     desc: "24/7 rapid response for storm damage and dangerous fallen trees threatening your home or business.",
-    image: "/images/service-emergency.jpg"
+    image: "/images/service-emergency.jpg",
+    link: "/services/emergency-tree-service"
   }
 ];
 
@@ -46,27 +52,31 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
           {services.map((service, index) => (
-            <Card key={index} className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow rounded-2xl bg-gray-50 flex flex-col h-full">
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
-              </div>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-xl md:text-2xl font-bold text-brand-green leading-tight">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow flex flex-col justify-between">
-                <CardDescription className="text-base text-gray-600 mb-6">
-                  {service.desc}
-                </CardDescription>
-                <Button variant="link" className="text-brand-orange p-0 h-auto font-bold self-start group-hover:gap-2 transition-all">
-                  Learn more <ArrowRight className="w-4 h-4 ml-1" />
-                </Button>
-              </CardContent>
-            </Card>
+            <Link key={index} href={service.link}>
+              <a className="block h-full no-underline">
+                <Card className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow rounded-2xl bg-gray-50 flex flex-col h-full cursor-pointer">
+                  <div className="relative h-64 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title} 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                  </div>
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-xl md:text-2xl font-bold text-brand-green leading-tight">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow flex flex-col justify-between">
+                    <CardDescription className="text-base text-gray-600 mb-6">
+                      {service.desc}
+                    </CardDescription>
+                    <Button variant="link" className="text-brand-orange p-0 h-auto font-bold self-start group-hover:gap-2 transition-all">
+                      Learn more <ArrowRight className="w-4 h-4 ml-1" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </a>
+            </Link>
           ))}
         </div>
       </div>
