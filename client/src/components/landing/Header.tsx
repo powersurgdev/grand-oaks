@@ -149,22 +149,21 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <div className="flex items-center gap-3 md:hidden">
-          <Button 
-            variant="default" 
-            size="sm" 
+          <a 
+            href="tel:8138607086"
             className={cn(
-              "font-bold rounded-full transition-colors",
+              "flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 border",
               isScrolled
-                ? "bg-brand-orange hover:bg-brand-orange/90 text-white"
-                : "bg-white text-brand-green hover:bg-gray-100"
+                ? "bg-green-50 border-green-200 text-brand-charcoal"
+                : "bg-white/90 backdrop-blur-sm border-white/40 text-brand-charcoal shadow-lg"
             )}
-            asChild
           >
-            <a href="tel:8138607086">
-              <Phone className="w-4 h-4 mr-2" />
-              Call
-            </a>
-          </Button>
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+            </span>
+            <span className="text-xs font-bold uppercase tracking-wider text-brand-charcoal">Available Now</span>
+          </a>
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
