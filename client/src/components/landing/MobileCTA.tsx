@@ -17,7 +17,7 @@ export default function MobileStickyCTA() {
         className="flex-1 bg-brand-orange hover:bg-brand-orange/90 text-white font-bold h-14 rounded-xl text-lg shadow-md"
         asChild
       >
-        <a href="#contact">
+        <a href="#estimate-form">
           <CalendarCheck className="w-5 h-5 mr-2" />
           Estimate
         </a>
