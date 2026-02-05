@@ -141,8 +141,9 @@ export default function Header() {
                 : "bg-white text-brand-green hover:bg-gray-100"
             )}
             size="lg"
+            asChild
           >
-            Call Now
+            <a href="#contact">Free Estimate</a>
           </Button>
         </div>
 
