@@ -1,8 +1,18 @@
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { servicesData } from "@/data/services";
+import { Link as WouterLink } from "wouter";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,11 +28,11 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "Why Us", href: "#why-us" },
-    { name: "Our Work", href: "#gallery" },
-    { name: "Reviews", href: "#reviews" },
-    { name: "Contact", href: "#contact" },
+    { name: "Services", href: "#services", type: "dropdown" },
+    { name: "Why Us", href: "#why-us", type: "link" },
+    { name: "Our Work", href: "#gallery", type: "link" },
+    { name: "Reviews", href: "#reviews", type: "link" },
+    { name: "Contact", href: "#contact", type: "link" },
   ];
 
   return (
@@ -48,21 +58,66 @@ export default function Header() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href}
-              className={cn(
-                "font-medium transition-colors text-lg",
-                isScrolled 
-                  ? "text-brand-charcoal hover:text-brand-green" 
-                  : "text-white hover:text-brand-orange drop-shadow-md"
-              )}
-            >
-              {link.name}
-            </a>
-          ))}
+        <nav className="hidden md:flex items-center gap-6">
+          <NavigationMenu>
+            <NavigationMenuList className="gap-6">
+              {navLinks.map((link) => (
+                <NavigationMenuItem key={link.name}>
+                  {link.type === "dropdown" ? (
+                    <>
+                      <NavigationMenuTrigger 
+                        className={cn(
+                          "bg-transparent text-lg font-medium transition-colors p-0 h-auto hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent",
+                          isScrolled 
+                            ? "text-brand-charcoal hover:text-brand-green data-[state=open]:text-brand-green" 
+                            : "text-white hover:text-brand-orange data-[state=open]:text-brand-orange drop-shadow-md"
+                        )}
+                      >
+                        {link.name}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white rounded-xl shadow-xl">
+                          {Object.entries(servicesData).map(([slug, service]) => (
+                            <li key={slug}>
+                              <NavigationMenuLink asChild>
+                                <WouterLink href={`/services/${slug}`}>
+                                  <a
+                                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-brand-offwhite hover:text-brand-green focus:bg-brand-offwhite focus:text-brand-green group"
+                                  >
+                                    <div className="flex items-center gap-2 text-sm font-bold leading-none text-brand-charcoal group-hover:text-brand-green">
+                                      <service.icon className="w-4 h-4" />
+                                      {service.title}
+                                    </div>
+                                    <p className="line-clamp-2 text-xs leading-snug text-muted-foreground mt-1 text-gray-500">
+                                      {service.subtitle}
+                                    </p>
+                                  </a>
+                                </WouterLink>
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </>
+                  ) : (
+                    <NavigationMenuLink asChild>
+                      <a 
+                        href={link.href}
+                        className={cn(
+                          "font-medium transition-colors text-lg block",
+                          isScrolled 
+                            ? "text-brand-charcoal hover:text-brand-green" 
+                            : "text-white hover:text-brand-orange drop-shadow-md"
+                        )}
+                      >
+                        {link.name}
+                      </a>
+                    </NavigationMenuLink>
+                  )}
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
         </nav>
 
         {/* Desktop CTA */}
@@ -117,10 +172,27 @@ export default function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] overflow-y-auto">
               <div className="flex flex-col gap-6 mt-10">
                 <nav className="flex flex-col gap-4">
-                  {navLinks.map((link) => (
+                  {/* Mobile Services Section */}
+                  <div className="space-y-3">
+                    <h4 className="font-bold text-lg text-brand-green">Services</h4>
+                    <div className="pl-4 space-y-3 border-l-2 border-gray-100">
+                      {Object.entries(servicesData).map(([slug, service]) => (
+                        <WouterLink key={slug} href={`/services/${slug}`}>
+                          <a 
+                            className="block text-base font-medium text-gray-600 hover:text-brand-green"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {service.title}
+                          </a>
+                        </WouterLink>
+                      ))}
+                    </div>
+                  </div>
+
+                  {navLinks.filter(l => l.type !== 'dropdown').map((link) => (
                     <a 
                       key={link.name} 
                       href={link.href}
