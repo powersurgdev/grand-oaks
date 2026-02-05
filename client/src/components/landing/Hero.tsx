@@ -38,7 +38,6 @@ export default function Hero() {
         {/* Mobile Gradient: darker at bottom for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80 md:via-black/20 md:to-black/60 z-10"></div>
       </div>
-
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 flex flex-col items-center md:items-start text-center md:text-left pt-32 pb-12 md:pt-40 md:pb-10 h-full justify-center">
         
@@ -49,7 +48,7 @@ export default function Hero() {
         </div>
 
         {/* Headline - Responsive sizing */}
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-3 md:mb-6 drop-shadow-lg max-w-5xl animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 uppercase">
+        <h1 className="sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-3 md:mb-6 drop-shadow-lg max-w-5xl animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 uppercase text-[28px]">
           Expert Tree Removal <br />
           <span className="text-brand-orange">& Arborist Care</span>
         </h1>
