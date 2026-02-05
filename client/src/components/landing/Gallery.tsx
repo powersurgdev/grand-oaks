@@ -1,53 +1,57 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
-// Re-using the service images as "gallery" images for this mockup since we don't have separate gallery stock
 const galleryImages = [
-  "/images/service-removal.jpg",
-  "/images/service-trimming.jpg",
-  "/images/service-stump.jpg",
-  "/images/service-clearing.jpg",
-  "/images/hero-bg.jpg"
+  // Row 1
+  { src: "/images/gallery-climbing.jpg", alt: "Arborist climbing", span: "col-span-1 md:col-span-1 row-span-2" },
+  { src: "/images/gallery-crane.jpg", alt: "Crane removal", span: "col-span-1 md:col-span-1" },
+  { src: "/images/gallery-stump.jpg", alt: "Stump grinding", span: "col-span-1 md:col-span-1" },
+  { src: "/images/gallery-crew.jpg", alt: "Tree crew", span: "col-span-1 md:col-span-1" },
+  
+  // Row 2
+  { src: "/images/gallery-pruning.jpg", alt: "Precision pruning", span: "col-span-1 md:col-span-1 row-span-2" },
+  { src: "/images/gallery-machinery.jpg", alt: "Land clearing", span: "col-span-1 md:col-span-2" },
+  
+  // Row 3
+  { src: "/images/gallery-wood.jpg", alt: "Wood removal", span: "col-span-1 md:col-span-1" },
+  { src: "/images/gallery-cleared.jpg", alt: "Cleared lot", span: "col-span-1 md:col-span-1" },
+  { src: "/images/service-removal.jpg", alt: "Tree removal", span: "col-span-1 md:col-span-1" },
 ];
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-20 bg-gray-50">
+    <section id="gallery" className="py-20 md:py-28 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-brand-charcoal mb-4">Our Recent Work</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            See the quality and care we bring to every project. From massive removals to precision trimming.
+        <div className="text-center mb-16">
+          <h2 className="text-brand-green text-sm font-bold tracking-widest uppercase mb-3">Our Work in Pasco County</h2>
+          <h3 className="text-3xl md:text-5xl font-extrabold text-brand-charcoal mb-4">
+            Recent Projects Gallery
+          </h3>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            See the quality and care we bring to every job. From complex crane removals to complete land clearing.
           </p>
         </div>
 
-        <Carousel className="w-full max-w-5xl mx-auto">
-          <CarouselContent>
-            {galleryImages.map((src, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 pl-4">
-                <div className="p-1">
-                  <Card className="border-none shadow-md overflow-hidden rounded-2xl">
-                    <CardContent className="flex aspect-square items-center justify-center p-0">
-                      <img 
-                        src={src} 
-                        alt={`Project ${index + 1}`} 
-                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                      />
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-12 bg-white text-brand-green border-brand-green hover:bg-brand-green hover:text-white" />
-          <CarouselNext className="hidden md:flex -right-12 bg-white text-brand-green border-brand-green hover:bg-brand-green hover:text-white" />
-        </Carousel>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+          {galleryImages.map((image, index) => (
+            <motion.div
+              key={index}
+              className={`relative rounded-xl overflow-hidden shadow-md group ${image.span}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span className="text-white font-bold text-lg drop-shadow-md">{image.alt}</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
