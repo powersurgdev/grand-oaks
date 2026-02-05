@@ -49,15 +49,15 @@ export default function Hero() {
         </div>
 
         {/* Headline - Responsive sizing */}
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-3 md:mb-6 drop-shadow-lg max-w-5xl animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
-          Complete Property <br className="hidden md:block" />
-          Maintenance Services <br />
-          <span className="text-brand-orange block mt-1 md:inline">Built for Florida Properties</span>
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-3 md:mb-6 drop-shadow-lg max-w-5xl animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 uppercase">
+          Tree Removal & <br className="hidden md:block" />
+          Certified Arborist Services <br />
+          <span className="text-brand-orange block mt-1 md:inline">In Pasco County, FL</span>
         </h1>
 
         {/* Subheadline - Concise on mobile */}
-        <p className="text-base sm:text-lg md:text-2xl text-gray-100 mb-6 md:mb-8 max-w-xl md:max-w-2xl font-medium drop-shadow-md animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 leading-relaxed px-2 md:px-0">
-          From certified arborist tree work to land clearing, site prep, and ground services — we handle it all.
+        <p className="text-base sm:text-lg md:text-2xl text-gray-100 mb-6 md:mb-8 max-w-xl md:max-w-3xl font-medium drop-shadow-md animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 leading-relaxed px-2 md:px-0">
+          Professional tree removal, trimming, stump grinding, land clearing, and emergency storm response.
         </p>
 
         {/* CTAs - Full width on mobile, side-by-side on desktop */}

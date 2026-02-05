@@ -4,34 +4,29 @@ import { ArrowRight } from "lucide-react";
 
 const services = [
   {
-    title: "Tree Services",
-    desc: "Complete tree care including removal, trimming, stump grinding, and emergency storm response.",
+    title: "Tree Removal",
+    desc: "Safe removal of hazardous, dead, or unwanted trees of any size using professional climbing or crane techniques.",
     image: "/images/service-removal.jpg"
   },
   {
-    title: "Land Clearing & Forestry",
-    desc: "Professional forestry mulching and large-scale land clearing for lots of any size.",
-    image: "/images/service-forestry.jpg"
+    title: "Tree Trimming",
+    desc: "Expert pruning to promote tree health, safety, and aesthetics, performed by certified arborists.",
+    image: "/images/service-trimming.jpg"
   },
   {
-    title: "Site Prep & Property Development",
-    desc: "Excavation, grading, and site preparation to get your property ready for construction.",
-    image: "/images/service-siteprep.jpg"
+    title: "Stump Grinding",
+    desc: "Complete stump removal to reclaim your yard and prevent pests, leaving your property clean and level.",
+    image: "/images/service-stump.jpg"
   },
   {
-    title: "Property Cleanup & Maintenance",
-    desc: "Overgrown lot cleanup, debris removal, and restoring neglected properties to pristine condition.",
-    image: "/images/service-cleanup.jpg"
+    title: "Land Clearing",
+    desc: "Efficient lot clearing and forestry mulching for new construction, pasture restoration, or property usage.",
+    image: "/images/service-clearing.jpg"
   },
   {
-    title: "Grounds & Lawn Services",
-    desc: "Routine lawn care, mowing, and landscape maintenance for residential and commercial properties.",
-    image: "/images/service-grounds.jpg"
-  },
-  {
-    title: "Driveways & Ground Surfaces",
-    desc: "Installation and repair of gravel driveways, culverts, and ground surface grading.",
-    image: "/images/service-driveways.jpg"
+    title: "Emergency Tree Services",
+    desc: "24/7 rapid response for storm damage and dangerous fallen trees threatening your home or business.",
+    image: "/images/service-emergency.jpg"
   }
 ];
 
@@ -42,14 +37,14 @@ export default function Services() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-brand-green text-sm font-bold tracking-widest uppercase mb-3">Our Services</h2>
           <h3 className="text-3xl md:text-5xl font-extrabold text-brand-charcoal mb-4">
-            Complete Property Solutions
+            Expert Tree Care & Land Solutions
           </h3>
           <p className="text-gray-600 text-lg">
-            Grand Oaks offers more than just tree care. We provide comprehensive property maintenance and development services for homeowners and businesses.
+            Grand Oaks specializes in professional tree services and land clearing for homeowners and businesses in Pasco County.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
           {services.map((service, index) => (
             <Card key={index} className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow rounded-2xl bg-gray-50 flex flex-col h-full">
               <div className="relative h-64 overflow-hidden">

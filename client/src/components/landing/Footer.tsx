@@ -20,12 +20,11 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6 text-brand-green">Services</h4>
             <ul className="space-y-3 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Tree Services</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Land Clearing & Forestry</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Site Prep & Development</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Property Cleanup</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Grounds & Lawn</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Driveways</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Tree Removal</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Tree Trimming</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Stump Grinding</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Land Clearing</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Emergency Tree Services</a></li>
             </ul>
           </div>
 
