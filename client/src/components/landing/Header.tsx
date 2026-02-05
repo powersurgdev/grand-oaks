@@ -138,7 +138,7 @@ export default function Header() {
               "font-bold rounded-full px-6 transition-all shadow-lg",
               isScrolled
                 ? "bg-brand-orange hover:bg-brand-orange/90 text-white"
-                : "bg-white text-brand-green hover:bg-gray-100"
+                : "bg-white text-brand-green hover:bg-brand-orange hover:text-white"
             )}
             size="lg"
             asChild
