@@ -148,21 +148,21 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-2 md:hidden">
           <a 
             href="tel:8138607086"
             className={cn(
-              "flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 border",
+              "flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-300 border",
               isScrolled
                 ? "bg-green-50 border-green-200 text-brand-charcoal"
                 : "bg-white/90 backdrop-blur-sm border-white/40 text-brand-charcoal shadow-lg"
             )}
           >
-            <span className="relative flex h-2.5 w-2.5">
+            <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-charcoal">Available Now</span>
+            <span className="text-[10px] font-extrabold uppercase tracking-wide text-brand-charcoal pt-[1px]">Available Now</span>
           </a>
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
