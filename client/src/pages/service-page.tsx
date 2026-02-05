@@ -5,6 +5,7 @@ import MobileStickyCTA from "@/components/landing/MobileCTA";
 import ServiceHero from "@/components/services/ServiceHero";
 import ServiceSidebar from "@/components/services/ServiceSidebar";
 import ServiceContact from "@/components/services/ServiceContact";
+import ServicePageGallery from "@/components/services/ServicePageGallery";
 import { 
   Accordion, 
   AccordionContent, 
@@ -94,6 +95,9 @@ export default function ServicePage({ slug }: ServicePageProps) {
                   ))}
                 </Accordion>
               </div>
+
+              {/* Service Gallery */}
+              <ServicePageGallery />
 
               {/* Clean Contact Section */}
               <ServiceContact />
