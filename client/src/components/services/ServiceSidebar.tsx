@@ -42,7 +42,7 @@ export default function ServiceSidebar() {
       <div className="bg-brand-green rounded-2xl shadow-lg p-8 text-center text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
         
-        <h3 className="text-xl font-extrabold mb-2 relative z-10">Need Help?</h3>
+        <h3 className="text-xl font-extrabold mb-2 relative z-10 text-white">Need Help?</h3>
         <p className="text-brand-offwhite/90 mb-6 text-sm relative z-10">
           Speak with a certified arborist today.
         </p>
