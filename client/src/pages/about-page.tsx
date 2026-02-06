@@ -5,6 +5,7 @@ import Header from "@/components/landing/Header";
 import MobileStickyCTA from "@/components/landing/MobileCTA";
 import { servicesData } from "@/data/services";
 import { Link } from "wouter";
+import LazyImage from "@/components/ui/lazy-image";
 
 export default function AboutPage() {
   return (
@@ -16,10 +17,11 @@ export default function AboutPage() {
         <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 flex items-center justify-center overflow-hidden min-h-[60vh]">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
-            <img 
-              src="/images/service-trimming.jpg" 
-              alt="Grand Oaks Tree Care" 
-              className="w-full h-full object-cover"
+            <LazyImage
+              src="/images/optimized/service-trimming.webp"
+              alt="Grand Oaks Tree Care"
+              className="w-full h-full"
+              priority={true}
             />
             <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
           </div>
@@ -78,10 +80,10 @@ export default function AboutPage() {
               </div>
               <div className="flex-1 relative w-full">
                 <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src="/images/service-trimming.jpg" 
-                    alt="Grand Oaks Team at Work" 
-                    className="w-full h-auto object-cover"
+                  <LazyImage
+                    src="/images/optimized/service-trimming.webp"
+                    alt="Grand Oaks Team at Work"
+                    className="w-full h-auto"
                   />
                 </div>
               </div>
@@ -148,10 +150,10 @@ export default function AboutPage() {
               
               <div className="flex-1 relative w-full">
                 <div className="rounded-2xl overflow-hidden shadow-xl bg-gray-100">
-                  <img 
-                    src="/images/service-removal.jpg" 
-                    alt="Safety First Approach" 
-                    className="w-full h-full object-cover"
+                  <LazyImage
+                    src="/images/optimized/service-removal.webp"
+                    alt="Safety First Approach"
+                    className="w-full h-full"
                   />
                 </div>
               </div>

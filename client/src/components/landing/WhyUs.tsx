@@ -1,4 +1,5 @@
 import { Shield, HardHat, MapPin, Smile } from "lucide-react";
+import LazyImage from "@/components/ui/lazy-image";
 
 const reasons = [
   {
@@ -54,12 +55,12 @@ export default function WhyUs() {
           
           {/* Right Side: Image */}
           <div className="relative hidden lg:block h-[600px] rounded-3xl overflow-hidden shadow-2xl">
-            <img 
-              src="/images/why-us-team.png" 
+            <LazyImage 
+              src="/images/optimized/why-us-team.webp" 
               alt="Team at work" 
-              className="w-full h-full object-cover"
+              className="w-full h-full"
+              data-testid="img-why-us-team"
             />
-            {/* Subtle overlay to ensure the image isn't too raw, but not heavy green */}
             <div className="absolute inset-0 bg-black/10"></div>
           </div>
         </div>

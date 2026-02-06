@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const backgroundImages = [
-  "/images/hero-bg.jpg",
-  "/images/service-forestry.jpg", 
-  "/images/service-siteprep.jpg"
+  "/images/optimized/hero-bg.webp",
+  "/images/optimized/service-forestry.webp", 
+  "/images/optimized/service-siteprep.webp"
 ];
 
 export default function Hero() {

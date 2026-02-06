@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { CheckCircle2 } from "lucide-react";
+import LazyImage from "@/components/ui/lazy-image";
 
 interface ServiceHeroProps {
   title: string;
@@ -11,17 +11,17 @@ interface ServiceHeroProps {
 export default function ServiceHero({ title, subtitle, image }: ServiceHeroProps) {
   return (
     <section className="relative h-[550px] md:h-[600px] flex flex-col justify-center overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-black">
-        <img 
-          src={image} 
-          alt={title} 
-          className="w-full h-full object-cover opacity-50"
+        <LazyImage
+          src={image}
+          alt={title}
+          className="w-full h-full opacity-50"
+          priority={true}
+          data-testid="img-service-hero"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/60"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center pt-32 pb-24 md:pt-40 md:pb-28 h-full flex flex-col justify-center">
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 drop-shadow-lg max-w-5xl mx-auto leading-tight animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
           {title}
@@ -48,7 +48,6 @@ export default function ServiceHero({ title, subtitle, image }: ServiceHeroProps
           </Button>
         </div>
 
-        {/* Trust Indicators */}
         <div className="mt-8 md:mt-12 flex flex-wrap justify-center gap-3 md:gap-6 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-500">
            {["Licensed & Insured", "Certified Arborists", "Free Estimates"].map((item, i) => (
             <div key={i} className="flex items-center gap-1.5 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/20 text-white text-sm font-semibold">

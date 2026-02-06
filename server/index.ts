@@ -22,6 +22,12 @@ app.use(
 
 app.use(express.urlencoded({ extended: false }));
 
+app.use("/images/optimized", (_req, res, next) => {
+  res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+  res.setHeader("Vary", "Accept");
+  next();
+});
+
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
     hour: "numeric",

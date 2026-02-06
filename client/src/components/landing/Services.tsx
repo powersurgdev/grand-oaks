@@ -4,38 +4,39 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
 import { cn } from "@/lib/utils";
+import LazyImage from "@/components/ui/lazy-image";
 
 const services = [
   {
     title: "Tree Removal",
     desc: "Safe removal of hazardous, dead, or unwanted trees of any size using professional climbing or crane techniques.",
-    image: "/images/service-tree-removal.jpg",
+    image: "/images/optimized/service-tree-removal.webp",
     link: "/services/tree-removal"
   },
   {
     title: "Tree Trimming",
     desc: "Expert pruning to promote tree health, safety, and aesthetics, performed by certified arborists.",
-    image: "/images/service-tree-trimming.png",
+    image: "/images/optimized/service-tree-trimming.webp",
     link: "/services/tree-trimming",
     className: "object-[50%_25%]"
   },
   {
     title: "Stump Grinding",
     desc: "Complete stump removal to reclaim your yard and prevent pests, leaving your property clean and level.",
-    image: "/images/service-stump-grinding.png",
+    image: "/images/optimized/service-stump-grinding.webp",
     link: "/services/stump-grinding"
   },
   {
     title: "Land Clearing",
     desc: "Efficient lot clearing and forestry mulching for new construction, pasture restoration, or property usage.",
-    image: "/images/service-land-clearing.png",
+    image: "/images/optimized/service-land-clearing.webp",
     link: "/services/land-clearing",
     className: "object-[50%_25%]"
   },
   {
     title: "Emergency Tree Services",
     desc: "24/7 rapid response for storm damage and dangerous fallen trees threatening your home or business.",
-    image: "/images/service-emergency.png",
+    image: "/images/optimized/service-emergency.webp",
     link: "/services/emergency-tree-service",
     className: "object-[50%_25%]"
   }
@@ -61,13 +62,14 @@ export default function Services() {
               <a className="block h-full no-underline">
                 <Card className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow rounded-2xl bg-gray-50 flex flex-col h-full cursor-pointer">
                   <div className="relative h-64 overflow-hidden">
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
+                    <LazyImage
+                      src={service.image}
+                      alt={service.title}
                       className={cn(
-                        "w-full h-full object-cover transition-transform duration-500 group-hover:scale-105",
+                        "w-full h-full transition-transform duration-500 group-hover:scale-105",
                         (service as any).className
                       )}
+                      data-testid={`img-service-${service.link.split('/').pop()}`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
                   </div>
