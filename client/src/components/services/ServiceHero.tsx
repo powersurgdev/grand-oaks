@@ -10,7 +10,7 @@ interface ServiceHeroProps {
 
 export default function ServiceHero({ title, subtitle, image }: ServiceHeroProps) {
   return (
-    <section className="relative h-[550px] md:h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[550px] md:h-[600px] flex flex-col justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-black">
         <img 
@@ -22,7 +22,7 @@ export default function ServiceHero({ title, subtitle, image }: ServiceHeroProps
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center mt-20 md:mt-0">
+      <div className="relative z-10 container mx-auto px-4 text-center pt-32 pb-12 md:pt-40 md:pb-10 h-full flex flex-col justify-center">
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 drop-shadow-lg max-w-5xl mx-auto leading-tight animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
           {title}
         </h1>
