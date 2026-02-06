@@ -270,7 +270,7 @@ export const servicesData = {
     heroHeadline: "Pasco County Emergency Tree Experts",
     heroSubheadline: "24/7 rapid response for storm damage and dangerous fallen trees — protecting your home and family.",
     icon: AlertTriangle,
-    heroImage: "/images/service-emergency.jpg",
+    heroImage: "/images/service-emergency.png",
     description: "Storm-damaged trees and sudden hazards require fast, professional attention. Whether a tree has fallen on your home, limbs are hanging dangerously overhead, or a driveway is blocked, emergency tree situations should never be handled without the proper equipment and training.\n\nGrand Oaks Property Maintenance provides emergency tree services throughout Pasco County with a focus on safety, rapid response, and professional cleanup. We assess the situation quickly, stabilize the hazard, and remove dangerous trees or debris to help you regain control after the storm.",
     features: [
       "Fallen Trees on Homes or Structures",
