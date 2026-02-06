@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
+import { cn } from "@/lib/utils";
+
 const services = [
   {
     title: "Tree Removal",
@@ -14,7 +16,8 @@ const services = [
     title: "Tree Trimming",
     desc: "Expert pruning to promote tree health, safety, and aesthetics, performed by certified arborists.",
     image: "/images/service-tree-trimming.png",
-    link: "/services/tree-trimming"
+    link: "/services/tree-trimming",
+    className: "object-top"
   },
   {
     title: "Stump Grinding",
@@ -59,7 +62,10 @@ export default function Services() {
                     <img 
                       src={service.image} 
                       alt={service.title} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className={cn(
+                        "w-full h-full object-cover transition-transform duration-500 group-hover:scale-105",
+                        (service as any).className
+                      )}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
                   </div>
