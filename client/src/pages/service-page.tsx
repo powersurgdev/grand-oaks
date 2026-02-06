@@ -71,6 +71,26 @@ export default function ServicePage({ slug }: ServicePageProps) {
                   </ul>
                 </div>
 
+                {/* Process Section */}
+                {(service as any).process && (
+                  <div className="mb-12">
+                    <h3 className="text-2xl font-bold text-brand-charcoal mb-6">Our {service.title} Process</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {(service as any).process.map((step: any, i: number) => (
+                        <div key={i} className="flex gap-4 items-start">
+                          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center font-bold text-lg shadow-md">
+                            {i + 1}
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-brand-charcoal text-lg mb-1">{step.title}</h4>
+                            <p className="text-gray-600 leading-relaxed text-sm md:text-base">{step.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {service.details.map((detail, i) => (
                   <div key={i} className="mb-8">
                     <h3 className="text-2xl font-bold text-brand-charcoal mb-3">{detail.head}</h3>

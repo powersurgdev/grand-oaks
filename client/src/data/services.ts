@@ -19,6 +19,12 @@ export const servicesData = {
       "Trees Near Power Lines or Fences",
       "Emergency Tree Removal Services"
     ],
+    process: [
+      { title: "On-Site Evaluation", description: "We assess tree health, location, and potential hazards" },
+      { title: "Safety Planning", description: "Proper rigging, equipment, and drop zones" },
+      { title: "Controlled Removal", description: "Sectional removal when needed to protect structures" },
+      { title: "Cleanup & Debris Removal", description: "We leave your property clean and safe" }
+    ],
     details: [
       {
         head: "Safety First Approach",
