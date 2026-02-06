@@ -111,8 +111,14 @@ export default function ServicePage({ slug }: ServicePageProps) {
                 ))}
               </div>
 
+              {/* Service Gallery */}
+              <ServicePageGallery />
+
+              {/* Clean Contact Section */}
+              <ServiceContact />
+              
               {/* FAQ Section */}
-              <div className="mb-16">
+              <div className="mb-16 mt-16">
                 <h3 className="text-2xl font-bold text-brand-charcoal mb-6">Frequently Asked Questions</h3>
                 <Accordion type="single" collapsible className="w-full">
                   {service.faqs.map((faq, i) => (
@@ -127,12 +133,6 @@ export default function ServicePage({ slug }: ServicePageProps) {
                   ))}
                 </Accordion>
               </div>
-
-              {/* Service Gallery */}
-              <ServicePageGallery />
-
-              {/* Clean Contact Section */}
-              <ServiceContact />
               
             </div>
 
