@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 const galleryImages = [
   // Row 1
@@ -13,7 +14,7 @@ const galleryImages = [
   
   // Row 3
   { src: "/images/gallery-crane-lift.png", alt: "Sectional Removal", span: "col-span-1 md:col-span-1" },
-  { src: "/images/gallery-climber-action.png", alt: "Expert Climbing", span: "col-span-1 md:col-span-1" },
+  { src: "/images/gallery-climber-action.png", alt: "Expert Climbing", span: "col-span-1 md:col-span-1", className: "object-[50%_25%]" },
   { src: "/images/service-removal.jpg", alt: "Tree removal", span: "col-span-1 md:col-span-1" },
 ];
 
@@ -44,7 +45,10 @@ export default function Gallery() {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className={cn(
+                  "w-full h-full object-cover transition-transform duration-700 group-hover:scale-110",
+                  (image as any).className
+                )}
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <span className="text-white font-bold text-lg drop-shadow-md">{image.alt}</span>
