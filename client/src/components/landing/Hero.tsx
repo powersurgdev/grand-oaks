@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const backgroundImages = [
-  "/images/optimized/gallery-crane-setup.webp",
-  "/images/optimized/gallery-climber-action.webp",
-  "/images/optimized/gallery-team-work.webp"
+  { src: "/images/optimized/gallery-crane-setup.webp", position: "center 70%" },
+  { src: "/images/optimized/gallery-climber-action.webp", position: "center 40%" },
+  { src: "/images/optimized/gallery-team-work.webp", position: "center center" },
 ];
 
 export default function Hero() {
@@ -26,9 +26,10 @@ export default function Hero() {
         <AnimatePresence mode="popLayout">
           <motion.img
             key={currentImage}
-            src={backgroundImages[currentImage]}
+            src={backgroundImages[currentImage].src}
             alt="Hero Background"
             className="absolute inset-0 w-full h-full object-cover opacity-60"
+            style={{ objectPosition: backgroundImages[currentImage].position }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }}
             exit={{ opacity: 0 }}
