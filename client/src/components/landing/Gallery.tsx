@@ -4,7 +4,7 @@ const galleryImages = [
   // Row 1
   { src: "/images/gallery-residential-job.png", alt: "Tight Access Work", span: "col-span-1 md:col-span-1 row-span-2" },
   { src: "/images/gallery-crane-pool.png", alt: "Zero-Impact Removal", span: "col-span-1 md:col-span-1" },
-  { src: "/images/gallery-stump.jpg", alt: "Stump grinding", span: "col-span-1 md:col-span-1" },
+  { src: "/images/gallery-crane-setup.png", alt: "Crane Operations", span: "col-span-1 md:col-span-1" },
   { src: "/images/gallery-team-work.png", alt: "Tree crew", span: "col-span-1 md:col-span-1" },
   
   // Row 2
