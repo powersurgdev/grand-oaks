@@ -38,9 +38,38 @@ export const servicesData = {
       }
     ],
     faqs: [
-      { q: "Do I need a permit to remove a tree in Pasco County?", a: "It depends on the tree size and species. As local experts, we can help you navigate Pasco County's specific tree ordinance regulations." },
-      { q: "Will tree removal damage my yard?", a: "We use ground protection mats and specialized equipment to minimize impact on your lawn. Our goal is to leave your yard cleaner than we found it." },
-      { q: "How much does tree removal cost?", a: "Cost varies based on size, location, and complexity. We offer free, no-obligation on-site estimates to give you an accurate price." }
+      { 
+        q: "Do I need a permit to remove a tree in Pasco County?", 
+        a: "In some cases, yes — certain trees or protected areas may require a permit before removal. The requirements can vary depending on your location, the type of tree, and whether the tree is considered hazardous. Our team can help you understand what’s needed and assist with the permit process if your project requires one." 
+      },
+      { 
+        q: "How much does tree removal typically cost?", 
+        a: "Tree removal pricing depends on several factors, including the size of the tree, its condition, how close it is to structures or power lines, and the complexity of the removal. We provide free, honest estimates after evaluating the tree in person so you know exactly what to expect before any work begins." 
+      },
+      {
+        q: "How quickly can you schedule tree removal?",
+        a: "We know tree issues often need attention fast — especially after storms or when a tree becomes unsafe. Our team offers quick response times and can typically schedule service promptly based on urgency and availability. If you need emergency removal, we’re ready to help as soon as possible."
+      },
+      { 
+        q: "Will tree removal damage my yard or property?", 
+        a: "Our priority is always safety and protecting your property. We use professional rigging techniques and controlled removal methods to safely take down trees, especially in tight residential spaces. We take great care to minimize impact to your lawn, landscaping, and surrounding structures." 
+      },
+      {
+        q: "Do you haul away the debris and clean up afterward?",
+        a: "Yes — cleanup is always included. After the tree is removed, we handle hauling away debris, branches, and wood so your property is left clean and safe. We treat every job site with respect and make sure everything is cleared before we leave."
+      },
+      {
+        q: "Can you remove a tree that’s close to my house or power lines?",
+        a: "Yes. Many removals require careful sectional dismantling, especially when trees are near homes, fences, or utility lines. Our certified arborists are trained to remove hazardous trees safely using the proper equipment and planning needed for complex situations."
+      },
+      {
+        q: "Is stump grinding included with tree removal?",
+        a: "Stump grinding is typically an add-on service, and it’s a great option if you want the tree fully removed below ground level. Many homeowners choose stump removal to improve the look of their yard, prevent regrowth, and make space for future landscaping. We’re happy to include stump grinding in your estimate if requested."
+      },
+      {
+        q: "What types of trees do you remove?",
+        a: "We remove a wide range of tree types common throughout Pasco County, including oak, pine, palm, and storm-damaged or dead trees. If you’re unsure whether a tree needs to be removed, our certified team can evaluate it and recommend the best course of action."
+      }
     ]
   },
   "tree-trimming": {
