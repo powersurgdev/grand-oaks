@@ -28,7 +28,7 @@ export const servicesData = {
     details: [
       {
         head: "Safety, Licensing & Insurance",
-        body: "Tree removal is serious work — and safety is always our top priority. Every job is carefully planned to protect your home, your property, and everyone on site. Our team uses professional equipment, proven rigging methods, and industry best practices to ensure the removal is done correctly from start to finish.\n\nAs certified arborists, we don’t just cut trees — we assess risk, tree health, and the safest approach before any work begins.\n\nGrand Oaks Property Maintenance is fully licensed and insured, including liability coverage and workers’ compensation, so you can feel confident knowing you’re protected throughout the entire process.",
+        body: "Tree removal requires experience, precision, and the right safety standards. Our certified arborists carefully assess every job and use professional equipment to remove trees safely — especially in close residential areas.\n\nWe are fully licensed and insured, including liability and workers’ compensation coverage, so your home and property are protected every step of the way.",
         highlights: [
           "Certified Arborist Team",
           "Licensed & Fully Insured",
