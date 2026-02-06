@@ -146,7 +146,7 @@ export const servicesData = {
     heroHeadline: "Pasco County Stump Grinding Experts",
     heroSubheadline: "Complete stump removal to reclaim your yard and prevent pests — leaving your property clean and level.",
     icon: Axe,
-    heroImage: "/images/service-stump.jpg",
+    heroImage: "/images/service-stump-grinding.png",
     description: "Stump grinding is the most effective way to remove leftover tree stumps without tearing up your entire yard. Whether the stump is from a recent removal or has been sitting for years, grinding eliminates the visible stump and helps prevent pests, regrowth, and landscaping obstacles.\n\nOur Pasco County team uses professional-grade equipment to safely grind stumps below ground level, leaving your property cleaner, safer, and ready for sod, planting, or future projects.\n\nIf you want the job done right — with minimal disruption and full cleanup — we’re here to help.",
     features: [
       "Stump Removal After Tree Removal",

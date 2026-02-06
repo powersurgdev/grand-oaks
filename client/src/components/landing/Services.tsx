@@ -19,7 +19,7 @@ const services = [
   {
     title: "Stump Grinding",
     desc: "Complete stump removal to reclaim your yard and prevent pests, leaving your property clean and level.",
-    image: "/images/service-stump.jpg",
+    image: "/images/service-stump-grinding.png",
     link: "/services/stump-grinding"
   },
   {
