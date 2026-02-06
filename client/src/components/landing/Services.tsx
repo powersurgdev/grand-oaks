@@ -37,7 +37,7 @@ const services = [
     desc: "24/7 rapid response for storm damage and dangerous fallen trees threatening your home or business.",
     image: "/images/service-emergency.png",
     link: "/services/emergency-tree-service",
-    className: "object-[50%_35%]"
+    className: "object-[50%_25%]"
   }
 ];
 
