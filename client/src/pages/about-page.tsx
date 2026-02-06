@@ -13,29 +13,32 @@ export default function AboutPage() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-brand-green overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 z-0 opacity-10">
-            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-              <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
-            </svg>
+        <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 flex items-center justify-center overflow-hidden min-h-[60vh]">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="/images/service-trimming.jpg" 
+              alt="Grand Oaks Tree Care" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
           </div>
 
-          <div className="container mx-auto px-4 relative z-10 text-center text-white">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-sm font-bold uppercase tracking-wider mb-6 border border-white/30">
+          <div className="container mx-auto px-4 relative z-10 text-center text-white max-w-4xl">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-brand-green/90 text-white text-sm font-bold uppercase tracking-wider mb-6 shadow-sm">
               About Grand Oaks Property Maintenance
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight drop-shadow-md">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
               15 Years of Trusted <br className="hidden md:block" />
               Tree Care in Pasco County
             </h1>
-            <p className="text-lg md:text-xl text-brand-offwhite max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-sm">
-              Grand Oaks Property Maintenance is a Florida-based tree service company built on experience, safety, and a deep understanding of the trees and landscapes that make our state unique. From routine trimming to emergency storm response, we’re proud to serve our local community with professional arborist-led care.
+            <p className="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
+              Grand Oaks Property Maintenance is a Florida-based tree service company built on experience, safety, and a deep understanding of the trees and landscapes that make our state unique.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white font-bold text-lg h-14 px-8 rounded-full shadow-lg transform transition-all hover:-translate-y-1"
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white font-bold text-lg h-14 px-8 rounded-full shadow-lg"
                 asChild
               >
                 <a href="/#estimate-form">Get Free Estimate</a>
@@ -43,7 +46,7 @@ export default function AboutPage() {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="bg-white/10 backdrop-blur-sm border-white/40 text-white hover:bg-white hover:text-brand-green font-bold text-lg h-14 px-8 rounded-full transition-all"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-green font-bold text-lg h-14 px-8 rounded-full"
                 asChild
               >
                 <a href="tel:8138607086">Call Now</a>
@@ -52,15 +55,14 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Our Story Section */}
-        <section className="py-20 md:py-28 bg-white" id="story">
+        {/* Our Story Section - Simplified */}
+        <section className="py-20 md:py-24 bg-white" id="story">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row gap-16 items-center">
+            <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
               <div className="flex-1 space-y-6">
-                <span className="text-brand-orange font-bold uppercase tracking-wide text-sm">Our Story</span>
+                <span className="text-brand-green font-bold uppercase tracking-wide text-sm">Our Story</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-brand-charcoal leading-tight">
-                  Local Roots. <br className="hidden md:block" />
-                  Professional Standards.
+                  Local Roots. Professional Standards.
                 </h2>
                 <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                   <p>
@@ -74,26 +76,23 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <div className="flex-1 relative">
-                <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+              <div className="flex-1 relative w-full">
+                <div className="rounded-2xl overflow-hidden shadow-xl">
                   <img 
                     src="/images/service-trimming.jpg" 
                     alt="Grand Oaks Team at Work" 
-                    className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                    className="w-full h-auto object-cover"
                   />
                 </div>
-                {/* Decorative Elements */}
-                <div className="absolute -bottom-6 -right-6 w-full h-full bg-brand-green/10 rounded-2xl -z-10"></div>
-                <div className="absolute -top-6 -left-6 w-24 h-24 bg-brand-orange/20 rounded-full blur-2xl -z-10"></div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* What Makes Florida Tree Care Different */}
-        <section className="py-20 bg-brand-offwhite">
+        {/* What Makes Florida Tree Care Different - Simplified */}
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center mb-16">
+            <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-charcoal mb-6">
                 Florida Trees Require Florida Experience
               </h2>
@@ -102,25 +101,21 @@ export default function AboutPage() {
               </p>
             </div>
             
-            <div className="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100 max-w-4xl mx-auto">
-              <div className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="flex-shrink-0 bg-brand-green/10 p-6 rounded-full text-brand-green">
-                  <TreeDeciduous className="w-12 h-12" />
-                </div>
-                <div>
-                  <p className="text-lg text-gray-600 leading-relaxed">
-                    Our team is familiar with the tree species common throughout Pasco County — including oaks, pines, palms, and storm-sensitive growth — and we approach every job with the knowledge and care needed to keep your property safe and your trees healthy.
-                  </p>
-                </div>
+            <div className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center text-center md:text-left">
+              <div className="flex-shrink-0 bg-brand-green/10 p-5 rounded-full text-brand-green">
+                <TreeDeciduous className="w-10 h-10" />
               </div>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Our team is familiar with the tree species common throughout Pasco County — including oaks, pines, palms, and storm-sensitive growth — and we approach every job with the knowledge and care needed to keep your property safe and your trees healthy.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Our Approach Section */}
-        <section className="py-20 md:py-28 bg-white overflow-hidden">
+        {/* Our Approach Section - Simplified */}
+        <section className="py-20 md:py-24 bg-white overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row-reverse gap-16 items-center">
+            <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-center">
               <div className="flex-1 space-y-6">
                 <span className="text-brand-green font-bold uppercase tracking-wide text-sm">Our Approach</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-brand-charcoal leading-tight">
@@ -138,7 +133,7 @@ export default function AboutPage() {
                     "Honest recommendations from certified professionals"
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3">
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-green text-white flex items-center justify-center">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-green/10 text-brand-green flex items-center justify-center">
                         <CheckCircle2 className="w-4 h-4" />
                       </div>
                       <span className="text-lg font-medium text-brand-charcoal">{item}</span>
@@ -152,42 +147,36 @@ export default function AboutPage() {
               </div>
               
               <div className="flex-1 relative w-full">
-                <div className="relative aspect-video lg:aspect-square rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
+                <div className="rounded-2xl overflow-hidden shadow-xl bg-gray-100">
                   <img 
                     src="/images/service-removal.jpg" 
                     alt="Safety First Approach" 
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
-                    <div className="flex items-center gap-3 text-white">
-                      <Shield className="w-8 h-8 text-brand-orange" />
-                      <span className="font-bold text-xl">Licensed & Fully Insured</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Services Overview Section */}
+        {/* Services Overview Section - Cleaner Style */}
         <section className="py-20 bg-brand-charcoal text-white">
           <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Full-Service Tree & Property Clearing Solutions
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed">
-                We offer a complete range of services to meet the needs of homeowners, landowners, and contractors across Pasco County. Whether it’s one tree or an entire property, we bring the same level of professionalism to every job.
+                We offer a complete range of services to meet the needs of homeowners, landowners, and contractors across Pasco County.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {Object.entries(servicesData).map(([slug, service], i) => (
                 <Link key={slug} href={`/services/${slug}`}>
-                  <a className="block h-full bg-white/5 border border-white/10 hover:border-brand-green/50 hover:bg-white/10 rounded-xl p-8 transition-all duration-300 group">
-                    <div className="bg-brand-green/20 w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:text-white transition-colors text-brand-green">
-                      <service.icon className="w-7 h-7" />
+                  <a className="block h-full bg-white/5 border border-white/10 hover:border-brand-green hover:bg-white/10 rounded-xl p-8 transition-all duration-300 group">
+                    <div className="bg-brand-green w-12 h-12 rounded-full flex items-center justify-center mb-6 text-white">
+                      <service.icon className="w-6 h-6" />
                     </div>
                     <h3 className="text-xl font-bold mb-3 group-hover:text-brand-green transition-colors">{service.title}</h3>
                     <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -204,7 +193,7 @@ export default function AboutPage() {
         </section>
 
         {/* Why Homeowners Choose Grand Oaks */}
-        <section className="py-20 md:py-28 bg-brand-offwhite">
+        <section className="py-20 md:py-28 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-charcoal mb-4">
@@ -222,8 +211,8 @@ export default function AboutPage() {
                 { title: "Fast Scheduling", icon: Phone },
                 { title: "Complete Cleanup Included", icon: CheckCircle2 },
               ].map((feature, i) => (
-                <div key={i} className="bg-white p-6 rounded-xl shadow-md border border-gray-100 flex items-center gap-4 hover:shadow-lg transition-shadow">
-                  <div className="bg-brand-offwhite p-3 rounded-full text-brand-green">
+                <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 hover:shadow-md transition-shadow">
+                  <div className="bg-brand-green/10 p-3 rounded-full text-brand-green">
                     <feature.icon className="w-6 h-6" />
                   </div>
                   <span className="font-bold text-brand-charcoal text-lg">{feature.title}</span>
