@@ -271,40 +271,57 @@ export const servicesData = {
     heroSubheadline: "24/7 rapid response for storm damage and dangerous fallen trees — protecting your home and family.",
     icon: AlertTriangle,
     heroImage: "/images/service-emergency.jpg",
-    description: "When storms strike, we are ready. We prioritize emergencies involving structural damage, blocked driveways, or immediate safety hazards. Don't risk your safety trying to handle dangerous storm debris yourself.",
+    description: "Storm-damaged trees and sudden hazards require fast, professional attention. Whether a tree has fallen on your home, limbs are hanging dangerously overhead, or a driveway is blocked, emergency tree situations should never be handled without the proper equipment and training.\n\nGrand Oaks Property Maintenance provides emergency tree services throughout Pasco County with a focus on safety, rapid response, and professional cleanup. We assess the situation quickly, stabilize the hazard, and remove dangerous trees or debris to help you regain control after the storm.",
     features: [
-      "Fallen Trees on Structures",
+      "Fallen Trees on Homes or Structures",
+      "Storm-Damaged or Hanging Branches",
       "Leaning or Compromised Trees",
-      "Damaged or Overhanging Branches",
-      "Driveway/Road Blockage Clearance",
       "Hazardous Limb Removal",
-      "Crane-Assisted Removal",
-      "Tarping & Temporary Protection",
-      "Insurance Claim Documentation"
+      "Driveway or Road Blockage Clearing",
+      "Crane-Assisted Emergency Removal",
+      "Temporary Roof or Property Protection",
+      "Insurance Documentation Support"
     ],
     process: [
-      { title: "Emergency Dispatch", description: "Rapid response to urgent calls 24/7" },
-      { title: "Hazard Assessment", description: "Evaluating stability and electrical risks" },
-      { title: "Safe Stabilization", description: "Securing the tree to prevent further damage" },
-      { title: "Removal & Tarping", description: "Clearing the hazard and protecting the structure" }
+      { title: "Emergency Dispatch", description: "We respond rapidly to urgent calls involving safety hazards, structural damage, or blocked access." },
+      { title: "Hazard Assessment", description: "Our team evaluates tree stability, surrounding risks, and any nearby utility concerns before work begins." },
+      { title: "Safe Stabilization & Removal", description: "We secure the area and remove fallen or dangerous trees using professional rigging, cranes, and heavy equipment when needed." },
+      { title: "Debris Clearing & Cleanup", description: "Once the hazard is removed, we clear storm debris and leave the property safe, accessible, and cleaned up." }
     ],
+    processBody: "In an emergency, clear steps and fast action matter. Our team prioritizes safety first while working quickly to remove hazards and prevent further damage.",
     details: [
       {
-        head: "Immediate Response & Insurance Help",
-        body: "We have crews on standby during severe weather events to respond when you need us most. If a tree has damaged your home, we can safely remove it using cranes to prevent further collapse.\n\nWe also streamline your insurance claim by providing detailed photos, documentation, and working directly with adjusters.",
+        head: "Professional Storm Response You Can Trust",
+        body: "Emergency tree work involves serious risk, heavy equipment, and fast decision-making. Our licensed and insured team prioritizes safety, property protection, and clean, professional service during every storm response.\n\nWe can also help streamline the insurance process by providing photos and documentation when needed, so you have the information required to move forward with your claim.",
         highlights: [
-          "24/7 Storm Response",
+          "24/7 Storm Response Availability",
           "Crane & Heavy Equipment Ready",
-          "Insurance Direct Billing Available",
-          "Licensed & Fully Insured"
+          "Licensed & Fully Insured",
+          "Cleanup and Debris Removal Included"
         ]
       }
     ],
     faqs: [
-      { q: "Is emergency service more expensive?", a: "Emergency call-outs, especially after hours or during storms, may carry a surcharge due to the high risk and immediate mobilization required." },
-      { q: "A tree fell on my house, what do I do?", a: "Ensure everyone is safe, evacuate if necessary, call 911 if there are injuries or power lines down. Then call us. Do not try to remove it yourself." },
-      { q: "Do you work with insurance companies?", a: "Yes, we work with all major insurance carriers and can provide the documentation and invoices they need to process your claim." },
-      { q: "Can you cover my roof after removal?", a: "Yes, we can provide emergency tarping services to protect your home from water damage until roof repairs can be made." }
+      { 
+        q: "Is emergency tree service more expensive?", 
+        a: "Emergency services can sometimes involve additional cost depending on urgency, storm conditions, and the complexity of the removal. We always provide clear communication and upfront estimates whenever possible." 
+      },
+      { 
+        q: "A tree fell on my house — what should I do first?", 
+        a: "Your safety comes first. Stay clear of the area, avoid any downed power lines, and contact emergency services if needed. Once the area is safe, our team can respond quickly to assess the damage and remove the tree safely." 
+      },
+      { 
+        q: "Do you work with insurance companies?", 
+        a: "Yes. We can provide helpful documentation such as photos and removal details that may assist with your insurance claim. If adjusters are involved, we can help support the process to make things easier during a stressful time." 
+      },
+      { 
+        q: "Can you tarp or temporarily protect my roof after removal?", 
+        a: "In many emergency situations, temporary protection may be needed to prevent further water intrusion or damage. We can assist with stabilization and short-term solutions depending on the situation." 
+      },
+      {
+        q: "How fast can you respond after a storm?",
+        a: "We prioritize urgent hazards involving homes, blocked driveways, or immediate safety concerns. Response times depend on storm conditions, but our team is ready to help as quickly as possible throughout Pasco County."
+      }
     ]
   }
 };
