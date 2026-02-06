@@ -36,8 +36,8 @@ export default function ServicePage({ slug }: ServicePageProps) {
       
       <main>
         <ServiceHero 
-          title={service.title} 
-          subtitle={service.subtitle} 
+          title={service.heroHeadline} 
+          subtitle={service.heroSubheadline} 
           image={service.heroImage} 
         />
 

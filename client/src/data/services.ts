@@ -4,6 +4,8 @@ export const servicesData = {
   "tree-removal": {
     title: "Tree Removal",
     subtitle: "Safe, Precision Removal for Hazardous Trees",
+    heroHeadline: "Pasco County Tree Removal Experts",
+    heroSubheadline: "We remove dangerous, damaged, and unwanted trees safely — protecting your home, property, and landscaping.",
     icon: TreeDeciduous,
     heroImage: "/images/service-removal.jpg",
     description: "Tree removal is a technical process that requires skill, precision, and the right equipment. Whether you have a dead pine threatening your home or a large oak that needs to be taken down in sections, our certified team handles it safely.",
@@ -33,6 +35,8 @@ export const servicesData = {
   "tree-trimming": {
     title: "Tree Trimming",
     subtitle: "Promote Health, Safety & Aesthetics",
+    heroHeadline: "Pasco County Tree Trimming Experts",
+    heroSubheadline: "Expert pruning to promote tree health, safety, and aesthetics — performed by certified arborists.",
     icon: Scissors,
     heroImage: "/images/service-trimming.jpg",
     description: "Proper trimming isn't just about looks—it's vital for the health of your trees and the safety of your property. Our certified arborists make precise cuts that encourage strong growth and reduce wind resistance.",
@@ -62,6 +66,8 @@ export const servicesData = {
   "stump-grinding": {
     title: "Stump Grinding",
     subtitle: "Complete Removal for a Clean Landscape",
+    heroHeadline: "Pasco County Stump Grinding Experts",
+    heroSubheadline: "Complete stump removal to reclaim your yard and prevent pests — leaving your property clean and level.",
     icon: Axe,
     heroImage: "/images/service-stump.jpg",
     description: "Don't let an old stump ruin your curb appeal or become a home for termites. Our powerful grinders chew stumps down well below the surface, allowing you to reclaim your yard.",
@@ -91,6 +97,8 @@ export const servicesData = {
   "land-clearing": {
     title: "Land Clearing",
     subtitle: "Forestry Mulching & Site Preparation",
+    heroHeadline: "Pasco County Land Clearing Experts",
+    heroSubheadline: "Efficient lot clearing and forestry mulching — preparing your land for construction or usage.",
     icon: Tractor,
     heroImage: "/images/service-forestry.jpg",
     description: "Whether you're prepping for new construction or clearing overgrown pasture, our heavy-duty equipment gets the job done fast. We offer forestry mulching, which clears land without burning or hauling.",
@@ -120,6 +128,8 @@ export const servicesData = {
   "emergency-tree-service": {
     title: "Emergency Tree Service",
     subtitle: "24/7 Rapid Response for Storm Damage",
+    heroHeadline: "Pasco County Emergency Tree Experts",
+    heroSubheadline: "24/7 rapid response for storm damage and dangerous fallen trees — protecting your home and family.",
     icon: AlertTriangle,
     heroImage: "/images/service-emergency.jpg",
     description: "When storms strike, we are ready. We prioritize emergencies involving structural damage or blocked driveways. Don't risk your safety trying to handle dangerous storm debris yourself.",
