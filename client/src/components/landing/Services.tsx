@@ -18,7 +18,7 @@ const services = [
     desc: "Expert pruning to promote tree health, safety, and aesthetics, performed by certified arborists.",
     image: "/images/optimized/service-tree-trimming.webp",
     link: "/services/tree-trimming",
-    className: "object-[50%_40%]"
+    imageStyle: { objectPosition: "50% 45%" }
   },
   {
     title: "Stump Grinding",
@@ -31,14 +31,14 @@ const services = [
     desc: "Efficient lot clearing and forestry mulching for new construction, pasture restoration, or property usage.",
     image: "/images/optimized/service-land-clearing.webp",
     link: "/services/land-clearing",
-    className: "object-[50%_25%]"
+    imageStyle: { objectPosition: "50% 25%" }
   },
   {
     title: "Emergency Tree Services",
     desc: "24/7 rapid response for storm damage and dangerous fallen trees threatening your home or business.",
     image: "/images/optimized/service-emergency.webp",
     link: "/services/emergency-tree-service",
-    className: "object-[50%_25%]"
+    imageStyle: { objectPosition: "50% 25%" }
   }
 ];
 
@@ -64,10 +64,8 @@ export default function Services() {
                   <LazyImage
                     src={service.image}
                     alt={service.title}
-                    className={cn(
-                      "w-full h-full transition-transform duration-500 group-hover:scale-105",
-                      (service as any).className
-                    )}
+                    className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+                    style={(service as any).imageStyle}
                     data-testid={`img-service-${service.link.split('/').pop()}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>

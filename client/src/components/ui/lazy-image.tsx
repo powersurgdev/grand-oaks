@@ -5,13 +5,14 @@ interface LazyImageProps {
   src: string;
   alt: string;
   className?: string;
+  style?: React.CSSProperties;
   width?: number;
   height?: number;
   priority?: boolean;
   "data-testid"?: string;
 }
 
-export default function LazyImage({ src, alt, className, width, height, priority = false, "data-testid": testId }: LazyImageProps) {
+export default function LazyImage({ src, alt, className, style, width, height, priority = false, "data-testid": testId }: LazyImageProps) {
   const [loaded, setLoaded] = useState(false);
   const [inView, setInView] = useState(priority);
   const imgRef = useRef<HTMLDivElement>(null);
@@ -60,6 +61,7 @@ export default function LazyImage({ src, alt, className, width, height, priority
               "w-full h-full object-cover transition-opacity duration-500",
               loaded ? "opacity-100" : "opacity-0"
             )}
+            style={style}
           />
         </picture>
       )}
