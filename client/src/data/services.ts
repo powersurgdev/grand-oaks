@@ -99,17 +99,13 @@ export const servicesData = {
     processBody: "Tree trimming isn’t just about cutting branches — it’s about improving safety and supporting healthy growth. Our team follows a careful, arborist-led approach to ensure your trees are trimmed properly and responsibly.",
     details: [
       {
-        head: "Structural Pruning & Clearance",
-        body: "We correct structural defects in young trees and maintain the integrity of mature ones, preventing future failure during storms. Overhanging branches can damage roofs and allow pests access to your home — we safely prune these back to provide proper clearance while maintaining the tree's natural shape."
-      },
-      {
         head: "Safety, Licensing & Insurance",
-        body: "Tree trimming requires the same level of safety and expertise as removal. Improper cuts can damage trees or cause dangerous regrowth. Our certified team follows ANSI A300 pruning standards to ensure the job is done right.\n\nWe are fully licensed and insured, protecting your property throughout the entire process.",
+        body: "Tree trimming requires the same level of expertise and care as removal — especially when branches are near roofs, fences, or power lines. Our certified team follows professional pruning standards to keep your trees healthy, safe, and properly maintained.\n\nWe are fully licensed and insured, and every job includes complete cleanup so your property is left safe and clean when we’re done.",
         highlights: [
-          "Certified Arborist Standards",
+          "Certified Arborist Practices",
           "Licensed & Fully Insured",
-          "Property Protection Guaranteed",
-          "Professional Cleanup Included"
+          "Careful Work Around Homes & Structures",
+          "Full Cleanup Included Every Time"
         ]
       }
     ],
