@@ -8,7 +8,7 @@ export const servicesData = {
     heroSubheadline: "We remove dangerous, damaged, and unwanted trees safely — protecting your home, property, and landscaping.",
     icon: TreeDeciduous,
     heroImage: "/images/service-removal.jpg",
-    description: "Tree removal is a technical process that requires skill, precision, and the right equipment. Whether you have a dead pine threatening your home or a large oak that needs to be taken down in sections, our certified team handles it safely.",
+    description: "Tree removal is often necessary when a tree becomes unsafe, damaged, or too close to your home. Whether you’re dealing with a dead tree, storm damage, or a large oak that needs to be removed in sections, our certified arborists handle the job safely, efficiently, and with the right equipment.",
     features: [
       "Hazardous Tree Removal",
       "Large Tree Dismantling",
