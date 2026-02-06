@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const backgroundImages = [
-  { src: "/images/optimized/gallery-crane-setup.webp", position: "center 70%" },
-  { src: "/images/optimized/gallery-climber-action.webp", position: "center 40%" },
+  { src: "/images/optimized/gallery-crane-setup.webp", position: "center 30%" },
+  { src: "/images/optimized/gallery-climber-action.webp", position: "center 20%" },
   { src: "/images/optimized/gallery-team-work.webp", position: "center center" },
 ];
 
