@@ -17,7 +17,7 @@ const services = [
     desc: "Expert pruning to promote tree health, safety, and aesthetics, performed by certified arborists.",
     image: "/images/service-tree-trimming.png",
     link: "/services/tree-trimming",
-    className: "object-top"
+    className: "object-[50%_25%]"
   },
   {
     title: "Stump Grinding",
