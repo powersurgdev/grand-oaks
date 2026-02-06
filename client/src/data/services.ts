@@ -167,12 +167,8 @@ export const servicesData = {
     processBody: "Stump grinding is a straightforward process, but it requires the right equipment and careful planning to protect your property. Our team ensures every job is handled safely, cleanly, and efficiently from start to finish.",
     details: [
       {
-        head: "Reclaim Your Yard",
-        body: "Stumps are tripping hazards, obstacles for mowing, and magnets for pests like termites and ants. Once removed, you can lay sod, plant a garden, or simply enjoy a flat, safe lawn. Our compact equipment can fit through standard gates, bringing big power to backyards without damaging your fence."
-      },
-      {
-        head: "Safety & Professionalism",
-        body: "Stump grinding involves powerful machinery and flying debris. We take every precaution to shield your home and windows during the process.\n\nAs a fully licensed and insured company, we guarantee professional service that prioritizes your property's safety.",
+        head: "Reclaim Your Yard Safely",
+        body: "Stumps are tripping hazards, obstacles for mowing, and magnets for pests like termites and ants. Once removed, you can lay sod, plant a garden, or simply enjoy a flat, safe lawn. Our compact equipment can fit through standard gates, bringing big power to backyards without damaging your fence.\n\nStump grinding involves powerful machinery and flying debris. We take every precaution to shield your home and windows during the process. As a fully licensed and insured company, we guarantee professional service that prioritizes your property's safety.",
         highlights: [
           "Underground Utility Awareness",
           "Property Shielding & Protection",
