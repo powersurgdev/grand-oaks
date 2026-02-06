@@ -120,7 +120,7 @@ export default function ServicePage({ slug }: ServicePageProps) {
               </div>
 
               {/* Service Gallery */}
-              <ServicePageGallery />
+              <ServicePageGallery slug={slug} />
 
               {/* Clean Contact Section */}
               <ServiceContact />
