@@ -27,12 +27,14 @@ export const servicesData = {
     ],
     details: [
       {
-        head: "Safety First Approach",
-        body: "We assess every tree's lean, health, and surroundings before making a single cut. Our team uses professional rigging to lower heavy limbs safely, protecting your home and landscape."
-      },
-      {
-        head: "Licensed & Insured",
-        body: "Never risk hiring an unlicensed amateur. We carry comprehensive liability and workers' compensation insurance for your peace of mind."
+        head: "Safety, Licensing & Insurance",
+        body: "Tree removal is serious work — and safety is always our top priority. Every job is carefully planned to protect your home, your property, and everyone on site. Our team uses professional equipment, proven rigging methods, and industry best practices to ensure the removal is done correctly from start to finish.\n\nAs certified arborists, we don’t just cut trees — we assess risk, tree health, and the safest approach before any work begins.\n\nGrand Oaks Property Maintenance is fully licensed and insured, including liability coverage and workers’ compensation, so you can feel confident knowing you’re protected throughout the entire process.",
+        highlights: [
+          "Certified Arborist Team",
+          "Licensed & Fully Insured",
+          "Professional Safety Equipment & Rigging",
+          "Protecting Homes, Yards & Surrounding Structures"
+        ]
       }
     ],
     faqs: [

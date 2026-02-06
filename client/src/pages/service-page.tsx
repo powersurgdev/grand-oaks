@@ -94,7 +94,19 @@ export default function ServicePage({ slug }: ServicePageProps) {
                 {service.details.map((detail, i) => (
                   <div key={i} className="mb-8">
                     <h3 className="text-2xl font-bold text-brand-charcoal mb-3">{detail.head}</h3>
-                    <p className="leading-relaxed">{detail.body}</p>
+                    <p className="leading-relaxed whitespace-pre-wrap">{detail.body}</p>
+                    
+                    {/* Optional Highlights for Details */}
+                    {(detail as any).highlights && (
+                      <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {(detail as any).highlights.map((highlight: string, idx: number) => (
+                          <li key={idx} className="flex items-center gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" />
+                            <span className="font-semibold text-brand-charcoal">{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 ))}
               </div>
