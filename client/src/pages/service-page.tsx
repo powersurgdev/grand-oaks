@@ -52,7 +52,7 @@ export default function ServicePage({ slug }: ServicePageProps) {
                 <h2 className="text-3xl font-bold text-brand-charcoal mb-6">
                   Expert {service.title} in Pasco County
                 </h2>
-                <p className="text-lg leading-relaxed mb-8">
+                <p className="text-lg leading-relaxed mb-8 whitespace-pre-wrap">
                   {service.description}
                 </p>
 
