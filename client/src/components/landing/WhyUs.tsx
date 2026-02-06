@@ -55,7 +55,7 @@ export default function WhyUs() {
           {/* Right Side: Image */}
           <div className="relative hidden lg:block h-[600px] rounded-3xl overflow-hidden shadow-2xl">
             <img 
-              src="/images/hero-bg.jpg" 
+              src="/images/why-us-team.png" 
               alt="Team at work" 
               className="w-full h-full object-cover"
             />
