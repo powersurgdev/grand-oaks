@@ -37,7 +37,14 @@ export default function ServiceHero({ title, subtitle, image }: ServiceHeroProps
             className="w-full sm:w-auto h-12 md:h-16 text-lg font-bold bg-brand-orange hover:bg-brand-orange/90 text-white rounded-xl shadow-xl transition-transform active:scale-95"
             asChild
           >
-            <a href="#estimate-form">Get Your Free Estimate</a>
+            <a href="tel:8138607086">Call Now (813) 860-7086</a>
+          </Button>
+          <Button 
+            size="xl" 
+            className="w-full sm:w-auto h-12 md:h-16 text-lg font-bold bg-white text-brand-green hover:bg-gray-100 rounded-xl shadow-xl transition-transform active:scale-95"
+            asChild
+          >
+            <a href="#estimate-form">Get Free Estimate</a>
           </Button>
         </div>
 
