@@ -7,7 +7,7 @@ export const servicesData = {
     heroHeadline: "Pasco County Tree Removal Experts",
     heroSubheadline: "We remove dangerous, damaged, and unwanted trees safely — protecting your home, property, and landscaping.",
     icon: TreeDeciduous,
-    heroImage: "/images/service-removal.jpg",
+    heroImage: "/images/service-tree-removal.jpg",
     description: "Tree removal is often necessary when a tree becomes unsafe, damaged, or too close to your home. Whether you’re dealing with a dead tree, storm damage, or a large oak that needs to be removed in sections, our certified arborists handle the job safely, efficiently, and with the right equipment.",
     features: [
       "Dead or Dying Tree Removal",

@@ -7,7 +7,7 @@ const services = [
   {
     title: "Tree Removal",
     desc: "Safe removal of hazardous, dead, or unwanted trees of any size using professional climbing or crane techniques.",
-    image: "/images/service-removal.jpg",
+    image: "/images/service-tree-removal.jpg",
     link: "/services/tree-removal"
   },
   {
