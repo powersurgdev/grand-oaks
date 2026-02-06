@@ -10,11 +10,14 @@ export const servicesData = {
     heroImage: "/images/service-removal.jpg",
     description: "Tree removal is often necessary when a tree becomes unsafe, damaged, or too close to your home. Whether you’re dealing with a dead tree, storm damage, or a large oak that needs to be removed in sections, our certified arborists handle the job safely, efficiently, and with the right equipment.",
     features: [
-      "Hazardous Tree Removal",
-      "Large Tree Dismantling",
-      "Crane-Assisted Removal",
-      "Deadwood Removal",
-      "Close-Quarters Removal"
+      "Dead or Dying Tree Removal",
+      "Storm-Damaged Tree Removal",
+      "Hazardous Trees Near Homes or Structures",
+      "Large Tree Removal & Sectional Dismantling",
+      "Crane-Assisted Tree Removal",
+      "Tight-Space / Close-Quarters Removal",
+      "Trees Near Power Lines or Fences",
+      "Emergency Tree Removal Services"
     ],
     details: [
       {
