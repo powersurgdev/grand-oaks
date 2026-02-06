@@ -114,10 +114,34 @@ export const servicesData = {
       }
     ],
     faqs: [
-      { q: "What is the best time of year to trim trees?", a: "While we can trim year-round in Florida, late winter or early spring is often ideal for many species to promote vigorous spring growth." },
-      { q: "Can you trim trees near power lines?", a: "We can handle service drops to your home. For high-voltage main lines, we coordinate with the utility company." },
-      { q: "Will trimming hurt my tree?", a: "Not when done correctly. Improper 'topping' hurts trees. Our certified pruning techniques actually extend the life and health of your trees." },
-      { q: "Do you remove the trimmings?", a: "Yes, we chip and remove all debris, leaving your yard cleaner than we found it." }
+      { 
+        q: "How often should trees be trimmed?", 
+        a: "Most trees benefit from routine trimming every few years, depending on the species, age, and location. Regular pruning helps maintain structure, prevent storm damage, and support healthy growth.\n\nOur team can recommend the right schedule based on your specific trees and property." 
+      },
+      { 
+        q: "Is tree trimming mainly for appearance or safety?", 
+        a: "Both. Proper trimming improves the look of your landscape, but it also plays a major role in safety. Removing dead or overextended limbs reduces the risk of falling branches during storms or high winds." 
+      },
+      { 
+        q: "Can trimming help prevent storm damage?", 
+        a: "Yes — trimming is one of the best preventative steps homeowners can take before hurricane season. Reducing heavy limbs and improving canopy balance can significantly lower the chance of breakage during severe weather." 
+      },
+      { 
+        q: "Will trimming harm my tree?", 
+        a: "Not when it’s done correctly. Improper trimming can damage a tree, which is why certified arborist techniques are so important.\n\nWe use professional pruning methods that protect tree health while improving structure and safety." 
+      },
+      { 
+        q: "Do you clean up the branches and debris afterward?", 
+        a: "Yes — cleanup is always included. We remove all trimmed limbs and debris and leave your property clean and safe when the job is complete." 
+      },
+      { 
+        q: "Can you trim trees near power lines or buildings?", 
+        a: "Yes. Many trimming jobs require careful precision, especially around homes, fences, driveways, or utility lines.\n\nOur team has the equipment and experience to safely handle trimming in tight or sensitive areas." 
+      },
+      { 
+        q: "What’s the difference between tree trimming and pruning?", 
+        a: "Trimming generally focuses on managing overgrowth and improving safety, while pruning is more targeted toward tree health and structure.\n\nOur certified arborists provide both and choose the right approach based on the tree’s needs." 
+      }
     ]
   },
   "stump-grinding": {
