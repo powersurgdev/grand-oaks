@@ -15,7 +15,7 @@ const galleryImages = [
   // Row 3
   { src: "/images/gallery-crane-lift.png", alt: "Sectional Removal", span: "col-span-1 md:col-span-1" },
   { src: "/images/gallery-climber-action.png", alt: "Expert Climbing", span: "col-span-1 md:col-span-1", className: "object-[50%_25%]" },
-  { src: "/images/service-removal.jpg", alt: "Tree removal", span: "col-span-1 md:col-span-1" },
+  { src: "/images/gallery-stump-removal.png", alt: "Stump Removal", span: "col-span-1 md:col-span-1" },
 ];
 
 export default function Gallery() {
