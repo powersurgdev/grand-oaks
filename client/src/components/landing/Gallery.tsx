@@ -5,7 +5,7 @@ const galleryImages = [
   { src: "/images/gallery-climbing.jpg", alt: "Arborist climbing", span: "col-span-1 md:col-span-1 row-span-2" },
   { src: "/images/gallery-crane.jpg", alt: "Crane removal", span: "col-span-1 md:col-span-1" },
   { src: "/images/gallery-stump.jpg", alt: "Stump grinding", span: "col-span-1 md:col-span-1" },
-  { src: "/images/gallery-crew.jpg", alt: "Tree crew", span: "col-span-1 md:col-span-1" },
+  { src: "/images/gallery-team-work.png", alt: "Tree crew", span: "col-span-1 md:col-span-1" },
   
   // Row 2
   { src: "/images/gallery-pruning.jpg", alt: "Precision pruning", span: "col-span-1 md:col-span-1 row-span-2" },
