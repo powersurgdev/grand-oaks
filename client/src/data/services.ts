@@ -79,28 +79,44 @@ export const servicesData = {
     heroSubheadline: "Expert pruning to promote tree health, safety, and aesthetics — performed by certified arborists.",
     icon: Scissors,
     heroImage: "/images/service-trimming.jpg",
-    description: "Proper trimming isn't just about looks—it's vital for the health of your trees and the safety of your property. Our certified arborists make precise cuts that encourage strong growth and reduce wind resistance.",
+    description: "Proper trimming isn't just about looks—it's vital for the health of your trees and the safety of your property. Our certified arborists make precise cuts that encourage strong growth, reduce wind resistance, and clear hazards away from your home.",
     features: [
       "Canopy Raising & Lifting",
-      "Deadwood Pruning",
+      "Deadwood Pruning & Removal",
       "Structure Clearance (Roof/Power Lines)",
-      "Crown Thinning",
-      "Storm Damage Prevention"
+      "Crown Thinning & Shaping",
+      "Storm Damage Prevention",
+      "Young Tree Structural Pruning",
+      "Palm Tree Trimming",
+      "View Enhancement"
+    ],
+    process: [
+      { title: "Tree Health Assessment", description: "Identifying structural issues and growth patterns" },
+      { title: "Strategic Planning", description: "Determining the best cuts for long-term health" },
+      { title: "Precision Pruning", description: "Using professional climbing and cutting techniques" },
+      { title: "Cleanup & Recycling", description: "Removing all debris for a pristine yard" }
     ],
     details: [
       {
-        head: "Structural Pruning",
-        body: "We correct structural defects in young trees and maintain the integrity of mature ones, preventing future failure during storms."
+        head: "Structural Pruning & Clearance",
+        body: "We correct structural defects in young trees and maintain the integrity of mature ones, preventing future failure during storms. Overhanging branches can damage roofs and allow pests access to your home — we safely prune these back to provide proper clearance while maintaining the tree's natural shape."
       },
       {
-        head: "Roof & Service Line Clearance",
-        body: "Overhanging branches can damage roofs and allow pests access to your home. We safely prune these back to provide proper clearance."
+        head: "Safety, Licensing & Insurance",
+        body: "Tree trimming requires the same level of safety and expertise as removal. Improper cuts can damage trees or cause dangerous regrowth. Our certified team follows ANSI A300 pruning standards to ensure the job is done right.\n\nWe are fully licensed and insured, protecting your property throughout the entire process.",
+        highlights: [
+          "Certified Arborist Standards",
+          "Licensed & Fully Insured",
+          "Property Protection Guaranteed",
+          "Professional Cleanup Included"
+        ]
       }
     ],
     faqs: [
       { q: "What is the best time of year to trim trees?", a: "While we can trim year-round in Florida, late winter or early spring is often ideal for many species to promote vigorous spring growth." },
       { q: "Can you trim trees near power lines?", a: "We can handle service drops to your home. For high-voltage main lines, we coordinate with the utility company." },
-      { q: "Will trimming hurt my tree?", a: "Not when done correctly. Improper 'topping' hurts trees. Our certified pruning techniques actually extend the life and health of your trees." }
+      { q: "Will trimming hurt my tree?", a: "Not when done correctly. Improper 'topping' hurts trees. Our certified pruning techniques actually extend the life and health of your trees." },
+      { q: "Do you remove the trimmings?", a: "Yes, we chip and remove all debris, leaving your yard cleaner than we found it." }
     ]
   },
   "stump-grinding": {
@@ -110,28 +126,44 @@ export const servicesData = {
     heroSubheadline: "Complete stump removal to reclaim your yard and prevent pests — leaving your property clean and level.",
     icon: Axe,
     heroImage: "/images/service-stump.jpg",
-    description: "Don't let an old stump ruin your curb appeal or become a home for termites. Our powerful grinders chew stumps down well below the surface, allowing you to reclaim your yard.",
+    description: "Don't let an old stump ruin your curb appeal or become a home for termites. Our powerful grinders chew stumps down well below the surface, allowing you to reclaim your yard for sod, planting, or construction.",
     features: [
       "Deep Grinding (6-12 inches below grade)",
       "Surface Root Chasing",
       "Mulch Backfilling",
-      "Tight-Access Grinding",
-      "Termite Prevention"
+      "Tight-Access Grinding (36\" gates)",
+      "Termite Prevention",
+      "Sod-Ready Preparation",
+      "Multiple Stump Discounts",
+      "Large Root System Removal"
+    ],
+    process: [
+      { title: "Utility Check", description: "Ensuring no underground lines are in the grind zone" },
+      { title: "Deep Grinding", description: "Removing the main stump 6-12 inches below grade" },
+      { title: "Root Chasing", description: "Grinding surface roots for a level finish" },
+      { title: "Backfill & Cleanup", description: "Filling the hole with mulch or soil as requested" }
     ],
     details: [
       {
         head: "Reclaim Your Yard",
-        body: "Stumps are tripping hazards and obstacles for mowing. Once removed, you can lay sod, plant a garden, or just enjoy a flat, safe lawn."
+        body: "Stumps are tripping hazards, obstacles for mowing, and magnets for pests like termites and ants. Once removed, you can lay sod, plant a garden, or simply enjoy a flat, safe lawn. Our compact equipment can fit through standard gates, bringing big power to backyards without damaging your fence."
       },
       {
-        head: "The Process",
-        body: "Our machine turns the stump into wood mulch. We can leave this mulch for your garden beds or haul it away for an additional fee."
+        head: "Safety & Professionalism",
+        body: "Stump grinding involves powerful machinery and flying debris. We take every precaution to shield your home and windows during the process.\n\nAs a fully licensed and insured company, we guarantee professional service that prioritizes your property's safety.",
+        highlights: [
+          "Underground Utility Awareness",
+          "Property Shielding & Protection",
+          "Licensed & Insured Operators",
+          "Complete Debris Management"
+        ]
       }
     ],
     faqs: [
       { q: "How deep do you grind the stump?", a: "Typically 6 to 12 inches below grade, which is sufficient for growing grass or planting small shrubs." },
-      { q: "What happens to the wood chips?", a: "Grinding creates a pile of mulch. We can rake it back into the hole, or haul it away if you prefer." },
-      { q: "Can you grind a stump in a fenced backyard?", a: "Yes, we have compact grinders that fit through standard 36-inch gates." }
+      { q: "What happens to the wood chips?", a: "Grinding creates a pile of mulch. We can rake it back into the hole to settle, or haul it away for a clean finish if requested." },
+      { q: "Can you grind a stump in a fenced backyard?", a: "Yes, we have compact grinders that fit through standard 36-inch gates." },
+      { q: "Will the stump grow back?", a: "No. Grinding the stump and major root ball effectively kills the tree system so it cannot regrow." }
     ]
   },
   "land-clearing": {
@@ -141,28 +173,44 @@ export const servicesData = {
     heroSubheadline: "Efficient lot clearing and forestry mulching — preparing your land for construction or usage.",
     icon: Tractor,
     heroImage: "/images/service-forestry.jpg",
-    description: "Whether you're prepping for new construction or clearing overgrown pasture, our heavy-duty equipment gets the job done fast. We offer forestry mulching, which clears land without burning or hauling.",
+    description: "Whether you're prepping for new construction or clearing overgrown pasture, our heavy-duty equipment gets the job done fast. We offer forestry mulching, which clears land without burning or hauling, returning nutrients to the soil.",
     features: [
       "Forestry Mulching",
       "Underbrush Removal",
       "Lot Clearing for Construction",
       "Fence Line Clearing",
-      "Invasive Species Removal"
+      "Invasive Species Removal",
+      "Right-of-Way Maintenance",
+      "Pasture Restoration",
+      "Selective Tree Retention"
+    ],
+    process: [
+      { title: "Site Consultation", description: "Defining boundaries and trees to save" },
+      { title: "Permitting Assistance", description: "Navigating local clearing regulations" },
+      { title: "Forestry Mulching", description: "Grinding vegetation into beneficial mulch" },
+      { title: "Final Grading", description: "Leaving a smooth, manageable surface" }
     ],
     details: [
       {
         head: "Eco-Friendly Forestry Mulching",
-        body: "This method grinds vegetation right where it stands, leaving a nutrient-rich layer of mulch. It prevents erosion and eliminates the need for expensive hauling or burning permits."
+        body: "Forestry mulching is the modern, eco-friendly alternative to 'push and burn' clearing. Our machines grind vegetation right where it stands, leaving a nutrient-rich layer of mulch that suppresses weeds and prevents erosion. This method eliminates hauling costs and requires no burning permits."
       },
       {
-        head: "Site Prep Ready",
-        body: "We leave your land ready for the next step—whether that's a foundation, a driveway, or just a beautiful open view."
+        head: "Project Safety & Compliance",
+        body: "Land clearing often involves heavy machinery and complex regulations. We handle the logistics so you don't have to.\n\nFrom permitting to safe equipment operation, Grand Oaks Property Maintenance is fully licensed and insured to handle projects of any size.",
+        highlights: [
+          "Efficient Heavy Equipment",
+          "No Burning Required",
+          "Erosion Control Benefits",
+          "Licensed & Fully Insured"
+        ]
       }
     ],
     faqs: [
       { q: "Do I need a permit for land clearing?", a: "Often yes, especially for larger lots or protected trees. We can assist with the permitting process in Pasco County." },
       { q: "Is forestry mulching cheaper than bulldozing?", a: "Generally, yes. Because there's no hauling or tipping fees, and it's a single-step process, it's often more cost-effective and faster." },
-      { q: "Can you selectively clear trees?", a: "Absolutely. We can mark and save desirable trees while clearing the underbrush around them." }
+      { q: "Can you selectively clear trees?", a: "Absolutely. We can mark and save desirable trees (like Grand Oaks) while clearing the underbrush around them." },
+      { q: "What happens to the mulch?", a: "It stays on site as a ground cover, which helps retain soil moisture and prevents immediate weed regrowth." }
     ]
   },
   "emergency-tree-service": {
@@ -172,28 +220,40 @@ export const servicesData = {
     heroSubheadline: "24/7 rapid response for storm damage and dangerous fallen trees — protecting your home and family.",
     icon: AlertTriangle,
     heroImage: "/images/service-emergency.jpg",
-    description: "When storms strike, we are ready. We prioritize emergencies involving structural damage or blocked driveways. Don't risk your safety trying to handle dangerous storm debris yourself.",
+    description: "When storms strike, we are ready. We prioritize emergencies involving structural damage, blocked driveways, or immediate safety hazards. Don't risk your safety trying to handle dangerous storm debris yourself.",
     features: [
       "Fallen Trees on Structures",
       "Leaning or Compromised Trees",
       "Damaged or Overhanging Branches",
       "Driveway/Road Blockage Clearance",
-      "Hazardous Limb Removal"
+      "Hazardous Limb Removal",
+      "Crane-Assisted Removal",
+      "Tarping & Temporary Protection",
+      "Insurance Claim Documentation"
+    ],
+    process: [
+      { title: "Emergency Dispatch", description: "Rapid response to urgent calls 24/7" },
+      { title: "Hazard Assessment", description: "Evaluating stability and electrical risks" },
+      { title: "Safe Stabilization", description: "Securing the tree to prevent further damage" },
+      { title: "Removal & Tarping", description: "Clearing the hazard and protecting the structure" }
     ],
     details: [
       {
-        head: "Immediate Response",
-        body: "We have crews on standby during severe weather events. We can safely remove trees from roofs using cranes to prevent further damage."
-      },
-      {
-        head: "Insurance Documentation",
-        body: "We take detailed photos and provide professional invoices to help streamline your homeowner's insurance claim."
+        head: "Immediate Response & Insurance Help",
+        body: "We have crews on standby during severe weather events to respond when you need us most. If a tree has damaged your home, we can safely remove it using cranes to prevent further collapse.\n\nWe also streamline your insurance claim by providing detailed photos, documentation, and working directly with adjusters.",
+        highlights: [
+          "24/7 Storm Response",
+          "Crane & Heavy Equipment Ready",
+          "Insurance Direct Billing Available",
+          "Licensed & Fully Insured"
+        ]
       }
     ],
     faqs: [
       { q: "Is emergency service more expensive?", a: "Emergency call-outs, especially after hours or during storms, may carry a surcharge due to the high risk and immediate mobilization required." },
       { q: "A tree fell on my house, what do I do?", a: "Ensure everyone is safe, evacuate if necessary, call 911 if there are injuries or power lines down. Then call us. Do not try to remove it yourself." },
-      { q: "Do you work with insurance companies?", a: "Yes, we work with all major insurance carriers and can provide the documentation they need." }
+      { q: "Do you work with insurance companies?", a: "Yes, we work with all major insurance carriers and can provide the documentation and invoices they need to process your claim." },
+      { q: "Can you cover my roof after removal?", a: "Yes, we can provide emergency tarping services to protect your home from water damage until roof repairs can be made." }
     ]
   }
 };
