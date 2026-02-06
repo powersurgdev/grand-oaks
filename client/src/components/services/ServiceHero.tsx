@@ -23,10 +23,6 @@ export default function ServiceHero({ title, subtitle, image }: ServiceHeroProps
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center mt-20 md:mt-0">
-        <Badge className="bg-brand-orange hover:bg-brand-orange text-white border-none px-4 py-1.5 text-sm font-bold mb-8 uppercase tracking-wider shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-700">
-          Pasco County Tree Services
-        </Badge>
-        
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 drop-shadow-lg max-w-5xl mx-auto leading-tight animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
           {title}
         </h1>
