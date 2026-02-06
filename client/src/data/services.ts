@@ -147,23 +147,24 @@ export const servicesData = {
     heroSubheadline: "Complete stump removal to reclaim your yard and prevent pests — leaving your property clean and level.",
     icon: Axe,
     heroImage: "/images/service-stump.jpg",
-    description: "Don't let an old stump ruin your curb appeal or become a home for termites. Our powerful grinders chew stumps down well below the surface, allowing you to reclaim your yard for sod, planting, or construction.",
+    description: "Stump grinding is the most effective way to remove leftover tree stumps without tearing up your entire yard. Whether the stump is from a recent removal or has been sitting for years, grinding eliminates the visible stump and helps prevent pests, regrowth, and landscaping obstacles.\n\nOur Pasco County team uses professional-grade equipment to safely grind stumps below ground level, leaving your property cleaner, safer, and ready for sod, planting, or future projects.\n\nIf you want the job done right — with minimal disruption and full cleanup — we’re here to help.",
     features: [
-      "Deep Grinding (6-12 inches below grade)",
-      "Surface Root Chasing",
-      "Mulch Backfilling",
-      "Tight-Access Grinding (36\" gates)",
-      "Termite Prevention",
-      "Sod-Ready Preparation",
-      "Multiple Stump Discounts",
-      "Large Root System Removal"
+      "Stump Removal After Tree Removal",
+      "Grinding for Sod or Landscaping Projects",
+      "Tripping Hazards in Yards or Walkways",
+      "Stumps Attracting Termites or Pests",
+      "Surface Root Grinding for a Level Finish",
+      "Tight Backyard Access (Fenced Properties)",
+      "Multiple Stump Grinding Discounts",
+      "Preparation for Construction or Driveways"
     ],
     process: [
-      { title: "Utility Check", description: "Ensuring no underground lines are in the grind zone" },
-      { title: "Deep Grinding", description: "Removing the main stump 6-12 inches below grade" },
-      { title: "Root Chasing", description: "Grinding surface roots for a level finish" },
-      { title: "Backfill & Cleanup", description: "Filling the hole with mulch or soil as requested" }
+      { title: "Site & Utility Check", description: "We confirm the area is clear and identify any underground utilities before grinding begins." },
+      { title: "Deep Stump Grinding", description: "We grind the stump down below the surface — typically 6–12 inches — depending on your plans for the area." },
+      { title: "Root & Surface Leveling", description: "If needed, we grind exposed surface roots to create a smoother, more usable finish." },
+      { title: "Backfill & Cleanup", description: "We clean up all debris and can backfill the area with mulch or soil so it’s ready for the next step." }
     ],
+    processBody: "Stump grinding is a straightforward process, but it requires the right equipment and careful planning to protect your property. Our team ensures every job is handled safely, cleanly, and efficiently from start to finish.",
     details: [
       {
         head: "Reclaim Your Yard",
@@ -181,10 +182,30 @@ export const servicesData = {
       }
     ],
     faqs: [
-      { q: "How deep do you grind the stump?", a: "Typically 6 to 12 inches below grade, which is sufficient for growing grass or planting small shrubs." },
-      { q: "What happens to the wood chips?", a: "Grinding creates a pile of mulch. We can rake it back into the hole to settle, or haul it away for a clean finish if requested." },
-      { q: "Can you grind a stump in a fenced backyard?", a: "Yes, we have compact grinders that fit through standard 36-inch gates." },
-      { q: "Will the stump grow back?", a: "No. Grinding the stump and major root ball effectively kills the tree system so it cannot regrow." }
+      { 
+        q: "How deep do you grind the stump?", 
+        a: "Most stumps are ground approximately 6–12 inches below ground level, which is ideal for covering with soil, planting grass, or completing basic landscaping.\n\nIf you have specific plans for the area, we can recommend the right depth during your estimate." 
+      },
+      { 
+        q: "What happens to the wood chips after grinding?", 
+        a: "Stump grinding produces natural wood mulch and chips. Many homeowners choose to keep the chips for landscaping, while others prefer removal or backfilling.\n\nWe’ll go over the best option for your yard before the job begins." 
+      },
+      { 
+        q: "Can you grind a stump in a fenced backyard?", 
+        a: "Yes. Our equipment can access many residential backyards, including properties with standard gate openings.\n\nIf access is tight, we’ll evaluate the space and confirm the best approach during your estimate." 
+      },
+      { 
+        q: "Will the stump grow back after grinding?", 
+        a: "In most cases, grinding prevents regrowth by removing the stump well below the surface. While certain tree species may attempt minor sprouting, stump grinding is one of the most effective solutions for long-term removal.\n\nWe can also discuss additional options if regrowth prevention is a concern." 
+      },
+      {
+        q: "Do you offer stump grinding as an add-on service?",
+        a: "Yes — stump grinding is a great add-on after tree removal. It’s the best way to fully clear the area, improve curb appeal, and prepare your yard for future landscaping or construction."
+      },
+      {
+        q: "Is cleanup included with stump grinding?",
+        a: "Absolutely. We take pride in leaving your property clean and safe once the work is complete. Cleanup is always included, and we’ll make sure the area is ready for whatever comes next."
+      }
     ]
   },
   "land-clearing": {
