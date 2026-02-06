@@ -211,44 +211,57 @@ export const servicesData = {
     heroSubheadline: "Efficient lot clearing and forestry mulching — preparing your land for construction or usage.",
     icon: Tractor,
     heroImage: "/images/service-forestry.jpg",
-    description: "Whether you're prepping for new construction or clearing overgrown pasture, our heavy-duty equipment gets the job done fast. We offer forestry mulching, which clears land without burning or hauling, returning nutrients to the soil.",
+    description: "Land clearing is the first step in transforming a property — whether you’re building a home, opening up pasture, clearing fence lines, or removing thick underbrush. Done properly, it improves access, safety, and long-term land usability.\n\nGrand Oaks Property Maintenance provides professional land clearing services throughout Pasco County, using heavy-duty equipment and forestry mulching to clear vegetation efficiently while minimizing disruption to the land.\n\nFrom small residential lots to larger acreage projects, we tailor every job to your goals and property needs.",
     features: [
-      "Forestry Mulching",
-      "Underbrush Removal",
-      "Lot Clearing for Construction",
-      "Fence Line Clearing",
+      "Forestry Mulching & Underbrush Removal",
+      "Lot Clearing for New Construction",
+      "Fence Line & Property Boundary Clearing",
+      "Pasture Restoration & Overgrowth Cleanup",
       "Invasive Species Removal",
       "Right-of-Way Maintenance",
-      "Pasture Restoration",
-      "Selective Tree Retention"
+      "Selective Clearing With Tree Retention",
+      "Access Clearing for Driveways or Equipment"
     ],
     process: [
-      { title: "Site Consultation", description: "Defining boundaries and trees to save" },
-      { title: "Permitting Assistance", description: "Navigating local clearing regulations" },
-      { title: "Forestry Mulching", description: "Grinding vegetation into beneficial mulch" },
-      { title: "Final Grading", description: "Leaving a smooth, manageable surface" }
+      { title: "Site Consultation", description: "We walk the property, identify boundaries, and discuss your goals for the land." },
+      { title: "Clearing Plan & Permitting Guidance", description: "If local regulations apply, we help you understand requirements and plan accordingly." },
+      { title: "Forestry Mulching or Clearing Execution", description: "We clear vegetation using professional equipment, grinding material on-site when appropriate." },
+      { title: "Final Finish & Property Readiness", description: "We leave the land manageable, accessible, and ready for the next phase — whether that’s building, fencing, or landscaping." }
     ],
+    processBody: "Every land clearing project starts with a plan. Our team works with you to define the scope, protect valuable trees, and ensure the job is completed safely and efficiently.",
     details: [
       {
-        head: "Eco-Friendly Forestry Mulching",
-        body: "Forestry mulching is the modern, eco-friendly alternative to 'push and burn' clearing. Our machines grind vegetation right where it stands, leaving a nutrient-rich layer of mulch that suppresses weeds and prevents erosion. This method eliminates hauling costs and requires no burning permits."
-      },
-      {
-        head: "Project Safety & Compliance",
-        body: "Land clearing often involves heavy machinery and complex regulations. We handle the logistics so you don't have to.\n\nFrom permitting to safe equipment operation, Grand Oaks Property Maintenance is fully licensed and insured to handle projects of any size.",
+        head: "Efficient, Professional Land Clearing",
+        body: "Forestry mulching is one of the most effective ways to clear land in Florida. Instead of hauling debris away or burning, we grind brush and vegetation on-site into natural mulch that helps reduce erosion and control regrowth.\n\nLand clearing also requires experienced operation and careful planning. Our licensed and insured team prioritizes safety, property protection, and compliance on every project — whether you need full clearing or selective retention of healthy trees.\n\nWe leave your property clean, manageable, and ready for what’s next.",
         highlights: [
-          "Efficient Heavy Equipment",
-          "No Burning Required",
-          "Erosion Control Benefits",
-          "Licensed & Fully Insured"
+          "Heavy-Duty Equipment",
+          "No Burning or Hauling Required",
+          "Licensed & Fully Insured",
+          "Clean, Professional Finish"
         ]
       }
     ],
     faqs: [
-      { q: "Do I need a permit for land clearing?", a: "Often yes, especially for larger lots or protected trees. We can assist with the permitting process in Pasco County." },
-      { q: "Is forestry mulching cheaper than bulldozing?", a: "Generally, yes. Because there's no hauling or tipping fees, and it's a single-step process, it's often more cost-effective and faster." },
-      { q: "Can you selectively clear trees?", a: "Absolutely. We can mark and save desirable trees (like Grand Oaks) while clearing the underbrush around them." },
-      { q: "What happens to the mulch?", a: "It stays on site as a ground cover, which helps retain soil moisture and prevents immediate weed regrowth." }
+      { 
+        q: "Do I need a permit for land clearing in Pasco County?", 
+        a: "Some land clearing projects may require permits depending on the size of the area, protected trees, or local environmental regulations. Requirements can vary by location and scope.\n\nOur team can help you understand what applies to your project and assist with the process when needed." 
+      },
+      { 
+        q: "Is forestry mulching cheaper than bulldozing?", 
+        a: "In many cases, yes. Forestry mulching can be a more cost-effective option because it eliminates the need for hauling debris away or bringing in additional cleanup equipment.\n\nIt’s also a great choice when you want a clean finish with less disturbance to the soil." 
+      },
+      { 
+        q: "Can you selectively clear land and keep certain trees?", 
+        a: "Absolutely. Many property owners want to remove underbrush and invasive growth while preserving healthy, mature trees.\n\nWe offer selective clearing services and work with you to retain the trees and areas you want to keep." 
+      },
+      { 
+        q: "What happens to the mulch after forestry mulching?", 
+        a: "The mulch is left on-site as a natural ground layer. It helps reduce erosion, return nutrients to the soil, and suppress future weed growth.\n\nIf you have specific plans for the land, we can discuss the best approach during your estimate." 
+      },
+      {
+        q: "How quickly can land clearing be scheduled?",
+        a: "We offer fast turnaround times and can often schedule land clearing promptly depending on project size and equipment availability.\n\nIf you’re working on a construction or property timeline, we’ll do our best to meet your schedule."
+      }
     ]
   },
   "emergency-tree-service": {
