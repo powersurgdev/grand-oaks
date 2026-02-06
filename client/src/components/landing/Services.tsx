@@ -58,34 +58,32 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
           {services.map((service, index) => (
-            <Link key={index} href={service.link}>
-              <a className="block h-full no-underline">
-                <Card className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow rounded-2xl bg-gray-50 flex flex-col h-full cursor-pointer">
-                  <div className="relative h-64 overflow-hidden">
-                    <LazyImage
-                      src={service.image}
-                      alt={service.title}
-                      className={cn(
-                        "w-full h-full transition-transform duration-500 group-hover:scale-105",
-                        (service as any).className
-                      )}
-                      data-testid={`img-service-${service.link.split('/').pop()}`}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
-                  </div>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-xl md:text-2xl font-bold text-brand-green leading-tight">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow flex flex-col justify-between">
-                    <CardDescription className="text-base text-gray-600 mb-6">
-                      {service.desc}
-                    </CardDescription>
-                    <Button variant="link" className="text-brand-orange p-0 h-auto font-bold self-start group-hover:gap-2 transition-all">
-                      Learn more <ArrowRight className="w-4 h-4 ml-1" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              </a>
+            <Link key={index} href={service.link} className="block h-full no-underline">
+              <Card className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow rounded-2xl bg-gray-50 flex flex-col h-full cursor-pointer">
+                <div className="relative h-64 overflow-hidden">
+                  <LazyImage
+                    src={service.image}
+                    alt={service.title}
+                    className={cn(
+                      "w-full h-full transition-transform duration-500 group-hover:scale-105",
+                      (service as any).className
+                    )}
+                    data-testid={`img-service-${service.link.split('/').pop()}`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                </div>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-xl md:text-2xl font-bold text-brand-green leading-tight">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow flex flex-col justify-between">
+                  <CardDescription className="text-base text-gray-600 mb-6">
+                    {service.desc}
+                  </CardDescription>
+                  <span className="text-brand-orange p-0 h-auto font-bold self-start group-hover:gap-2 transition-all flex items-center text-sm">
+                    Learn more <ArrowRight className="w-4 h-4 ml-1" />
+                  </span>
+                </CardContent>
+              </Card>
             </Link>
           ))}
         </div>

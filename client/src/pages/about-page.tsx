@@ -175,19 +175,17 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {Object.entries(servicesData).map(([slug, service], i) => (
-                <Link key={slug} href={`/services/${slug}`}>
-                  <a className="block h-full bg-white/5 border border-white/10 hover:border-brand-green hover:bg-white/10 rounded-xl p-8 transition-all duration-300 group">
-                    <div className="bg-brand-green w-12 h-12 rounded-full flex items-center justify-center mb-6 text-white">
-                      <service.icon className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-brand-green transition-colors">{service.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                      {service.subtitle}
-                    </p>
-                    <div className="flex items-center text-brand-orange text-sm font-bold mt-auto">
-                      Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </a>
+                <Link key={slug} href={`/services/${slug}`} className="block h-full bg-white/5 border border-white/10 hover:border-brand-green hover:bg-white/10 rounded-xl p-8 transition-all duration-300 group">
+                  <div className="bg-brand-green w-12 h-12 rounded-full flex items-center justify-center mb-6 text-white">
+                    <service.icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-brand-green transition-colors">{service.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                    {service.subtitle}
+                  </p>
+                  <div className="flex items-center text-brand-orange text-sm font-bold mt-auto">
+                    Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </Link>
               ))}
             </div>

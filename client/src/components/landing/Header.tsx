@@ -81,18 +81,17 @@ export default function Header() {
                           {Object.entries(servicesData).map(([slug, service]) => (
                             <li key={slug}>
                               <NavigationMenuLink asChild>
-                                <WouterLink href={`/services/${slug}`}>
-                                  <a
-                                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-brand-offwhite hover:text-brand-green focus:bg-brand-offwhite focus:text-brand-green group"
-                                  >
-                                    <div className="flex items-center gap-2 text-sm font-bold leading-none text-brand-charcoal group-hover:text-brand-green">
-                                      <service.icon className="w-4 h-4" />
-                                      {service.title}
-                                    </div>
-                                    <p className="line-clamp-2 text-xs leading-snug text-muted-foreground mt-1 text-gray-500">
-                                      {service.subtitle}
-                                    </p>
-                                  </a>
+                                <WouterLink
+                                  href={`/services/${slug}`}
+                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-brand-offwhite hover:text-brand-green focus:bg-brand-offwhite focus:text-brand-green group"
+                                >
+                                  <div className="flex items-center gap-2 text-sm font-bold leading-none text-brand-charcoal group-hover:text-brand-green">
+                                    <service.icon className="w-4 h-4" />
+                                    {service.title}
+                                  </div>
+                                  <p className="line-clamp-2 text-xs leading-snug text-muted-foreground mt-1 text-gray-500">
+                                    {service.subtitle}
+                                  </p>
                                 </WouterLink>
                               </NavigationMenuLink>
                             </li>
@@ -181,13 +180,13 @@ export default function Header() {
                     <h4 className="font-bold text-lg text-brand-green">Services</h4>
                     <div className="pl-4 space-y-3 border-l-2 border-gray-100">
                       {Object.entries(servicesData).map(([slug, service]) => (
-                        <WouterLink key={slug} href={`/services/${slug}`}>
-                          <a 
-                            className="block text-base font-medium text-gray-600 hover:text-brand-green"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            {service.title}
-                          </a>
+                        <WouterLink
+                          key={slug}
+                          href={`/services/${slug}`}
+                          className="block text-base font-medium text-gray-600 hover:text-brand-green"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {service.title}
                         </WouterLink>
                       ))}
                     </div>

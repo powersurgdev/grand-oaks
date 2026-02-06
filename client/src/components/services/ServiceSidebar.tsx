@@ -19,20 +19,18 @@ export default function ServiceSidebar() {
         </div>
         <div className="p-2">
           {Object.entries(servicesData).map(([slug, service]) => (
-            <Link key={slug} href={`/services/${slug}`}>
-              <a className={`
-                flex items-center justify-between px-4 py-3 rounded-xl transition-all mb-1
-                ${isActive(`/services/${slug}`) 
-                  ? 'bg-brand-green text-white font-bold shadow-md' 
-                  : 'text-gray-600 hover:bg-gray-50 hover:text-brand-green font-medium'
-                }
-              `}>
-                <span className="flex items-center gap-3">
-                  <service.icon className="w-4 h-4" />
-                  {service.title}
-                </span>
-                {isActive(`/services/${slug}`) && <ArrowRight className="w-4 h-4" />}
-              </a>
+            <Link key={slug} href={`/services/${slug}`} className={`
+              flex items-center justify-between px-4 py-3 rounded-xl transition-all mb-1
+              ${isActive(`/services/${slug}`) 
+                ? 'bg-brand-green text-white font-bold shadow-md' 
+                : 'text-gray-600 hover:bg-gray-50 hover:text-brand-green font-medium'
+              }
+            `}>
+              <span className="flex items-center gap-3">
+                <service.icon className="w-4 h-4" />
+                {service.title}
+              </span>
+              {isActive(`/services/${slug}`) && <ArrowRight className="w-4 h-4" />}
             </Link>
           ))}
         </div>
