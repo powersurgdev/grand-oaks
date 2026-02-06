@@ -29,7 +29,8 @@ const services = [
     title: "Land Clearing",
     desc: "Efficient lot clearing and forestry mulching for new construction, pasture restoration, or property usage.",
     image: "/images/service-land-clearing.png",
-    link: "/services/land-clearing"
+    link: "/services/land-clearing",
+    className: "object-[50%_25%]"
   },
   {
     title: "Emergency Tree Services",
