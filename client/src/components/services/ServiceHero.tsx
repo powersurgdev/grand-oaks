@@ -6,9 +6,10 @@ interface ServiceHeroProps {
   title: string;
   subtitle: string;
   image: string;
+  imagePosition?: string;
 }
 
-export default function ServiceHero({ title, subtitle, image }: ServiceHeroProps) {
+export default function ServiceHero({ title, subtitle, image, imagePosition }: ServiceHeroProps) {
   return (
     <section className="relative h-[550px] md:h-[600px] flex flex-col justify-center overflow-hidden">
       <div className="absolute inset-0 bg-black">
@@ -16,6 +17,7 @@ export default function ServiceHero({ title, subtitle, image }: ServiceHeroProps
           src={image}
           alt={title}
           className="w-full h-full opacity-50"
+          style={imagePosition ? { objectPosition: imagePosition } : undefined}
           priority={true}
           data-testid="img-service-hero"
         />

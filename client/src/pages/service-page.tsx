@@ -38,7 +38,8 @@ export default function ServicePage({ slug }: ServicePageProps) {
         <ServiceHero 
           title={service.heroHeadline} 
           subtitle={service.heroSubheadline} 
-          image={service.heroImage} 
+          image={service.heroImage}
+          imagePosition={(service as any).heroImagePosition}
         />
 
         <div className="container mx-auto px-4 py-16 md:py-24">

@@ -8,6 +8,7 @@ export const servicesData = {
     heroSubheadline: "We remove dangerous, damaged, and unwanted trees safely — protecting your home, property, and landscaping.",
     icon: TreeDeciduous,
     heroImage: "/images/optimized/service-tree-removal.webp",
+    heroImagePosition: "center 40%",
     description: "Tree removal is often necessary when a tree becomes unsafe, damaged, or too close to your home. Whether you’re dealing with a dead tree, storm damage, or a large oak that needs to be removed in sections, our certified arborists handle the job safely, efficiently, and with the right equipment.",
     features: [
       "Dead or Dying Tree Removal",
@@ -79,6 +80,7 @@ export const servicesData = {
     heroSubheadline: "Expert pruning to promote tree health, safety, and aesthetics — performed by certified arborists.",
     icon: Scissors,
     heroImage: "/images/optimized/service-tree-trimming.webp",
+    heroImagePosition: "center 20%",
     description: "Tree trimming is one of the best ways to protect your property and maintain the long-term health of your trees. Overgrown limbs can become hazardous during storms, interfere with roofs or power lines, and lead to uneven or unhealthy growth.\n\nOur certified arborists provide professional trimming and pruning services throughout Pasco County, using proper techniques to improve tree structure, encourage healthy growth, and keep your landscape safe and well-maintained.\n\nWhether you need seasonal maintenance or corrective pruning, we tailor every trim to the specific tree and your property’s needs.",
     features: [
       "Overgrown Branches Near Roofs or Structures",
@@ -147,6 +149,7 @@ export const servicesData = {
     heroSubheadline: "Complete stump removal to reclaim your yard and prevent pests — leaving your property clean and level.",
     icon: Axe,
     heroImage: "/images/optimized/service-stump-grinding.webp",
+    heroImagePosition: "center 45%",
     description: "Stump grinding is the most effective way to remove leftover tree stumps without tearing up your entire yard. Whether the stump is from a recent removal or has been sitting for years, grinding eliminates the visible stump and helps prevent pests, regrowth, and landscaping obstacles.\n\nOur Pasco County team uses professional-grade equipment to safely grind stumps below ground level, leaving your property cleaner, safer, and ready for sod, planting, or future projects.\n\nIf you want the job done right — with minimal disruption and full cleanup — we’re here to help.",
     features: [
       "Stump Removal After Tree Removal",
@@ -211,6 +214,7 @@ export const servicesData = {
     heroSubheadline: "Efficient lot clearing and forestry mulching — preparing your land for construction or usage.",
     icon: Tractor,
     heroImage: "/images/optimized/service-land-clearing.webp",
+    heroImagePosition: "center 35%",
     description: "Land clearing is the first step in transforming a property — whether you’re building a home, opening up pasture, clearing fence lines, or removing thick underbrush. Done properly, it improves access, safety, and long-term land usability.\n\nGrand Oaks Property Maintenance provides professional land clearing services throughout Pasco County, using heavy-duty equipment and forestry mulching to clear vegetation efficiently while minimizing disruption to the land.\n\nFrom small residential lots to larger acreage projects, we tailor every job to your goals and property needs.",
     features: [
       "Forestry Mulching & Underbrush Removal",
@@ -271,6 +275,7 @@ export const servicesData = {
     heroSubheadline: "24/7 rapid response for storm damage and dangerous fallen trees — protecting your home and family.",
     icon: AlertTriangle,
     heroImage: "/images/optimized/service-emergency.webp",
+    heroImagePosition: "center 30%",
     description: "Storm-damaged trees and sudden hazards require fast, professional attention. Whether a tree has fallen on your home, limbs are hanging dangerously overhead, or a driveway is blocked, emergency tree situations should never be handled without the proper equipment and training.\n\nGrand Oaks Property Maintenance provides emergency tree services throughout Pasco County with a focus on safety, rapid response, and professional cleanup. We assess the situation quickly, stabilize the hazard, and remove dangerous trees or debris to help you regain control after the storm.",
     features: [
       "Fallen Trees on Homes or Structures",
