@@ -210,7 +210,7 @@ export const servicesData = {
     heroHeadline: "Pasco County Land Clearing Experts",
     heroSubheadline: "Efficient lot clearing and forestry mulching — preparing your land for construction or usage.",
     icon: Tractor,
-    heroImage: "/images/service-forestry.jpg",
+    heroImage: "/images/service-land-clearing.png",
     description: "Land clearing is the first step in transforming a property — whether you’re building a home, opening up pasture, clearing fence lines, or removing thick underbrush. Done properly, it improves access, safety, and long-term land usability.\n\nGrand Oaks Property Maintenance provides professional land clearing services throughout Pasco County, using heavy-duty equipment and forestry mulching to clear vegetation efficiently while minimizing disruption to the land.\n\nFrom small residential lots to larger acreage projects, we tailor every job to your goals and property needs.",
     features: [
       "Forestry Mulching & Underbrush Removal",

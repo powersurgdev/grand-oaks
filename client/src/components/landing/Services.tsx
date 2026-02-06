@@ -28,7 +28,7 @@ const services = [
   {
     title: "Land Clearing",
     desc: "Efficient lot clearing and forestry mulching for new construction, pasture restoration, or property usage.",
-    image: "/images/service-clearing.jpg",
+    image: "/images/service-land-clearing.png",
     link: "/services/land-clearing"
   },
   {
