@@ -8,7 +8,7 @@ const galleryImages = [
   { src: "/images/gallery-team-work.png", alt: "Tree crew", span: "col-span-1 md:col-span-1" },
   
   // Row 2
-  { src: "/images/gallery-pruning.jpg", alt: "Precision pruning", span: "col-span-1 md:col-span-1 row-span-2" },
+  { src: "/images/gallery-bucket-truck.png", alt: "Bucket Truck Service", span: "col-span-1 md:col-span-1 row-span-2" },
   { src: "/images/gallery-machinery.jpg", alt: "Land clearing", span: "col-span-1 md:col-span-2" },
   
   // Row 3
