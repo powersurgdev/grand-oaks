@@ -78,7 +78,7 @@ export const servicesData = {
     heroHeadline: "Pasco County Tree Trimming Experts",
     heroSubheadline: "Expert pruning to promote tree health, safety, and aesthetics — performed by certified arborists.",
     icon: Scissors,
-    heroImage: "/images/service-trimming.jpg",
+    heroImage: "/images/service-tree-trimming.png",
     description: "Tree trimming is one of the best ways to protect your property and maintain the long-term health of your trees. Overgrown limbs can become hazardous during storms, interfere with roofs or power lines, and lead to uneven or unhealthy growth.\n\nOur certified arborists provide professional trimming and pruning services throughout Pasco County, using proper techniques to improve tree structure, encourage healthy growth, and keep your landscape safe and well-maintained.\n\nWhether you need seasonal maintenance or corrective pruning, we tailor every trim to the specific tree and your property’s needs.",
     features: [
       "Overgrown Branches Near Roofs or Structures",

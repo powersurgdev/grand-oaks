@@ -13,7 +13,7 @@ const services = [
   {
     title: "Tree Trimming",
     desc: "Expert pruning to promote tree health, safety, and aesthetics, performed by certified arborists.",
-    image: "/images/service-trimming.jpg",
+    image: "/images/service-tree-trimming.png",
     link: "/services/tree-trimming"
   },
   {
