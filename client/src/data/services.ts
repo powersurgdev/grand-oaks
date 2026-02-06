@@ -168,12 +168,12 @@ export const servicesData = {
     details: [
       {
         head: "Reclaim Your Yard Safely",
-        body: "Stumps are tripping hazards, obstacles for mowing, and magnets for pests like termites and ants. Once removed, you can lay sod, plant a garden, or simply enjoy a flat, safe lawn. Our compact equipment can fit through standard gates, bringing big power to backyards without damaging your fence.\n\nStump grinding involves powerful machinery and flying debris. We take every precaution to shield your home and windows during the process. As a fully licensed and insured company, we guarantee professional service that prioritizes your property's safety.",
+        body: "Stump grinding clears old stumps below ground level, eliminating hazards, preventing pests, and making your yard usable again. Our licensed and insured team uses professional equipment, protects your property throughout the process, and includes full cleanup when the job is done.",
         highlights: [
           "Underground Utility Awareness",
-          "Property Shielding & Protection",
+          "Property Protection & Debris Control",
           "Licensed & Insured Operators",
-          "Complete Debris Management"
+          "Complete Cleanup Included"
         ]
       }
     ],
