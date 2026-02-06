@@ -81,14 +81,14 @@ export const servicesData = {
     heroImage: "/images/service-trimming.jpg",
     description: "Tree trimming is one of the best ways to protect your property and maintain the long-term health of your trees. Overgrown limbs can become hazardous during storms, interfere with roofs or power lines, and lead to uneven or unhealthy growth.\n\nOur certified arborists provide professional trimming and pruning services throughout Pasco County, using proper techniques to improve tree structure, encourage healthy growth, and keep your landscape safe and well-maintained.\n\nWhether you need seasonal maintenance or corrective pruning, we tailor every trim to the specific tree and your property’s needs.",
     features: [
-      "Canopy Raising & Lifting",
-      "Deadwood Pruning & Removal",
-      "Structure Clearance (Roof/Power Lines)",
-      "Crown Thinning & Shaping",
-      "Storm Damage Prevention",
-      "Young Tree Structural Pruning",
-      "Palm Tree Trimming",
-      "View Enhancement"
+      "Overgrown Branches Near Roofs or Structures",
+      "Storm Preparation & Hazard Reduction",
+      "Dead or Hanging Limb Removal",
+      "Tree Canopy Thinning for Health & Airflow",
+      "Clearance From Power Lines or Driveways",
+      "Shaping & Aesthetic Pruning",
+      "Routine Seasonal Tree Maintenance",
+      "Corrective Pruning for Damaged Trees"
     ],
     process: [
       { title: "Tree Health Assessment", description: "Identifying structural issues and growth patterns" },
