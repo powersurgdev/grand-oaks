@@ -91,11 +91,12 @@ export const servicesData = {
       "Corrective Pruning for Damaged Trees"
     ],
     process: [
-      { title: "Tree Health Assessment", description: "Identifying structural issues and growth patterns" },
-      { title: "Strategic Planning", description: "Determining the best cuts for long-term health" },
-      { title: "Precision Pruning", description: "Using professional climbing and cutting techniques" },
-      { title: "Cleanup & Recycling", description: "Removing all debris for a pristine yard" }
+      { title: "Tree Evaluation", description: "We assess the tree’s health, structure, and any safety concerns around your home or property." },
+      { title: "Professional Pruning Plan", description: "Our certified arborists determine the best trimming approach based on species, growth patterns, and risk factors." },
+      { title: "Safe, Precise Trimming", description: "We remove hazardous or overgrown limbs using proper equipment and industry best practices." },
+      { title: "Full Cleanup & Debris Removal", description: "Once trimming is complete, we haul away branches and leave your yard clean and ready to enjoy." }
     ],
+    processBody: "Tree trimming isn’t just about cutting branches — it’s about improving safety and supporting healthy growth. Our team follows a careful, arborist-led approach to ensure your trees are trimmed properly and responsibly.",
     details: [
       {
         head: "Structural Pruning & Clearance",
