@@ -9,6 +9,7 @@ import ServicePage from "@/pages/service-page";
 import AboutPage from "@/pages/about-page";
 import ReviewsPage from "@/pages/reviews-page";
 import ServicesPage from "@/pages/services-page";
+import ContactPage from "@/pages/contact-page";
 
 function Router() {
   return (
@@ -18,6 +19,8 @@ function Router() {
       <Route path="/about-us/" component={AboutPage} />
       <Route path="/reviews" component={ReviewsPage} />
       <Route path="/reviews/" component={ReviewsPage} />
+      <Route path="/contact" component={ContactPage} />
+      <Route path="/contact/" component={ContactPage} />
       <Route path="/services" component={ServicesPage} />
       <Route path="/services/" component={ServicesPage} />
       
