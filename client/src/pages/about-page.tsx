@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
 import MobileStickyCTA from "@/components/landing/MobileCTA";
+import Services from "@/components/landing/Services";
+import ContactForm from "@/components/landing/ContactForm";
 
 export default function AboutPage() {
   useEffect(() => {
@@ -62,32 +63,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-brand-green text-white text-center">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-4">Ready to Get Started?</h2>
-            <p className="text-white/80 text-lg max-w-xl mx-auto mb-8">
-              Get a free, no-obligation estimate for your tree service needs.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button
-                size="lg"
-                className="w-full sm:w-auto h-12 md:h-14 text-base font-bold bg-brand-orange hover:bg-brand-orange/90 text-white rounded-xl shadow-xl"
-                asChild
-                data-testid="button-about-call"
-              >
-                <a href="tel:8138607086">Call (813) 860-7086</a>
-              </Button>
-              <Button
-                size="lg"
-                className="w-full sm:w-auto h-12 md:h-14 text-base font-bold bg-white text-brand-green hover:bg-gray-100 rounded-xl shadow-xl"
-                asChild
-                data-testid="button-about-estimate"
-              >
-                <a href="/#estimate-form">Get Free Estimate</a>
-              </Button>
-            </div>
-          </div>
-        </section>
+        <Services />
+
+        <ContactForm />
       </main>
 
       <Footer />
