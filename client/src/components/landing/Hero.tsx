@@ -41,7 +41,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80 md:via-black/20 md:to-black/60 z-10"></div>
       </div>
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-4 flex flex-col lg:flex-row lg:items-center lg:gap-12 pt-32 pb-12 md:pt-40 md:pb-10 h-full justify-center">
+      <div className="relative z-20 container mx-auto px-4 flex flex-col xl:flex-row xl:items-center xl:gap-12 pt-32 pb-12 md:pt-40 md:pb-10 h-full justify-center">
         
         {/* Left Column: Hero Text & CTAs */}
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
@@ -73,7 +73,7 @@ export default function Hero() {
             </Button>
             <Button 
               size="xl" 
-              className="w-full sm:w-auto h-11 md:h-16 text-sm md:text-lg font-bold bg-white text-brand-green hover:bg-gray-100 rounded-xl md:rounded-2xl shadow-xl transition-transform active:scale-95 lg:hidden"
+              className="w-full sm:w-auto h-11 md:h-16 text-sm md:text-lg font-bold bg-white text-brand-green hover:bg-gray-100 rounded-xl md:rounded-2xl shadow-xl transition-transform active:scale-95 xl:hidden"
               asChild
             >
               <a href="#contact">Get Free Estimate</a>
@@ -97,7 +97,7 @@ export default function Hero() {
         </div>
 
         {/* Right Column: Contact Form (Desktop Only) */}
-        <div className="hidden lg:block w-full max-w-md xl:max-w-lg shrink-0 animate-in fade-in slide-in-from-right-10 duration-700 delay-300">
+        <div className="hidden xl:block w-full max-w-md shrink-0 animate-in fade-in slide-in-from-right-10 duration-700 delay-300">
           <HeroContactForm />
         </div>
       </div>
