@@ -56,7 +56,7 @@ function CompanyDropdown({ isScrolled, companyLinks }: { isScrolled: boolean; co
               >
                 <Star className="w-4 h-4 text-brand-orange shrink-0" />
                 <div className="space-y-1">
-                  <div className="text-sm font-bold leading-none text-brand-charcoal group-hover:text-brand-orange">
+                  <div className="text-sm font-bold leading-none text-brand-charcoal group-hover:text-brand-charcoal">
                     {item.name}
                   </div>
                   <p className="text-xs leading-snug text-gray-500">
