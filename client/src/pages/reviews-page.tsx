@@ -40,10 +40,10 @@ export default function ReviewsPage() {
               <span className="font-bold tracking-widest uppercase text-sm text-white/80" data-testid="text-reviews-label">Google Reviews</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg uppercase leading-tight" data-testid="text-reviews-heading">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] uppercase leading-tight text-white" data-testid="text-reviews-heading">
               What Our Customers Say
             </h1>
-            <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-white max-w-2xl mx-auto drop-shadow-md">
               Real reviews from Pasco County homeowners who trusted Grand Oaks with their trees.
             </p>
           </div>
