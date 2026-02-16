@@ -86,6 +86,7 @@ export default function Header() {
   }, []);
 
   const companyLinks = [
+    { name: "About Us", href: "/about" },
     { name: "Reviews", href: "/reviews/" },
   ];
 
