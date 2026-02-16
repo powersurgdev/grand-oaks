@@ -32,9 +32,9 @@ function CompanyDropdown({ isScrolled, companyLinks }: { isScrolled: boolean; co
         className={cn(
           "inline-flex items-center gap-1 text-lg font-semibold transition-colors h-auto px-4 py-2 rounded-md",
           open
-            ? "bg-white/90 backdrop-blur-sm text-brand-green shadow-sm"
+            ? "bg-white/90 backdrop-blur-sm text-brand-orange shadow-sm"
             : isScrolled 
-              ? "bg-transparent text-brand-charcoal hover:text-brand-green" 
+              ? "bg-transparent text-brand-charcoal hover:text-brand-orange" 
               : "bg-transparent text-white hover:text-brand-orange drop-shadow-md"
         )}
         data-testid="nav-company-dropdown"
@@ -56,7 +56,7 @@ function CompanyDropdown({ isScrolled, companyLinks }: { isScrolled: boolean; co
               >
                 <Star className="w-4 h-4 text-brand-orange shrink-0" />
                 <div className="space-y-1">
-                  <div className="text-sm font-bold leading-none text-brand-charcoal group-hover:text-brand-green">
+                  <div className="text-sm font-bold leading-none text-brand-charcoal group-hover:text-brand-orange">
                     {item.name}
                   </div>
                   <p className="text-xs leading-snug text-gray-500">
