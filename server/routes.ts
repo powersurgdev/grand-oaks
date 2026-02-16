@@ -3,6 +3,7 @@ import { type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
+import { sendContactNotification } from "./email";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -19,6 +20,11 @@ export async function registerRoutes(
         });
       }
       const contact = await storage.createContact(result.data);
+
+      sendContactNotification(contact).catch((err) => {
+        console.error("Email notification failed (non-blocking):", err);
+      });
+
       return res.status(201).json({ 
         message: "Thank you! We'll get back to you shortly.",
         id: contact.id 
