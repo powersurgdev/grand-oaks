@@ -7,12 +7,14 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import ServicePage from "@/pages/service-page";
 import AboutPage from "@/pages/about-page";
+import ReviewsPage from "@/pages/reviews-page";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/about" component={AboutPage} />
+      <Route path="/reviews" component={ReviewsPage} />
       
       {/* Service Routes */}
       <Route path="/services/tree-removal">
