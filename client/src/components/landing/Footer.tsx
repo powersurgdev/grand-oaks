@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Phone, MapPin, Star } from "lucide-react";
+import { Facebook, Instagram, Phone, MapPin, Star, HelpCircle } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Footer() {
@@ -54,6 +54,10 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Star className="w-5 h-5 text-brand-orange" />
                 <Link href="/reviews/" className="hover:text-white transition-colors" data-testid="link-footer-reviews">Reviews</Link>
+              </li>
+              <li className="flex items-center gap-3">
+                <HelpCircle className="w-5 h-5 text-brand-orange" />
+                <Link href="/frequently-asked-questions/" className="hover:text-white transition-colors" data-testid="link-footer-faq">FAQ</Link>
               </li>
             </ul>
             
