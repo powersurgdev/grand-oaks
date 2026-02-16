@@ -1,5 +1,5 @@
-import { Phone, Menu } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Phone, Menu, ChevronDown, Star } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
@@ -13,6 +13,62 @@ import {
 } from "@/components/ui/navigation-menu";
 import { servicesData } from "@/data/services";
 import { Link as WouterLink } from "wouter";
+
+function CompanyDropdown({ isScrolled, companyLinks }: { isScrolled: boolean; companyLinks: { name: string; href: string }[] }) {
+  const [open, setOpen] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
+
+  const handleEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setOpen(true);
+  };
+  const handleLeave = () => {
+    timeoutRef.current = setTimeout(() => setOpen(false), 150);
+  };
+
+  return (
+    <div className="relative" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+      <button
+        className={cn(
+          "inline-flex items-center gap-1 bg-transparent text-lg font-semibold transition-colors h-auto px-4 py-2 rounded-md",
+          isScrolled 
+            ? "text-brand-charcoal hover:text-brand-green" 
+            : "text-white hover:text-brand-orange drop-shadow-md"
+        )}
+        data-testid="nav-company-dropdown"
+        onClick={() => setOpen(!open)}
+      >
+        Company
+        <ChevronDown className={cn("relative top-[1px] h-3 w-3 transition duration-300", open && "rotate-180")} aria-hidden="true" />
+      </button>
+      {open && (
+        <div className="absolute left-1/2 -translate-x-1/2 top-full pt-1.5 z-50">
+          <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden p-2 w-[220px]">
+            {companyLinks.map((item) => (
+              <WouterLink
+                key={item.name}
+                href={item.href}
+                className="flex items-center gap-2.5 select-none rounded-md p-3 no-underline outline-none transition-colors hover:bg-brand-offwhite group"
+                data-testid={`link-company-${item.name.toLowerCase()}`}
+                onClick={() => setOpen(false)}
+              >
+                <Star className="w-4 h-4 text-brand-orange shrink-0" />
+                <div className="space-y-1">
+                  <div className="text-sm font-bold leading-none text-brand-charcoal group-hover:text-brand-green">
+                    {item.name}
+                  </div>
+                  <p className="text-xs leading-snug text-gray-500">
+                    See What Our Customers Say
+                  </p>
+                </div>
+              </WouterLink>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -100,41 +156,7 @@ export default function Header() {
                       </NavigationMenuContent>
                     </>
                   ) : link.type === "company-dropdown" ? (
-                    <>
-                      <NavigationMenuTrigger 
-                        className={cn(
-                          "bg-transparent text-lg font-semibold transition-colors h-auto hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent px-4 py-2",
-                          isScrolled 
-                            ? "text-brand-charcoal hover:text-brand-green data-[state=open]:text-brand-green" 
-                            : "text-white hover:text-brand-orange data-[state=open]:text-brand-orange drop-shadow-md"
-                        )}
-                        data-testid="nav-company-dropdown"
-                      >
-                        {link.name}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white rounded-xl shadow-xl">
-                          {companyLinks.map((item) => (
-                            <li key={item.name}>
-                              <NavigationMenuLink asChild>
-                                <WouterLink
-                                  href={item.href}
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-brand-offwhite hover:text-brand-green focus:bg-brand-offwhite focus:text-brand-green group"
-                                  data-testid={`link-company-${item.name.toLowerCase()}`}
-                                >
-                                  <div className="flex items-center gap-2 text-sm font-bold leading-none text-brand-charcoal group-hover:text-brand-green">
-                                    {item.name}
-                                  </div>
-                                  <p className="line-clamp-2 text-xs leading-snug text-muted-foreground mt-1 text-gray-500">
-                                    See What Our Customers Say
-                                  </p>
-                                </WouterLink>
-                              </NavigationMenuLink>
-                            </li>
-                          ))}
-                        </ul>
-                      </NavigationMenuContent>
-                    </>
+                    <CompanyDropdown isScrolled={isScrolled} companyLinks={companyLinks} />
                   ) : (
                     <NavigationMenuLink asChild>
                       <a 
