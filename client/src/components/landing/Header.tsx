@@ -59,16 +59,16 @@ export default function Header() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-4">
           <NavigationMenu>
-            <NavigationMenuList className="gap-6">
+            <NavigationMenuList className="gap-4">
               {navLinks.map((link) => (
                 <NavigationMenuItem key={link.name}>
                   {link.type === "dropdown" ? (
                     <>
                       <NavigationMenuTrigger 
                         className={cn(
-                          "bg-transparent text-lg font-medium transition-colors h-auto hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent px-3 py-2",
+                          "bg-transparent text-base font-medium transition-colors h-auto hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent px-2 py-2",
                           isScrolled 
                             ? "text-brand-charcoal hover:text-brand-green data-[state=open]:text-brand-green" 
                             : "text-white hover:text-brand-orange data-[state=open]:text-brand-orange drop-shadow-md"
@@ -104,7 +104,7 @@ export default function Header() {
                       <a 
                         href={link.href}
                         className={cn(
-                          "font-medium transition-colors text-lg block",
+                          "font-medium transition-colors text-base block",
                           isScrolled 
                             ? "text-brand-charcoal hover:text-brand-green" 
                             : "text-white hover:text-brand-orange drop-shadow-md"
@@ -121,11 +121,11 @@ export default function Header() {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-3">
           <a 
             href="tel:8138607086" 
             className={cn(
-              "font-bold text-lg transition-colors",
+              "font-bold text-sm xl:text-base transition-colors whitespace-nowrap",
               isScrolled 
                 ? "text-brand-charcoal hover:text-brand-green" 
                 : "text-white hover:text-brand-orange drop-shadow-md"
@@ -148,7 +148,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <a 
             href="tel:8138607086"
             className={cn(
