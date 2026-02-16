@@ -53,10 +53,6 @@ export default function Footer() {
                 <a href="tel:8138607086" className="hover:text-white font-bold">(813) 860-7086</a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-brand-orange" />
-                <a href="mailto:info@grandoaks.com" className="hover:text-white">info@grandoaks.com</a>
-              </li>
-              <li className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-brand-orange" />
                 <span>Pasco County, FL</span>
               </li>
