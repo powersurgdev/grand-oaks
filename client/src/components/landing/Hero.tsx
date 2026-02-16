@@ -81,7 +81,7 @@ export default function Hero() {
           </div>
 
           {/* Trust Indicators - Grid on mobile for better space usage */}
-          <div className="mt-6 md:mt-12 grid grid-cols-2 md:flex md:flex-wrap gap-2 md:gap-6 w-full md:w-auto animate-in fade-in slide-in-from-bottom-12 duration-700 delay-500 text-left md:text-left">
+          <div className="mt-6 md:mt-12 grid grid-cols-2 md:flex md:flex-wrap gap-2 md:gap-6 w-full md:w-auto animate-in fade-in slide-in-from-bottom-12 duration-700 delay-500 text-left md:text-left xl:max-h-[44px] xl:overflow-hidden">
             {[
               "Certified Arborist", 
               "Licensed & Insured", 
