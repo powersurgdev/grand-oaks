@@ -2,7 +2,8 @@ import { getUncachableSendGridClient } from './sendgrid';
 import type { Contact } from '@shared/schema';
 
 const NOTIFICATION_EMAILS = [
-  'grandoakstreeworks@gmail.com',
+  'sergio@grandoakspropertymaintenance.com',
+  'grandoaks.pm@gmail.com',
 ];
 
 function buildEmailHtml(contact: Contact): string {
