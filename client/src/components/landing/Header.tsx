@@ -1,4 +1,4 @@
-import { Phone, Menu, ChevronDown } from "lucide-react";
+import { Phone, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -100,37 +100,41 @@ export default function Header() {
                       </NavigationMenuContent>
                     </>
                   ) : link.type === "company-dropdown" ? (
-                    <div className="relative group/company">
-                      <button
+                    <>
+                      <NavigationMenuTrigger 
                         className={cn(
-                          "inline-flex items-center gap-1 bg-transparent text-lg font-semibold transition-colors h-auto px-4 py-2",
+                          "bg-transparent text-lg font-semibold transition-colors h-auto hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent px-4 py-2",
                           isScrolled 
-                            ? "text-brand-charcoal hover:text-brand-green" 
-                            : "text-white hover:text-brand-orange drop-shadow-md"
+                            ? "text-brand-charcoal hover:text-brand-green data-[state=open]:text-brand-green" 
+                            : "text-white hover:text-brand-orange data-[state=open]:text-brand-orange drop-shadow-md"
                         )}
                         data-testid="nav-company-dropdown"
                       >
                         {link.name}
-                        <ChevronDown className="relative top-[1px] h-3 w-3 transition duration-300 group-hover/company:rotate-180" aria-hidden="true" />
-                      </button>
-                      <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 opacity-0 invisible group-hover/company:opacity-100 group-hover/company:visible transition-all duration-200">
-                        <ul className="w-[180px] p-2 bg-white rounded-xl shadow-xl border border-gray-100">
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-white rounded-xl shadow-xl">
                           {companyLinks.map((item) => (
                             <li key={item.name}>
-                              <WouterLink
-                                href={item.href}
-                                className="block select-none rounded-md px-3 py-2.5 leading-none no-underline outline-none transition-colors hover:bg-brand-offwhite hover:text-brand-green group"
-                                data-testid={`link-company-${item.name.toLowerCase()}`}
-                              >
-                                <span className="text-sm font-bold text-brand-charcoal group-hover:text-brand-green">
-                                  {item.name}
-                                </span>
-                              </WouterLink>
+                              <NavigationMenuLink asChild>
+                                <WouterLink
+                                  href={item.href}
+                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-brand-offwhite hover:text-brand-green focus:bg-brand-offwhite focus:text-brand-green group"
+                                  data-testid={`link-company-${item.name.toLowerCase()}`}
+                                >
+                                  <div className="flex items-center gap-2 text-sm font-bold leading-none text-brand-charcoal group-hover:text-brand-green">
+                                    {item.name}
+                                  </div>
+                                  <p className="line-clamp-2 text-xs leading-snug text-muted-foreground mt-1 text-gray-500">
+                                    See What Our Customers Say
+                                  </p>
+                                </WouterLink>
+                              </NavigationMenuLink>
                             </li>
                           ))}
                         </ul>
-                      </div>
-                    </div>
+                      </NavigationMenuContent>
+                    </>
                   ) : (
                     <NavigationMenuLink asChild>
                       <a 
