@@ -30,10 +30,12 @@ function CompanyDropdown({ isScrolled, companyLinks }: { isScrolled: boolean; co
     <div className="relative" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
       <button
         className={cn(
-          "inline-flex items-center gap-1 bg-transparent text-lg font-semibold transition-colors h-auto px-4 py-2 rounded-md",
-          isScrolled 
-            ? "text-brand-charcoal hover:text-brand-green" 
-            : "text-white hover:text-brand-orange drop-shadow-md"
+          "inline-flex items-center gap-1 text-lg font-semibold transition-colors h-auto px-4 py-2 rounded-md",
+          open
+            ? "bg-white/90 backdrop-blur-sm text-brand-green shadow-sm"
+            : isScrolled 
+              ? "bg-transparent text-brand-charcoal hover:text-brand-green" 
+              : "bg-transparent text-white hover:text-brand-orange drop-shadow-md"
         )}
         data-testid="nav-company-dropdown"
         onClick={() => setOpen(!open)}
