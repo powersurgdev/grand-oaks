@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Facebook, Instagram, Phone, MapPin, Star } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Footer() {
@@ -30,12 +30,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-6 text-brand-green">Company</h4>
-            <ul className="space-y-3 text-gray-300">
-              <li><Link href="/reviews" className="hover:text-white transition-colors" data-testid="link-footer-reviews">Reviews</Link></li>
-            </ul>
-
-            <h4 className="font-bold text-lg mb-6 mt-8 text-brand-green">Service Areas</h4>
+            <h4 className="font-bold text-lg mb-6 text-brand-green">Service Areas</h4>
             <ul className="space-y-3 text-gray-300">
               <li>Pasco County</li>
               <li>Wesley Chapel</li>
@@ -54,7 +49,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-brand-orange" />
-                <span>Pasco County, FL</span>
+                <span>Wesley Chapel, FL</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Star className="w-5 h-5 text-brand-orange" />
+                <Link href="/reviews" className="hover:text-white transition-colors" data-testid="link-footer-reviews">Reviews</Link>
               </li>
             </ul>
             
