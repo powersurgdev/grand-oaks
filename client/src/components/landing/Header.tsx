@@ -1,4 +1,4 @@
-import { Phone, Menu } from "lucide-react";
+import { Phone, Menu, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -33,9 +33,9 @@ export default function Header() {
 
   const navLinks = [
     { name: "Services", href: "#services", type: "dropdown" },
+    { name: "Company", href: "#company", type: "company-dropdown" },
     { name: "Why Us", href: "/#why-us", type: "link" },
     { name: "Our Work", href: "/#gallery", type: "link" },
-    { name: "Company", href: "#company", type: "company-dropdown" },
   ];
 
   return (
@@ -100,38 +100,37 @@ export default function Header() {
                       </NavigationMenuContent>
                     </>
                   ) : link.type === "company-dropdown" ? (
-                    <>
-                      <NavigationMenuTrigger 
+                    <div className="relative group/company">
+                      <button
                         className={cn(
-                          "bg-transparent text-lg font-semibold transition-colors h-auto hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent px-4 py-2",
+                          "inline-flex items-center gap-1 bg-transparent text-lg font-semibold transition-colors h-auto px-4 py-2",
                           isScrolled 
-                            ? "text-brand-charcoal hover:text-brand-green data-[state=open]:text-brand-green" 
-                            : "text-white hover:text-brand-orange data-[state=open]:text-brand-orange drop-shadow-md"
+                            ? "text-brand-charcoal hover:text-brand-green" 
+                            : "text-white hover:text-brand-orange drop-shadow-md"
                         )}
                         data-testid="nav-company-dropdown"
                       >
                         {link.name}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <ul className="w-[220px] gap-2 p-3 bg-white rounded-xl shadow-xl">
+                        <ChevronDown className="relative top-[1px] h-3 w-3 transition duration-300 group-hover/company:rotate-180" aria-hidden="true" />
+                      </button>
+                      <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 opacity-0 invisible group-hover/company:opacity-100 group-hover/company:visible transition-all duration-200">
+                        <ul className="w-[180px] p-2 bg-white rounded-xl shadow-xl border border-gray-100">
                           {companyLinks.map((item) => (
                             <li key={item.name}>
-                              <NavigationMenuLink asChild>
-                                <WouterLink
-                                  href={item.href}
-                                  className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-brand-offwhite hover:text-brand-green focus:bg-brand-offwhite focus:text-brand-green group"
-                                  data-testid={`link-company-${item.name.toLowerCase()}`}
-                                >
-                                  <span className="text-sm font-bold text-brand-charcoal group-hover:text-brand-green">
-                                    {item.name}
-                                  </span>
-                                </WouterLink>
-                              </NavigationMenuLink>
+                              <WouterLink
+                                href={item.href}
+                                className="block select-none rounded-md px-3 py-2.5 leading-none no-underline outline-none transition-colors hover:bg-brand-offwhite hover:text-brand-green group"
+                                data-testid={`link-company-${item.name.toLowerCase()}`}
+                              >
+                                <span className="text-sm font-bold text-brand-charcoal group-hover:text-brand-green">
+                                  {item.name}
+                                </span>
+                              </WouterLink>
                             </li>
                           ))}
                         </ul>
-                      </NavigationMenuContent>
-                    </>
+                      </div>
+                    </div>
                   ) : (
                     <NavigationMenuLink asChild>
                       <a 
