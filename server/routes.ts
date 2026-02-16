@@ -45,6 +45,44 @@ export async function registerRoutes(
     }
   });
 
+  const SITE_URL = "https://grandoakspropertymaintenance.com";
+  const today = new Date().toISOString().split('T')[0];
+
+  app.get("/sitemap.xml", (_req, res) => {
+    const pages = [
+      { loc: "/", priority: "1.0", changefreq: "weekly" },
+      { loc: "/about", priority: "0.8", changefreq: "monthly" },
+      { loc: "/services/tree-removal", priority: "0.9", changefreq: "monthly" },
+      { loc: "/services/tree-trimming", priority: "0.9", changefreq: "monthly" },
+      { loc: "/services/stump-grinding", priority: "0.9", changefreq: "monthly" },
+      { loc: "/services/land-clearing", priority: "0.9", changefreq: "monthly" },
+      { loc: "/services/emergency-tree-service", priority: "0.9", changefreq: "monthly" },
+    ];
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(p => `  <url>
+    <loc>${SITE_URL}${p.loc}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${p.changefreq}</changefreq>
+    <priority>${p.priority}</priority>
+  </url>`).join("\n")}
+</urlset>`;
+
+    res.set("Content-Type", "application/xml");
+    res.send(xml);
+  });
+
+  app.get("/robots.txt", (_req, res) => {
+    const robots = `User-agent: *
+Allow: /
+
+Sitemap: ${SITE_URL}/sitemap.xml
+`;
+    res.set("Content-Type", "text/plain");
+    res.send(robots);
+  });
+
   await seedGalleryData();
 
   return httpServer;
