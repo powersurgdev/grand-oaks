@@ -259,22 +259,14 @@ export default function Header() {
                     </a>
                   ))}
 
-                  <div className="space-y-3">
-                    <h4 className="font-bold text-lg text-brand-green">Company</h4>
-                    <div className="pl-4 space-y-3 border-l-2 border-gray-100">
-                      {companyLinks.map((item) => (
-                        <WouterLink
-                          key={item.name}
-                          href={item.href}
-                          className="block text-base font-medium text-gray-600 hover:text-brand-green"
-                          onClick={() => setIsOpen(false)}
-                          data-testid={`mobile-link-company-${item.name.toLowerCase()}`}
-                        >
-                          {item.name}
-                        </WouterLink>
-                      ))}
-                    </div>
-                  </div>
+                  <WouterLink
+                    href="/reviews"
+                    className="text-xl font-medium text-foreground hover:text-brand-green transition-colors"
+                    onClick={() => setIsOpen(false)}
+                    data-testid="mobile-link-reviews"
+                  >
+                    Reviews
+                  </WouterLink>
                 </nav>
                 <div className="flex flex-col gap-3 mt-4">
                   <Button 
