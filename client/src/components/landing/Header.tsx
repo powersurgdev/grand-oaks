@@ -38,8 +38,8 @@ export default function Header() {
       className={cn(
         "fixed top-0 z-50 w-full transition-all duration-300",
         isScrolled 
-          ? "bg-white/95 backdrop-blur shadow-sm border-b border-gray-100 py-2" 
-          : "bg-transparent border-b border-transparent py-4"
+          ? "bg-white/95 backdrop-blur-md shadow-md py-2" 
+          : "bg-transparent py-5"
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
@@ -49,21 +49,21 @@ export default function Header() {
             alt="Grand Oaks Property Maintenance" 
             className={cn(
               "w-auto object-contain transition-all duration-300",
-              isScrolled ? "h-8 md:h-9" : "h-10 md:h-16 drop-shadow-md"
+              isScrolled ? "h-8 md:h-10" : "h-10 md:h-14 drop-shadow-md"
             )}
           />
         </a>
 
-        <nav className="hidden xl:flex items-center gap-1">
+        <nav className="hidden xl:flex items-center">
           <NavigationMenu>
-            <NavigationMenuList className="gap-1">
+            <NavigationMenuList className="gap-2">
               {navLinks.map((link) => (
                 <NavigationMenuItem key={link.name}>
                   {link.type === "dropdown" ? (
                     <>
                       <NavigationMenuTrigger 
                         className={cn(
-                          "bg-transparent text-[15px] font-medium transition-colors h-auto hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent px-3 py-2",
+                          "bg-transparent text-lg font-semibold transition-colors h-auto hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent px-4 py-2",
                           isScrolled 
                             ? "text-brand-charcoal hover:text-brand-green data-[state=open]:text-brand-green" 
                             : "text-white hover:text-brand-orange data-[state=open]:text-brand-orange drop-shadow-md"
@@ -99,7 +99,7 @@ export default function Header() {
                       <a 
                         href={link.href}
                         className={cn(
-                          "font-medium transition-colors text-[15px] block px-3 py-2",
+                          "font-semibold transition-colors text-lg block px-4 py-2",
                           isScrolled 
                             ? "text-brand-charcoal hover:text-brand-green" 
                             : "text-white hover:text-brand-orange drop-shadow-md"
@@ -115,24 +115,25 @@ export default function Header() {
           </NavigationMenu>
         </nav>
 
-        <div className="hidden xl:flex items-center gap-4">
+        <div className="hidden xl:flex items-center gap-5">
           <a 
             href="tel:8138607086" 
             className={cn(
-              "font-bold text-base transition-colors whitespace-nowrap",
+              "flex items-center gap-2 font-bold text-lg transition-colors whitespace-nowrap",
               isScrolled 
                 ? "text-brand-charcoal hover:text-brand-green" 
                 : "text-white hover:text-brand-orange drop-shadow-md"
             )}
           >
+            <Phone className="w-5 h-5" />
             (813) 860-7086
           </a>
           <Button 
             className={cn(
-              "font-bold rounded-full px-6 transition-all shadow-lg",
+              "font-bold rounded-full px-8 text-base transition-all shadow-lg h-12",
               isScrolled
                 ? "bg-brand-orange hover:bg-brand-orange/90 text-white"
-                : "bg-white text-brand-green hover:bg-brand-orange hover:text-white"
+                : "bg-brand-orange hover:bg-brand-orange/80 text-white"
             )}
             size="lg"
             asChild
