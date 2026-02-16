@@ -15,6 +15,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={AboutPage} />
       <Route path="/reviews" component={ReviewsPage} />
+      <Route path="/reviews/" component={ReviewsPage} />
       
       {/* Service Routes */}
       <Route path="/services/tree-removal">

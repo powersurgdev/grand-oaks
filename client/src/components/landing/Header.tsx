@@ -86,7 +86,7 @@ export default function Header() {
   }, []);
 
   const companyLinks = [
-    { name: "Reviews", href: "/reviews" },
+    { name: "Reviews", href: "/reviews/" },
   ];
 
   const navLinks = [
@@ -262,7 +262,7 @@ export default function Header() {
                   ))}
 
                   <WouterLink
-                    href="/reviews"
+                    href="/reviews/"
                     className="text-xl font-medium text-foreground hover:text-brand-green transition-colors"
                     onClick={() => setIsOpen(false)}
                     data-testid="mobile-link-reviews"

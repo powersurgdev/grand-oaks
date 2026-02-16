@@ -53,7 +53,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Star className="w-5 h-5 text-brand-orange" />
-                <Link href="/reviews" className="hover:text-white transition-colors" data-testid="link-footer-reviews">Reviews</Link>
+                <Link href="/reviews/" className="hover:text-white transition-colors" data-testid="link-footer-reviews">Reviews</Link>
               </li>
             </ul>
             
