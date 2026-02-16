@@ -27,10 +27,15 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const companyLinks = [
+    { name: "Reviews", href: "/reviews" },
+  ];
+
   const navLinks = [
     { name: "Services", href: "#services", type: "dropdown" },
     { name: "Why Us", href: "/#why-us", type: "link" },
     { name: "Our Work", href: "/#gallery", type: "link" },
+    { name: "Company", href: "#company", type: "company-dropdown" },
   ];
 
   return (
@@ -87,6 +92,39 @@ export default function Header() {
                                   <p className="line-clamp-2 text-xs leading-snug text-muted-foreground mt-1 text-gray-500">
                                     {service.subtitle}
                                   </p>
+                                </WouterLink>
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </>
+                  ) : link.type === "company-dropdown" ? (
+                    <>
+                      <NavigationMenuTrigger 
+                        className={cn(
+                          "bg-transparent text-lg font-semibold transition-colors h-auto hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent px-4 py-2",
+                          isScrolled 
+                            ? "text-brand-charcoal hover:text-brand-green data-[state=open]:text-brand-green" 
+                            : "text-white hover:text-brand-orange data-[state=open]:text-brand-orange drop-shadow-md"
+                        )}
+                        data-testid="nav-company-dropdown"
+                      >
+                        {link.name}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="w-[220px] gap-2 p-3 bg-white rounded-xl shadow-xl">
+                          {companyLinks.map((item) => (
+                            <li key={item.name}>
+                              <NavigationMenuLink asChild>
+                                <WouterLink
+                                  href={item.href}
+                                  className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-brand-offwhite hover:text-brand-green focus:bg-brand-offwhite focus:text-brand-green group"
+                                  data-testid={`link-company-${item.name.toLowerCase()}`}
+                                >
+                                  <span className="text-sm font-bold text-brand-charcoal group-hover:text-brand-green">
+                                    {item.name}
+                                  </span>
                                 </WouterLink>
                               </NavigationMenuLink>
                             </li>
@@ -185,7 +223,7 @@ export default function Header() {
                     </div>
                   </div>
 
-                  {navLinks.filter(l => l.type !== 'dropdown').map((link) => (
+                  {navLinks.filter(l => l.type !== 'dropdown' && l.type !== 'company-dropdown').map((link) => (
                     <a 
                       key={link.name} 
                       href={link.href}
@@ -195,6 +233,23 @@ export default function Header() {
                       {link.name}
                     </a>
                   ))}
+
+                  <div className="space-y-3">
+                    <h4 className="font-bold text-lg text-brand-green">Company</h4>
+                    <div className="pl-4 space-y-3 border-l-2 border-gray-100">
+                      {companyLinks.map((item) => (
+                        <WouterLink
+                          key={item.name}
+                          href={item.href}
+                          className="block text-base font-medium text-gray-600 hover:text-brand-green"
+                          onClick={() => setIsOpen(false)}
+                          data-testid={`mobile-link-company-${item.name.toLowerCase()}`}
+                        >
+                          {item.name}
+                        </WouterLink>
+                      ))}
+                    </div>
+                  </div>
                 </nav>
                 <div className="flex flex-col gap-3 mt-4">
                   <Button 
