@@ -8,6 +8,7 @@ import Home from "@/pages/home";
 import ServicePage from "@/pages/service-page";
 import AboutPage from "@/pages/about-page";
 import ReviewsPage from "@/pages/reviews-page";
+import ServicesPage from "@/pages/services-page";
 
 function Router() {
   return (
@@ -17,6 +18,8 @@ function Router() {
       <Route path="/about-us/" component={AboutPage} />
       <Route path="/reviews" component={ReviewsPage} />
       <Route path="/reviews/" component={ReviewsPage} />
+      <Route path="/services" component={ServicesPage} />
+      <Route path="/services/" component={ServicesPage} />
       
       {/* Service Routes */}
       <Route path="/services/tree-removal">
