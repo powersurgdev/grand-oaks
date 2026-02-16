@@ -31,15 +31,11 @@ function buildEmailHtml(contact: Contact): string {
       <td align="center">
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
           
-          <!-- Header with Logo -->
+          <!-- Header -->
           <tr>
             <td style="background: linear-gradient(135deg, #2D5A27 0%, #1a3d18 100%);padding:32px 40px;text-align:center;">
-              <img 
-                src="https://grand-oaks-property-maintenance.replit.app/logo-text-cropped.png" 
-                alt="Grand Oaks Property Maintenance" 
-                width="220" 
-                style="max-width:220px;height:auto;" 
-              />
+              <h2 style="margin:0;font-size:22px;font-weight:800;color:#ffffff;letter-spacing:0.5px;text-transform:uppercase;">Grand Oaks</h2>
+              <p style="margin:4px 0 0;font-size:13px;font-weight:600;color:#a7c4a3;letter-spacing:1px;text-transform:uppercase;">Property Maintenance</p>
             </td>
           </tr>
 
