@@ -30,7 +30,7 @@ export default function Reviews() {
         </div>
 
         <div
-          className="max-w-5xl mx-auto"
+          className="w-full"
           ref={widgetRef}
           data-testid="reviews-widget-container"
         >
