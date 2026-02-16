@@ -46,7 +46,6 @@ export default function Header() {
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Logo */}
         <a href="/" className="flex-shrink-0">
           <img 
             src="/logo-text-cropped.png" 
@@ -58,17 +57,16 @@ export default function Header() {
           />
         </a>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-4">
+        <nav className="hidden xl:flex items-center gap-1">
           <NavigationMenu>
-            <NavigationMenuList className="gap-4">
+            <NavigationMenuList className="gap-1">
               {navLinks.map((link) => (
                 <NavigationMenuItem key={link.name}>
                   {link.type === "dropdown" ? (
                     <>
                       <NavigationMenuTrigger 
                         className={cn(
-                          "bg-transparent text-base font-medium transition-colors h-auto hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent px-2 py-2",
+                          "bg-transparent text-[15px] font-medium transition-colors h-auto hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent px-3 py-2",
                           isScrolled 
                             ? "text-brand-charcoal hover:text-brand-green data-[state=open]:text-brand-green" 
                             : "text-white hover:text-brand-orange data-[state=open]:text-brand-orange drop-shadow-md"
@@ -104,7 +102,7 @@ export default function Header() {
                       <a 
                         href={link.href}
                         className={cn(
-                          "font-medium transition-colors text-base block",
+                          "font-medium transition-colors text-[15px] block px-3 py-2",
                           isScrolled 
                             ? "text-brand-charcoal hover:text-brand-green" 
                             : "text-white hover:text-brand-orange drop-shadow-md"
@@ -120,12 +118,11 @@ export default function Header() {
           </NavigationMenu>
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden xl:flex items-center gap-4">
           <a 
             href="tel:8138607086" 
             className={cn(
-              "font-bold text-sm xl:text-base transition-colors whitespace-nowrap",
+              "font-bold text-base transition-colors whitespace-nowrap",
               isScrolled 
                 ? "text-brand-charcoal hover:text-brand-green" 
                 : "text-white hover:text-brand-orange drop-shadow-md"
@@ -147,8 +144,7 @@ export default function Header() {
           </Button>
         </div>
 
-        {/* Mobile Menu */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 xl:hidden">
           <a 
             href="tel:8138607086"
             className={cn(
@@ -175,7 +171,6 @@ export default function Header() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px] overflow-y-auto">
               <div className="flex flex-col gap-6 mt-10">
                 <nav className="flex flex-col gap-4">
-                  {/* Mobile Services Section */}
                   <div className="space-y-3">
                     <h4 className="font-bold text-lg text-brand-green">Services</h4>
                     <div className="pl-4 space-y-3 border-l-2 border-gray-100">
