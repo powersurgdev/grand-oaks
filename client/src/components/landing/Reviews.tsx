@@ -30,7 +30,7 @@ export default function Reviews() {
         </div>
 
         <div
-          className="max-w-5xl mx-auto max-h-[500px] md:max-h-[600px] overflow-y-auto rounded-2xl"
+          className="max-w-5xl mx-auto"
           ref={widgetRef}
           data-testid="reviews-widget-container"
         >
