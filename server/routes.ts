@@ -54,6 +54,7 @@ export async function registerRoutes(
       { loc: "/about-us/", priority: "0.8", changefreq: "monthly" },
       { loc: "/reviews/", priority: "0.8", changefreq: "weekly" },
       { loc: "/contact/", priority: "0.8", changefreq: "monthly" },
+      { loc: "/frequently-asked-questions/", priority: "0.7", changefreq: "monthly" },
       { loc: "/services/", priority: "0.8", changefreq: "monthly" },
       { loc: "/services/tree-removal", priority: "0.9", changefreq: "monthly" },
       { loc: "/services/tree-trimming", priority: "0.9", changefreq: "monthly" },

@@ -10,6 +10,7 @@ import AboutPage from "@/pages/about-page";
 import ReviewsPage from "@/pages/reviews-page";
 import ServicesPage from "@/pages/services-page";
 import ContactPage from "@/pages/contact-page";
+import FAQPage from "@/pages/faq-page";
 
 function Router() {
   return (
@@ -22,6 +23,8 @@ function Router() {
       <Route path="/contact" component={ContactPage} />
       <Route path="/contact/" component={ContactPage} />
       <Route path="/contact/#" component={ContactPage} />
+      <Route path="/frequently-asked-questions" component={FAQPage} />
+      <Route path="/frequently-asked-questions/" component={FAQPage} />
       <Route path="/services" component={ServicesPage} />
       <Route path="/services/" component={ServicesPage} />
       
