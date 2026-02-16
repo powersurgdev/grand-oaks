@@ -93,7 +93,6 @@ export default function Header() {
   const navLinks = [
     { name: "Services", href: "#services", type: "dropdown" },
     { name: "Company", href: "#company", type: "company-dropdown" },
-    { name: "Why Us", href: "/#why-us", type: "link" },
     { name: "Our Work", href: "/#gallery", type: "link" },
   ];
 
