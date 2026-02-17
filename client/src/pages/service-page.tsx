@@ -40,6 +40,7 @@ export default function ServicePage({ slug }: ServicePageProps) {
           subtitle={service.heroSubheadline} 
           image={service.heroImage}
           imagePosition={(service as any).heroImagePosition}
+          formSource={`service-${slug}-hero`}
         />
 
         <div className="container mx-auto px-4 py-16 md:py-24">

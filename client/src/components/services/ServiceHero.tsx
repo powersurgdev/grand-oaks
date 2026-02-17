@@ -8,9 +8,10 @@ interface ServiceHeroProps {
   subtitle: string;
   image: string;
   imagePosition?: string;
+  formSource?: string;
 }
 
-export default function ServiceHero({ title, subtitle, image, imagePosition }: ServiceHeroProps) {
+export default function ServiceHero({ title, subtitle, image, imagePosition, formSource }: ServiceHeroProps) {
   return (
     <section className="relative min-h-[550px] md:min-h-[80vh] flex flex-col justify-center overflow-hidden">
       <div className="absolute inset-0 bg-black">
@@ -69,7 +70,7 @@ export default function ServiceHero({ title, subtitle, image, imagePosition }: S
         </div>
 
         <div className="hidden xl:block w-full max-w-md shrink-0 animate-in fade-in slide-in-from-right-10 duration-700 delay-300">
-          <HeroContactForm />
+          <HeroContactForm formSource={formSource} />
         </div>
       </div>
     </section>

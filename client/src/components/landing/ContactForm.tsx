@@ -8,7 +8,13 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 
-export default function ContactForm() {
+function getDeviceType(): string {
+  const ua = navigator.userAgent;
+  if (/Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(ua)) return "mobile";
+  return "desktop";
+}
+
+export default function ContactForm({ formSource = "unknown" }: { formSource?: string }) {
   const { toast } = useToast();
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
@@ -16,7 +22,7 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
 
   const submitMutation = useMutation({
-    mutationFn: async (data: { fullName: string; phone: string; service: string; message?: string }) => {
+    mutationFn: async (data: { fullName: string; phone: string; service: string; message?: string; deviceType?: string; formSource?: string }) => {
       const res = await apiRequest("POST", "/api/contact", data);
       return res.json();
     },
@@ -56,6 +62,8 @@ export default function ContactForm() {
       phone: phone.trim(),
       service,
       message: message.trim() || undefined,
+      deviceType: getDeviceType(),
+      formSource,
     });
   };
 

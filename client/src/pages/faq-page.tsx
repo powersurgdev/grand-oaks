@@ -114,7 +114,7 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <ContactForm />
+        <ContactForm formSource="faq-page" />
       </main>
 
       <Footer />
