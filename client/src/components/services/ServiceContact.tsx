@@ -71,7 +71,7 @@ export default function ServiceContact() {
           <div className="flex items-center gap-2">
              <span className="text-gray-400 hidden md:inline">|</span>
              <span>Prefer to call?</span>
-             <a href="tel:8138607086" className="font-bold text-brand-charcoal hover:text-brand-green transition-colors">(813) 860-7086</a>
+             <a href="tel:8138607086" onClick={() => { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion('tel:8138607086'); }} className="font-bold text-brand-charcoal hover:text-brand-green transition-colors">(813) 860-7086</a>
           </div>
         </div>
       </div>

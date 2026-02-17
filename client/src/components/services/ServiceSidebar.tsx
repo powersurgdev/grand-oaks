@@ -47,6 +47,7 @@ export default function ServiceSidebar() {
 
         <a 
           href="tel:8138607086" 
+          onClick={() => { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion('tel:8138607086'); }}
           className="flex items-center justify-center gap-2 text-2xl font-bold bg-white text-brand-green py-3 rounded-xl shadow-md hover:bg-gray-100 transition-colors w-full mb-4 relative z-10"
         >
           <Phone className="w-5 h-5 fill-brand-green" />

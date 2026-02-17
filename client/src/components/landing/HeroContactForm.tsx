@@ -63,7 +63,7 @@ export default function HeroContactForm() {
         <h3 className="text-xl font-bold text-white">Get Your Free Estimate</h3>
         <p className="text-white/80 text-sm flex items-center gap-1.5 mt-1">
           <Phone className="w-3.5 h-3.5" />
-          Or call <a href="tel:8138607086" className="font-bold text-white hover:underline">(813) 860-7086</a>
+          Or call <a href="tel:8138607086" onClick={() => { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion('tel:8138607086'); }} className="font-bold text-white hover:underline">(813) 860-7086</a>
         </p>
       </div>
       <form onSubmit={handleSubmit} className="p-6 space-y-4">

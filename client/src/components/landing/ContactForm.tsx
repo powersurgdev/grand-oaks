@@ -110,7 +110,7 @@ export default function ContactForm() {
             <CardHeader className="bg-brand-green text-white p-8">
               <CardTitle className="text-2xl text-white">Contact Us Today</CardTitle>
               <CardDescription className="text-brand-offwhite/80">
-                Prefer calling? <a href="tel:8138607086" className="font-bold text-white hover:underline">(813) 860-7086</a>
+                Prefer calling? <a href="tel:8138607086" onClick={() => { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion('tel:8138607086'); }} className="font-bold text-white hover:underline">(813) 860-7086</a>
               </CardDescription>
             </CardHeader>
             <CardContent className="p-8 space-y-6">

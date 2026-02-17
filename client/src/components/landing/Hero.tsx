@@ -69,7 +69,7 @@ export default function Hero() {
               className="w-full sm:w-auto h-11 md:h-16 text-sm md:text-lg font-bold bg-brand-orange hover:bg-brand-orange/90 text-white rounded-xl md:rounded-2xl shadow-xl transition-transform active:scale-95"
               asChild
             >
-              <a href="tel:8138607086">Call Now (813) 860-7086</a>
+              <a href="tel:8138607086" onClick={() => { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion('tel:8138607086'); }}>Call Now (813) 860-7086</a>
             </Button>
             <Button 
               size="xl" 

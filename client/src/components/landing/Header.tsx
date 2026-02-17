@@ -183,6 +183,7 @@ export default function Header() {
         <div className="hidden xl:flex items-center gap-5">
           <a 
             href="tel:8138607086" 
+            onClick={() => { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion('tel:8138607086'); }}
             className={cn(
               "flex items-center gap-2 font-bold text-lg transition-colors whitespace-nowrap",
               isScrolled 
@@ -210,6 +211,7 @@ export default function Header() {
         <div className="flex items-center gap-2 xl:hidden">
           <a 
             href="tel:8138607086"
+            onClick={() => { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion('tel:8138607086'); }}
             className={cn(
               "flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-300 border",
               isScrolled
@@ -275,7 +277,7 @@ export default function Header() {
                     className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-bold rounded-xl h-12 text-lg"
                     asChild
                   >
-                    <a href="tel:8138607086">Call (813) 860-7086</a>
+                    <a href="tel:8138607086" onClick={() => { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion('tel:8138607086'); }}>Call (813) 860-7086</a>
                   </Button>
                   <Button 
                     className="w-full bg-brand-green hover:bg-brand-green/90 text-white font-bold rounded-xl h-12 text-lg"

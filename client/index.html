@@ -29,6 +29,25 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     
+    <!-- Google Ads Click to Call Conversion -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17492567607/QXs6CLWM_fkbELfMjZVB',
+          'value': 1.0,
+          'currency': 'USD',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    <!-- End Google Ads Click to Call Conversion -->
+
     <link rel="preload" as="image" type="image/webp" href="/images/optimized/gallery-crane-setup.webp" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
