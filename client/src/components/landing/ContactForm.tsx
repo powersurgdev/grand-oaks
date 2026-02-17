@@ -21,6 +21,8 @@ export default function ContactForm() {
       return res.json();
     },
     onSuccess: (data) => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "lead_form_submit_success" });
       toast({
         title: "Request Submitted!",
         description: data.message || "We'll get back to you shortly.",
