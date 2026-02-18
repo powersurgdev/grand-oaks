@@ -252,6 +252,24 @@ export default function Header() {
                     </div>
                   </div>
 
+                  <WouterLink
+                    href="/about-us/"
+                    className="text-xl font-medium text-foreground hover:text-brand-green transition-colors"
+                    onClick={() => setIsOpen(false)}
+                    data-testid="mobile-link-about"
+                  >
+                    About Us
+                  </WouterLink>
+
+                  <WouterLink
+                    href="/reviews/"
+                    className="text-xl font-medium text-foreground hover:text-brand-green transition-colors"
+                    onClick={() => setIsOpen(false)}
+                    data-testid="mobile-link-reviews"
+                  >
+                    Reviews
+                  </WouterLink>
+
                   {navLinks.filter(l => l.type !== 'dropdown' && l.type !== 'company-dropdown').map((link) => (
                     <a 
                       key={link.name} 
@@ -262,15 +280,6 @@ export default function Header() {
                       {link.name}
                     </a>
                   ))}
-
-                  <WouterLink
-                    href="/reviews/"
-                    className="text-xl font-medium text-foreground hover:text-brand-green transition-colors"
-                    onClick={() => setIsOpen(false)}
-                    data-testid="mobile-link-reviews"
-                  >
-                    Reviews
-                  </WouterLink>
                 </nav>
                 <div className="flex flex-col gap-3 mt-4">
                   <Button 

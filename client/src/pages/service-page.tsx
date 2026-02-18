@@ -4,7 +4,7 @@ import Footer from "@/components/landing/Footer";
 import MobileStickyCTA from "@/components/landing/MobileCTA";
 import ServiceHero from "@/components/services/ServiceHero";
 import ServiceSidebar from "@/components/services/ServiceSidebar";
-import ServiceContact from "@/components/services/ServiceContact";
+import ContactForm from "@/components/landing/ContactForm";
 import ServicePageGallery from "@/components/services/ServicePageGallery";
 import { 
   Accordion, 
@@ -124,8 +124,8 @@ export default function ServicePage({ slug }: ServicePageProps) {
               {/* Service Gallery */}
               <ServicePageGallery slug={slug} />
 
-              {/* Clean Contact Section */}
-              <ServiceContact />
+              {/* Contact Form */}
+              <ContactForm formSource={`service-${slug}-inline`} compact />
               
               {/* FAQ Section */}
               <div className="mb-16 mt-16">

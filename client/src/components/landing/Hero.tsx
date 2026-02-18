@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ShieldCheck } from "lucide-react";
 import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import HeroContactForm from "./HeroContactForm";
 
 const backgroundImages = [
@@ -24,19 +24,17 @@ export default function Hero() {
     <section className="relative w-full min-h-[550px] md:min-h-[80vh] flex flex-col justify-center overflow-hidden">
       {/* Background Image Carousel */}
       <div className="absolute inset-0 w-full h-full z-0 bg-black">
-        <AnimatePresence mode="popLayout">
+        {backgroundImages.map((img, index) => (
           <motion.img
-            key={currentImage}
-            src={backgroundImages[currentImage].src}
+            key={index}
+            src={img.src}
             alt="Hero Background"
-            className="absolute inset-0 w-full h-full object-cover opacity-60"
-            style={{ objectPosition: backgroundImages[currentImage].position }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.5 }}
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: img.position }}
+            animate={{ opacity: currentImage === index ? 0.6 : 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
           />
-        </AnimatePresence>
+        ))}
         {/* Mobile Gradient: darker at bottom for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80 md:via-black/20 md:to-black/60 z-10"></div>
       </div>

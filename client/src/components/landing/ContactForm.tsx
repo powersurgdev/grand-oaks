@@ -14,7 +14,7 @@ function getDeviceType(): string {
   return "desktop";
 }
 
-export default function ContactForm({ formSource = "unknown" }: { formSource?: string }) {
+export default function ContactForm({ formSource = "unknown", compact = false }: { formSource?: string; compact?: boolean }) {
   const { toast } = useToast();
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
@@ -66,6 +66,90 @@ export default function ContactForm({ formSource = "unknown" }: { formSource?: s
       formSource,
     });
   };
+
+  const formContent = (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="space-y-2">
+            <label className="text-sm font-medium text-gray-700">Full Name</label>
+            <Input
+              data-testid="input-fullname"
+              placeholder="John Doe"
+              className="h-12 rounded-xl bg-gray-50 border-gray-200"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+              required
+            />
+        </div>
+        <div className="space-y-2">
+            <label className="text-sm font-medium text-gray-700">Phone Number</label>
+            <Input
+              data-testid="input-phone"
+              placeholder="(555) 123-4567"
+              className="h-12 rounded-xl bg-gray-50 border-gray-200"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+        </div>
+      </div>
+      
+      <div className="space-y-2">
+        <label className="text-sm font-medium text-gray-700">Service Needed</label>
+        <Select value={service} onValueChange={setService}>
+          <SelectTrigger className="h-12 rounded-xl bg-gray-50 border-gray-200" data-testid="select-service">
+            <SelectValue placeholder="Select a service" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="removal">Tree Removal</SelectItem>
+            <SelectItem value="trimming">Tree Trimming</SelectItem>
+            <SelectItem value="stump">Stump Grinding</SelectItem>
+            <SelectItem value="clearing">Land Clearing</SelectItem>
+            <SelectItem value="emergency">Emergency Tree Services</SelectItem>
+            <SelectItem value="other">Other</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      <div className="space-y-2">
+        <label className="text-sm font-medium text-gray-700">Message (Optional)</label>
+        <Textarea
+          data-testid="input-message"
+          placeholder="Tell us a bit about the trees or property..." 
+          className="min-h-[120px] rounded-xl bg-gray-50 border-gray-200 resize-none"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+      </div>
+
+      <Button
+        type="submit"
+        data-testid="button-submit"
+        disabled={submitMutation.isPending}
+        className="w-full h-14 text-lg font-bold bg-brand-orange hover:bg-brand-orange/90 text-white rounded-xl shadow-lg mt-2"
+      >
+        {submitMutation.isPending ? "Sending..." : "Get My Free Estimate"}
+      </Button>
+    </form>
+  );
+
+  if (compact) {
+    return (
+      <div id="estimate-form" className="scroll-mt-32">
+        <Card className="shadow-xl border-none rounded-3xl overflow-hidden">
+          <CardHeader className="bg-brand-green text-white p-6 md:p-8">
+            <CardTitle className="text-2xl text-white">Get Your Free Quote</CardTitle>
+            <CardDescription className="text-brand-offwhite/80">
+              Fast response times & honest pricing. Prefer calling? <a href="tel:8138607086" onClick={() => { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion('tel:8138607086'); }} className="font-bold text-white hover:underline">(813) 860-7086</a>
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="p-6 md:p-8 space-y-6">
+            {formContent}
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <section id="contact" className="py-20 bg-gray-50 relative overflow-hidden">
@@ -124,69 +208,7 @@ export default function ContactForm({ formSource = "unknown" }: { formSource?: s
               </CardDescription>
             </CardHeader>
             <CardContent className="p-8 space-y-6">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                      <label className="text-sm font-medium text-gray-700">Full Name</label>
-                      <Input
-                        data-testid="input-fullname"
-                        placeholder="John Doe"
-                        className="h-12 rounded-xl bg-gray-50 border-gray-200"
-                        value={fullName}
-                        onChange={(e) => setFullName(e.target.value)}
-                        required
-                      />
-                  </div>
-                  <div className="space-y-2">
-                      <label className="text-sm font-medium text-gray-700">Phone Number</label>
-                      <Input
-                        data-testid="input-phone"
-                        placeholder="(555) 123-4567"
-                        className="h-12 rounded-xl bg-gray-50 border-gray-200"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        required
-                      />
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-700">Service Needed</label>
-                  <Select value={service} onValueChange={setService}>
-                    <SelectTrigger className="h-12 rounded-xl bg-gray-50 border-gray-200" data-testid="select-service">
-                      <SelectValue placeholder="Select a service" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="removal">Tree Removal</SelectItem>
-                      <SelectItem value="trimming">Tree Trimming</SelectItem>
-                      <SelectItem value="stump">Stump Grinding</SelectItem>
-                      <SelectItem value="clearing">Land Clearing</SelectItem>
-                      <SelectItem value="emergency">Emergency Tree Services</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-700">Message (Optional)</label>
-                  <Textarea
-                    data-testid="input-message"
-                    placeholder="Tell us a bit about the trees or property..." 
-                    className="min-h-[120px] rounded-xl bg-gray-50 border-gray-200 resize-none"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  data-testid="button-submit"
-                  disabled={submitMutation.isPending}
-                  className="w-full h-14 text-lg font-bold bg-brand-orange hover:bg-brand-orange/90 text-white rounded-xl shadow-lg mt-2"
-                >
-                  {submitMutation.isPending ? "Sending..." : "Get My Free Estimate"}
-                </Button>
-              </form>
+              {formContent}
             </CardContent>
           </Card>
 
