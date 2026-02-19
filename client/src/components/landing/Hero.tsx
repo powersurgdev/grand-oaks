@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ShieldCheck } from "lucide-react";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import HeroContactForm from "./HeroContactForm";
 
 const backgroundImages = [
@@ -12,10 +11,14 @@ const backgroundImages = [
 
 export default function Hero() {
   const [currentImage, setCurrentImage] = useState(0);
+  const [prevImage, setPrevImage] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % backgroundImages.length);
+      setCurrentImage((prev) => {
+        setPrevImage(prev);
+        return (prev + 1) % backgroundImages.length;
+      });
     }, 5000);
     return () => clearInterval(timer);
   }, []);
@@ -24,19 +27,25 @@ export default function Hero() {
     <section className="relative w-full min-h-[550px] md:min-h-[80vh] flex flex-col justify-center overflow-hidden">
       {/* Background Image Carousel */}
       <div className="absolute inset-0 w-full h-full z-0 bg-black">
-        {backgroundImages.map((img, index) => (
-          <motion.img
-            key={index}
-            src={img.src}
-            alt="Hero Background"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: img.position }}
-            animate={{ opacity: currentImage === index ? 0.6 : 0 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
-          />
-        ))}
+        {backgroundImages.map((img, index) => {
+          const isActive = currentImage === index;
+          const isPrev = prevImage === index && prevImage !== currentImage;
+          return (
+            <img
+              key={index}
+              src={img.src}
+              alt="Hero Background"
+              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-in-out"
+              style={{
+                objectPosition: img.position,
+                opacity: isActive ? 0.6 : isPrev ? 0.6 : 0,
+                zIndex: isActive ? 2 : isPrev ? 1 : 0,
+              }}
+            />
+          );
+        })}
         {/* Mobile Gradient: darker at bottom for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80 md:via-black/20 md:to-black/60 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80 md:via-black/20 md:to-black/60" style={{ zIndex: 3 }}></div>
       </div>
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 flex flex-col xl:flex-row xl:items-center xl:gap-12 pt-32 pb-12 md:pt-40 md:pb-10 h-full justify-center">
@@ -67,7 +76,7 @@ export default function Hero() {
               className="w-full sm:w-auto h-11 md:h-16 text-sm md:text-lg font-bold bg-brand-orange hover:bg-brand-orange/90 text-white rounded-xl md:rounded-2xl shadow-xl transition-transform active:scale-95"
               asChild
             >
-              <a href="tel:8138607086" onClick={() => { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion('tel:8138607086'); }}>Call Now (813) 860-7086</a>
+              <a href="tel:8135443721" onClick={() => { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion('tel:8135443721'); }}>Call Now (813) 544-3721</a>
             </Button>
             <Button 
               size="xl" 

@@ -8,7 +8,7 @@ export default function MobileStickyCTA() {
         className="flex-1 bg-brand-charcoal hover:bg-black text-white font-bold h-14 rounded-xl text-lg shadow-md"
         asChild
       >
-        <a href="tel:8138607086" onClick={() => { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion('tel:8138607086'); }}>
+        <a href="tel:8135443721" onClick={() => { if (typeof window.gtag_report_conversion === 'function') window.gtag_report_conversion('tel:8135443721'); }}>
           <Phone className="w-5 h-5 mr-2" />
           Call Now
         </a>

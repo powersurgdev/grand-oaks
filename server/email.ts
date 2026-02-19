@@ -178,7 +178,7 @@ function buildEmailHtml(contact: Contact): string {
                 Grand Oaks Property Maintenance
               </p>
               <p style="margin:6px 0 0;font-size:13px;color:#7da87a;">
-                Pasco County, Florida &bull; (813) 860-7086
+                Pasco County, Florida &bull; (813) 544-3721
               </p>
               <p style="margin:12px 0 0;font-size:11px;color:#5a8a57;">
                 This is an automated notification from your website contact form.

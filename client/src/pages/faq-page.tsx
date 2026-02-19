@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "Do you offer emergency tree services?",
-    a: "Yes! We offer 24/7 emergency response for storm damage, fallen trees on structures, and hazardous situations. Call us anytime at (813) 860-7086.",
+    a: "Yes! We offer 24/7 emergency response for storm damage, fallen trees on structures, and hazardous situations. Call us anytime at (813) 544-3721.",
   },
   {
     q: "What areas do you serve?",
