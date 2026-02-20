@@ -25,6 +25,10 @@ export async function registerRoutes(
         console.error("Email notification failed (non-blocking):", err);
       });
 
+      sendToPulse(contact).catch((err) => {
+        console.error("Pulse webhook failed (non-blocking):", err);
+      });
+
       return res.status(201).json({ 
         message: "Thank you! We'll get back to you shortly.",
         id: contact.id 
@@ -90,6 +94,46 @@ Sitemap: ${SITE_URL}/sitemap.xml
   await seedGalleryData();
 
   return httpServer;
+}
+
+async function sendToPulse(contact: {
+  fullName: string;
+  phone: string;
+  service: string;
+  message?: string | null;
+  deviceType?: string | null;
+  formSource?: string | null;
+}) {
+  const webhookUrl = process.env.PULSE_WEBHOOK_URL;
+  const apiKey = process.env.PULSE_API_KEY;
+
+  if (!webhookUrl || !apiKey) {
+    console.warn("Pulse webhook not configured — skipping CRM sync");
+    return;
+  }
+
+  const response = await fetch(webhookUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      apiKey,
+      fullName: contact.fullName,
+      phone: contact.phone,
+      service: contact.service,
+      message: contact.message || "",
+      deviceType: contact.deviceType || "desktop",
+      formSource: contact.formSource || "website",
+    }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Pulse webhook returned ${response.status}: ${errorText}`);
+  }
+
+  const data = await response.json();
+  console.log("Lead sent to Pulse Analytics:", data);
+  return data;
 }
 
 async function seedGalleryData() {
