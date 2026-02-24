@@ -38,8 +38,8 @@ export default function Hero() {
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-in-out"
               style={{
                 objectPosition: img.position,
-                opacity: isActive ? 0.6 : isPrev ? 0.6 : 0,
-                zIndex: isActive ? 2 : isPrev ? 1 : 0,
+                opacity: isActive ? 1 : 0,
+                zIndex: isActive ? 2 : 1,
               }}
             />
           );
