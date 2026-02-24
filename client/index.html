@@ -37,12 +37,16 @@
           window.location = url;
         }
       };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-17492567607/QXs6CLWM_fkbELfMjZVB',
-          'value': 1.0,
-          'currency': 'USD',
-          'event_callback': callback
-      });
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17492567607/QXs6CLWM_fkbELfMjZVB',
+            'value': 1.0,
+            'currency': 'USD',
+            'event_callback': callback
+        });
+      } else {
+        callback();
+      }
       return false;
     }
     </script>
