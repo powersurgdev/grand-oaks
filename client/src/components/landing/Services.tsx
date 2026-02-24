@@ -56,9 +56,14 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-          {services.map((service, index) => (
-            <Link key={index} href={service.link} className="block h-full no-underline">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 justify-center">
+          {services.map((service, index) => {
+            const total = services.length;
+            const remainder = total % 3;
+            const isLastRow = remainder > 0 && index >= total - remainder;
+            const colSpan = isLastRow ? "lg:col-span-3" : "lg:col-span-2";
+            return (
+            <Link key={index} href={service.link} className={cn("block h-full no-underline", colSpan)}>
               <Card className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow rounded-2xl bg-gray-50 flex flex-col h-full cursor-pointer">
                 <div className="relative h-64 overflow-hidden">
                   <LazyImage
@@ -83,7 +88,8 @@ export default function Services() {
                 </CardContent>
               </Card>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
