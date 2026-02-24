@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 
 function loadSociableKitScript() {
-  const src = "https://widgets.sociablekit.com/google-reviews/widget.js";
-  if (document.querySelector(`script[src="${src}"]`)) return;
+  const existing = document.querySelector('script[src^="https://widgets.sociablekit.com/google-reviews/widget.js"]');
+  if (existing) existing.remove();
   const script = document.createElement("script");
-  script.src = src;
+  script.src = `https://widgets.sociablekit.com/google-reviews/widget.js?v=${Date.now()}`;
   script.defer = true;
   document.body.appendChild(script);
 }
