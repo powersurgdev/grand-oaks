@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 import MobileStickyCTA from "@/components/landing/MobileCTA";
+import ContactForm from "@/components/landing/ContactForm";
 import { CheckCircle2 } from "lucide-react";
 
 function loadSociableKitScript() {
@@ -56,6 +57,8 @@ export default function ReviewsPage() {
             </div>
           </div>
         </section>
+
+        <ContactForm />
       </main>
 
       <Footer />
