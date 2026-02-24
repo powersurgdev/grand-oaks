@@ -52,7 +52,7 @@ export default function ReviewsPage() {
 
         <section className="py-16 md:py-24 bg-brand-offwhite">
           <div className="container mx-auto px-4">
-            <div className="w-full max-w-4xl mx-auto" data-testid="reviews-page-widget">
+            <div className="w-full max-w-6xl mx-auto" data-testid="reviews-page-widget">
               <div className="sk-ww-google-reviews" data-embed-id="25655088"></div>
             </div>
           </div>
