@@ -1,7 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Phone, CalendarCheck } from "lucide-react";
+import { useCallback } from "react";
 
 export default function MobileStickyCTA() {
+  const handleEstimateClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    const formEl = document.getElementById("estimate-form");
+    if (formEl) {
+      e.preventDefault();
+      formEl.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
   return (
     <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] md:hidden z-50 flex gap-3">
       <Button 
@@ -17,7 +26,7 @@ export default function MobileStickyCTA() {
         className="flex-1 bg-brand-orange hover:bg-brand-orange/90 text-white font-bold h-14 rounded-xl text-lg shadow-md"
         asChild
       >
-        <a href="#estimate-form">
+        <a href="/contact/#estimate-form" onClick={handleEstimateClick}>
           <CalendarCheck className="w-5 h-5 mr-2" />
           Estimate
         </a>
