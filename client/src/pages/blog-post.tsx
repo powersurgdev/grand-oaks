@@ -157,7 +157,7 @@ export default function BlogPostPage({ categorySlug, postSlug }: { categorySlug:
             <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 30% 50%, rgba(255,255,255,0.12) 0%, transparent 50%), radial-gradient(circle at 70% 20%, rgba(255,255,255,0.08) 0%, transparent 40%)" }}></div>
           </div>
           <div className="relative z-10 container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <nav className="flex items-center flex-wrap gap-1 text-sm text-white/70 mb-6" aria-label="Breadcrumb" data-testid="breadcrumbs">
                 <Link href="/" className="hover:text-white transition-colors">Home</Link>
                 <ChevronRight className="w-3 h-3" />
@@ -196,12 +196,12 @@ export default function BlogPostPage({ categorySlug, postSlug }: { categorySlug:
           </div>
         </section>
 
-        <section className="py-10 md:py-14">
+        <section className="py-10 md:py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <div className="flex flex-col lg:flex-row gap-8">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-col lg:flex-row gap-10">
                 {headings.length > 3 && (
-                  <aside className="lg:w-64 lg:shrink-0 lg:order-2">
+                  <aside className="lg:w-56 lg:shrink-0 lg:order-2">
                     <div className="lg:sticky lg:top-24 bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
                       <div className="flex items-center gap-2 mb-4">
                         <div className="w-7 h-7 rounded-lg bg-brand-green/10 flex items-center justify-center">
@@ -225,8 +225,8 @@ export default function BlogPostPage({ categorySlug, postSlug }: { categorySlug:
                 )}
 
                 <article className="flex-1 min-w-0 lg:order-1">
-                  <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 md:p-10">
-                    <div className="prose prose-lg max-w-none prose-headings:text-brand-charcoal prose-headings:font-bold prose-headings:mt-8 prose-headings:mb-4 prose-h2:text-2xl prose-h2:border-b prose-h2:border-gray-100 prose-h2:pb-3 prose-h3:text-xl prose-p:text-gray-600 prose-p:leading-relaxed prose-a:text-brand-green prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-strong:text-brand-charcoal prose-li:text-gray-600 prose-li:leading-relaxed prose-ul:space-y-1 prose-ol:space-y-1 prose-blockquote:border-brand-green prose-blockquote:bg-brand-green/5 prose-blockquote:rounded-r-xl prose-blockquote:py-1 prose-blockquote:not-italic" data-testid="post-content">
+                  <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-10 md:p-12 lg:p-14">
+                    <div className="prose prose-lg md:prose-xl max-w-none prose-headings:text-brand-charcoal prose-headings:font-bold prose-headings:mt-10 prose-headings:mb-5 prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:border-b prose-h2:border-gray-100 prose-h2:pb-3 prose-h3:text-xl md:prose-h3:text-2xl prose-p:text-gray-600 prose-p:leading-[1.8] prose-a:text-brand-green prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-strong:text-brand-charcoal prose-li:text-gray-600 prose-li:leading-[1.8] prose-ul:space-y-2 prose-ol:space-y-2 prose-blockquote:border-brand-green prose-blockquote:bg-brand-green/5 prose-blockquote:rounded-r-xl prose-blockquote:py-1 prose-blockquote:not-italic" data-testid="post-content">
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         components={{
@@ -314,7 +314,7 @@ export default function BlogPostPage({ categorySlug, postSlug }: { categorySlug:
         {relatedPosts.length > 0 && (
           <section className="py-12 md:py-16 bg-white border-t border-gray-100">
             <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto">
+              <div className="max-w-4xl mx-auto">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center">
                     <BookOpen className="w-5 h-5 text-brand-green" />
