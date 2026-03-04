@@ -85,7 +85,7 @@ export default function BlogHome() {
             <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 40%)" }}></div>
           </div>
           <div className="relative z-10 container mx-auto px-4">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)] uppercase leading-tight tracking-tight text-white" data-testid="text-blog-heading">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-[0_3px_6px_rgba(0,0,0,0.6)] uppercase leading-tight text-white [text-shadow:_0_2px_10px_rgba(0,0,0,0.5)]" data-testid="text-blog-heading">
               Tree Care Answers for Pasco & Hillsborough County
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
