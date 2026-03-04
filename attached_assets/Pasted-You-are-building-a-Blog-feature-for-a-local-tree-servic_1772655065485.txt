@@ -1,0 +1,125 @@
+You are building a Blog feature for a local tree service website (Grand Oaks Property Maintenance) focused on Pasco County and Hillsborough County, FL.
+
+GOAL
+Create an SEO-first blog that functions like a searchable Q&A knowledge base:
+- Blog Home at /blog
+- Search bar to search post titles + content
+- Category filters (chips or sidebar)
+- Individual blog posts with clean URL slugs
+- Strong internal linking to money pages (services + service-area pages)
+- Optimized metadata, schema, sitemap, and breadcrumbs
+
+NAVIGATION
+1) Add a primary navigation link labeled “Blog” that routes to /blog.
+
+ROUTING + URL STRUCTURE (BEST PRACTICE)
+Use this exact pattern:
+- Blog home: /blog
+- Category hub pages: /blog/{categorySlug}
+- Post pages: /blog/{categorySlug}/{postSlug}
+
+Slug rules:
+- lowercase
+- hyphen-separated words (no underscores)
+- short but descriptive (avoid filler words)
+- include the main keyword + local modifier ONLY when it’s truly relevant (Pasco, Hillsborough, or a city name)
+
+CATEGORIES (initial set)
+Create these category slugs + display names:
+1) tree-trimming  -> Tree Trimming & Pruning
+2) tree-removal   -> Tree Removal
+3) stump-grinding -> Stump Grinding
+4) land-clearing  -> Land Clearing
+5) storm-prep     -> Storm Prep (Hurricane Season)
+6) emergency-storm-cleanup -> Emergency Storm Cleanup
+7) tree-health-pests -> Tree Health, Disease & Pests
+8) permits-pricing -> Pricing, Permits & What to Expect
+9) safety-diy-vs-pro -> Safety & DIY vs Pro
+
+BLOG HOME PAGE (/blog) REQUIREMENTS
+Layout:
+- H1: “Tree Care Answers for Pasco & Hillsborough County”
+- Prominent Search bar (full width)
+- Category filter UI (chips)
+- Post cards list with:
+  - Title (question-style)
+  - 1–2 line excerpt
+  - Category tag
+  - City/County tag if applicable
+  - Published date
+- Sorting options: Newest, Most Popular
+- Pagination (e.g., 12 per page) with SEO-friendly pagination URLs:
+  /blog?page=2 (and add rel=prev/next if applicable)
+
+Category hub pages (/blog/{categorySlug}):
+- H1 describing the category
+- Short intro paragraph (unique per category)
+- Same search + filters
+- List only posts in that category
+
+SEARCH BEHAVIOR
+- Search should match titles first, then content.
+- Show “No results” state with suggested categories and top posts.
+- Optional: autocomplete suggestions while typing (recommended).
+
+POST PAGE TEMPLATE (/blog/{categorySlug}/{postSlug})
+Structure:
+- H1 = exact question title
+- Above-the-fold quick answer summary (2–4 sentences)
+- Table of Contents (jump links) for longer posts
+- Main content with clear headings (H2/H3)
+- “When to call a pro” section + CTA button linking to the relevant Service page
+- FAQ section at bottom (3–6 FAQs) related to the post
+- “Related questions” section linking to 6–10 related posts (same category + storm prep cross-links)
+- Breadcrumbs:
+  Home > Blog > {Category} > {Post Title}
+
+LOCAL SEO RULES FOR POSTS
+- If the post is location-specific, include Pasco/Hillsborough or city name in:
+  - Title (only if natural)
+  - Intro paragraph
+  - One section about local conditions (storms, tree types, seasons)
+  - CTA that links to the matching service-area page (if it exists)
+- Do NOT stuff every post with locations. Mix local + evergreen posts.
+
+INTERNAL LINKING (CRITICAL)
+Every post must:
+1) Link to exactly one primary “money page” (service page) that matches intent:
+   - /tree-trimming
+   - /tree-removal
+   - /stump-grinding
+   - /land-clearing
+   - /emergency-storm-cleanup
+2) Link to 2–4 related blog posts (contextual anchors).
+3) If you have service-area pages, add one link to the relevant area page (e.g., /service-areas/pasco-county or /service-areas/hillsborough-county).
+
+SEO TECHNICAL REQUIREMENTS
+- Generate a unique <title> and meta description for every page.
+- Add canonical tags:
+  - Posts canonical to their own URL
+  - Category pages canonical to themselves
+- Use clean, crawlable HTML (no content hidden behind client-only rendering if possible).
+- Build an XML sitemap that includes:
+  - /blog
+  - all category pages
+  - all post pages
+- Add OpenGraph + Twitter card tags for posts.
+
+STRUCTURED DATA (SCHEMA)
+- For blog posts: use Article or BlogPosting schema.
+- For the FAQ section: add FAQPage schema ONLY for the FAQ block on the post page.
+  (Do NOT use QAPage schema because users are not submitting answers.)
+- Add BreadcrumbList schema for breadcrumbs.
+
+CONTENT MODEL
+Implement a simple content system:
+- Posts stored as markdown or JSON with fields:
+  id, title, slug, categorySlug, excerpt, content, faq[], publishedAt, updatedAt,
+  locationTags (optional), primaryServiceLink
+- Ensure routing auto-generates pages from these posts.
+
+QUALITY BAR
+Make everything fast, clean, mobile-first:
+- LCP-friendly layout, optimized images, minimal JS
+- Accessible search + filters
+- Clear CTAs for phone call + estimate form on post pages
