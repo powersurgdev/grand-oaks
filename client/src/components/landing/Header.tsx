@@ -31,6 +31,7 @@ export default function Header() {
     { name: "Services", href: "#services", type: "dropdown" },
     { name: "About Us", href: "/about-us/", type: "page-link" },
     { name: "Reviews", href: "/reviews/", type: "page-link" },
+    { name: "Blog", href: "/blog/", type: "page-link" },
   ];
 
   return (
@@ -203,6 +204,15 @@ export default function Header() {
                     data-testid="mobile-link-reviews"
                   >
                     Reviews
+                  </WouterLink>
+
+                  <WouterLink
+                    href="/blog/"
+                    className="text-xl font-medium text-foreground hover:text-brand-green transition-colors"
+                    onClick={() => setIsOpen(false)}
+                    data-testid="mobile-link-blog"
+                  >
+                    Blog
                   </WouterLink>
 
                 </nav>

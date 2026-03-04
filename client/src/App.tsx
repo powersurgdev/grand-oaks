@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useParams } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -11,6 +11,20 @@ import ReviewsPage from "@/pages/reviews-page";
 import ServicesPage from "@/pages/services-page";
 import ContactPage from "@/pages/contact-page";
 import FAQPage from "@/pages/faq-page";
+import BlogHome from "@/pages/blog-home";
+import BlogCategoryPage from "@/pages/blog-category";
+import BlogPostPage from "@/pages/blog-post";
+import BlogAdmin from "@/pages/blog-admin";
+
+function BlogCategoryRoute() {
+  const params = useParams<{ categorySlug: string }>();
+  return <BlogCategoryPage slug={params.categorySlug} />;
+}
+
+function BlogPostRoute() {
+  const params = useParams<{ categorySlug: string; postSlug: string }>();
+  return <BlogPostPage categorySlug={params.categorySlug} postSlug={params.postSlug} />;
+}
 
 function Router() {
   return (
@@ -28,7 +42,6 @@ function Router() {
       <Route path="/services" component={ServicesPage} />
       <Route path="/services/" component={ServicesPage} />
       
-      {/* Service Routes */}
       <Route path="/services/tree-removal">
         <ServicePage slug="tree-removal" />
       </Route>
@@ -44,6 +57,16 @@ function Router() {
       <Route path="/services/emergency-tree-service">
         <ServicePage slug="emergency-tree-service" />
       </Route>
+
+      <Route path="/admin" component={BlogAdmin} />
+      <Route path="/admin/" component={BlogAdmin} />
+
+      <Route path="/blog" component={BlogHome} />
+      <Route path="/blog/" component={BlogHome} />
+      <Route path="/blog/:categorySlug" component={BlogCategoryRoute} />
+      <Route path="/blog/:categorySlug/" component={BlogCategoryRoute} />
+      <Route path="/blog/:categorySlug/:postSlug" component={BlogPostRoute} />
+      <Route path="/blog/:categorySlug/:postSlug/" component={BlogPostRoute} />
 
       <Route component={NotFound} />
     </Switch>
