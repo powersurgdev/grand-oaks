@@ -1,5 +1,5 @@
-import { Phone, Menu, ChevronDown, Star } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { Phone, Menu } from "lucide-react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
@@ -14,64 +14,6 @@ import {
 import { servicesData } from "@/data/services";
 import { Link as WouterLink } from "wouter";
 
-function CompanyDropdown({ isScrolled, companyLinks }: { isScrolled: boolean; companyLinks: { name: string; href: string }[] }) {
-  const [open, setOpen] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
-
-  const handleEnter = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setOpen(true);
-  };
-  const handleLeave = () => {
-    timeoutRef.current = setTimeout(() => setOpen(false), 150);
-  };
-
-  return (
-    <div className="relative" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
-      <button
-        className={cn(
-          "inline-flex items-center gap-1 text-lg font-semibold transition-colors h-auto px-4 py-2 rounded-md",
-          open
-            ? "bg-white/90 backdrop-blur-sm text-brand-orange shadow-sm"
-            : isScrolled 
-              ? "bg-transparent text-brand-charcoal hover:text-brand-orange" 
-              : "bg-transparent text-white hover:text-brand-orange drop-shadow-md"
-        )}
-        data-testid="nav-company-dropdown"
-        onClick={() => setOpen(!open)}
-      >
-        Company
-        <ChevronDown className={cn("relative top-[1px] h-3 w-3 transition duration-300", open && "rotate-180")} aria-hidden="true" />
-      </button>
-      {open && (
-        <div className="absolute left-1/2 -translate-x-1/2 top-full pt-1.5 z-50">
-          <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden p-2 w-[220px]">
-            {companyLinks.map((item) => (
-              <WouterLink
-                key={item.name}
-                href={item.href}
-                className="flex items-center gap-2.5 select-none rounded-md p-3 no-underline outline-none transition-colors hover:bg-brand-offwhite group"
-                data-testid={`link-company-${item.name.toLowerCase()}`}
-                onClick={() => setOpen(false)}
-              >
-                <Star className="w-4 h-4 text-brand-orange shrink-0" />
-                <div className="space-y-1">
-                  <div className="text-sm font-bold leading-none text-brand-charcoal group-hover:text-brand-charcoal">
-                    {item.name}
-                  </div>
-                  <p className="text-xs leading-snug text-gray-500">
-                    See What Our Customers Say
-                  </p>
-                </div>
-              </WouterLink>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -85,15 +27,10 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const companyLinks = [
-    { name: "About Us", href: "/about-us/" },
-    { name: "Reviews", href: "/reviews/" },
-  ];
-
   const navLinks = [
     { name: "Services", href: "#services", type: "dropdown" },
-    { name: "Company", href: "#company", type: "company-dropdown" },
-    { name: "Our Work", href: "/#gallery", type: "link" },
+    { name: "About Us", href: "/about-us/", type: "page-link" },
+    { name: "Reviews", href: "/reviews/", type: "page-link" },
   ];
 
   return (
@@ -157,11 +94,9 @@ export default function Header() {
                         </ul>
                       </NavigationMenuContent>
                     </>
-                  ) : link.type === "company-dropdown" ? (
-                    <CompanyDropdown isScrolled={isScrolled} companyLinks={companyLinks} />
                   ) : (
                     <NavigationMenuLink asChild>
-                      <a 
+                      <WouterLink 
                         href={link.href}
                         className={cn(
                           "font-semibold transition-colors text-lg block px-4 py-2",
@@ -171,7 +106,7 @@ export default function Header() {
                         )}
                       >
                         {link.name}
-                      </a>
+                      </WouterLink>
                     </NavigationMenuLink>
                   )}
                 </NavigationMenuItem>
@@ -270,16 +205,6 @@ export default function Header() {
                     Reviews
                   </WouterLink>
 
-                  {navLinks.filter(l => l.type !== 'dropdown' && l.type !== 'company-dropdown').map((link) => (
-                    <a 
-                      key={link.name} 
-                      href={link.href}
-                      className="text-xl font-medium text-foreground hover:text-brand-green transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {link.name}
-                    </a>
-                  ))}
                 </nav>
                 <div className="flex flex-col gap-3 mt-4">
                   <Button 
