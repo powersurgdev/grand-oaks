@@ -4,3 +4,10 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+.env
+.env.local
+.env.*.local
+blog_posts/
+grand_oaks_blog_posts/
+*.py
+scraped_posts.json
