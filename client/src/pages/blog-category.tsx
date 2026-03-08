@@ -35,7 +35,7 @@ export default function BlogCategoryPage({ slug }: { slug: string }) {
         canonical.rel = "canonical";
         document.head.appendChild(canonical);
       }
-      canonical.href = `https://grandoakspropertymaintenance.com/blog/${slug}/`;
+      canonical.href = `https://grandoakspropertymaintenance.com/blog/${slug}`;
     }
   }, [category, slug]);
 
@@ -67,7 +67,7 @@ export default function BlogCategoryPage({ slug }: { slug: string }) {
             <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 40%)" }}></div>
           </div>
           <div className="relative z-10 container mx-auto px-4">
-            <Link href="/blog/" className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-4 transition-colors">
+            <Link href="/blog" className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-4 transition-colors">
               <ArrowLeft className="w-4 h-4" /> Back to Blog
             </Link>
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] uppercase leading-tight" data-testid="text-category-heading">
@@ -118,7 +118,7 @@ export default function BlogCategoryPage({ slug }: { slug: string }) {
               <>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {postsData?.posts.map((post) => (
-                    <Link key={post.id} href={`/blog/${post.categorySlug}/${post.slug}/`} className="block no-underline">
+                    <Link key={post.id} href={`/blog/${post.categorySlug}/${post.slug}`} className="block no-underline">
                       <Card className="group border-none shadow-md hover:shadow-xl transition-all rounded-2xl bg-white h-full cursor-pointer" data-testid={`card-post-${post.id}`}>
                         <CardContent className="p-6 flex flex-col h-full">
                           <div className="flex items-center gap-2 mb-3 flex-wrap">

@@ -60,7 +60,7 @@ export default function Hero() {
 
           {/* Headline - Responsive sizing */}
           <h1 className="text-[28px] sm:text-5xl md:text-7xl lg:text-[4.5rem] xl:text-[5rem] font-extrabold text-white mb-3 md:mb-6 drop-shadow-lg max-w-5xl animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100 uppercase leading-tight md:leading-none">
-            Expert Tree Removal <br />
+            🚀 TEST: Expert Tree Removal <br />
             <span className="text-brand-orange">& Arborist Care</span>
           </h1>
 

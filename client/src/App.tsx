@@ -14,7 +14,6 @@ import FAQPage from "@/pages/faq-page";
 import BlogHome from "@/pages/blog-home";
 import BlogCategoryPage from "@/pages/blog-category";
 import BlogPostPage from "@/pages/blog-post";
-import BlogAdmin from "@/pages/blog-admin";
 
 function BlogCategoryRoute() {
   const params = useParams<{ categorySlug: string }>();
@@ -57,9 +56,6 @@ function Router() {
       <Route path="/services/emergency-tree-service">
         <ServicePage slug="emergency-tree-service" />
       </Route>
-
-      <Route path="/admin" component={BlogAdmin} />
-      <Route path="/admin/" component={BlogAdmin} />
 
       <Route path="/blog" component={BlogHome} />
       <Route path="/blog/" component={BlogHome} />

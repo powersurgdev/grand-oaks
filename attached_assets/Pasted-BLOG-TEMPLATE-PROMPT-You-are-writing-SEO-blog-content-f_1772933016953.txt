@@ -1,0 +1,192 @@
+BLOG TEMPLATE PROMPT
+
+You are writing SEO blog content for a local tree service company called Grand Oaks Property Maintenance serving Pasco County and Hillsborough County in Florida.
+
+The goal of every blog post is to:
+• Rank on Google for local search queries
+• Educate homeowners
+• Build trust and authority
+• Generate phone calls and estimate requests
+
+Write in a **clear, natural, conversational tone**. Avoid sounding robotic or overly technical.
+
+Follow this EXACT structure for every article.
+
+---
+
+PAGE HERO SECTION
+
+Title (H1):
+Clear, SEO-friendly title targeting the main keyword.
+
+Example:
+"Why You Should Never DIY Tree Removal"
+
+Subtitle / Date
+
+Hero image suggestion:
+Real tree removal, trimming, storm damage cleanup, or arborist work.
+
+---
+
+INTRODUCTION (2–3 short paragraphs)
+
+Open with a relatable homeowner situation.
+
+Example angles:
+• Storm damage
+• Overgrown trees
+• DIY mistakes
+• Safety concerns
+
+Explain briefly why the topic matters.
+
+Keep paragraphs short (2–3 sentences each).
+
+---
+
+SECTION 1 – THE MAIN PROBLEM (H2)
+
+Explain the core issue homeowners face.
+
+Examples:
+• Tree removal dangers
+• Poor trimming techniques
+• Hidden tree disease
+• Storm risks
+
+Use short paragraphs.
+
+---
+
+SECTION 2 – KEY RISKS OR FACTORS (H2)
+
+Break down into **multiple H3 subsections**.
+
+Example:
+
+Chainsaw Kickback
+Explain the risk.
+
+Unpredictable Tree Falls
+Explain what homeowners don't realize.
+
+Power Line Hazards
+Explain electrical risk.
+
+Falls From Height
+Explain ladder danger.
+
+Each subsection should be **2–3 short paragraphs max**.
+
+---
+
+SECTION 3 – WHAT PROFESSIONALS DO DIFFERENTLY (H2)
+
+Use bullet points.
+
+Example:
+
+• ISA-trained arborists
+• Specialized equipment
+• Rigging systems
+• Safety procedures
+• Insurance protection
+
+Explain why hiring professionals prevents accidents.
+
+---
+
+SECTION 4 – COST COMPARISON (H2)
+
+Show why DIY mistakes are expensive.
+
+Example bullets:
+
+• ER visit for chainsaw injury
+• Property damage from falling trees
+• Roof damage from incorrect cuts
+• Professional tree removal cost
+
+Emphasize that professional work is cheaper than accidents.
+
+---
+
+SECTION 5 – WHEN DIY IS OK (H2)
+
+Provide honest advice.
+
+Example safe tasks:
+
+• Picking up fallen branches
+• Pruning small limbs from the ground
+• Mulching around trees
+• Small trees under 4" diameter
+
+This builds trust with readers.
+
+---
+
+SECTION 6 – THE BOTTOM LINE (H2)
+
+Clear takeaway.
+
+Example:
+
+If the job requires:
+• a chainsaw above waist height
+• climbing a ladder
+• working near power lines
+
+Call a professional.
+
+---
+
+SECTION 7 – FREQUENTLY ASKED QUESTIONS (H2)
+
+Include 4–6 FAQs.
+
+Example questions:
+
+• Is it legal to cut down a tree on my property?
+• How much does tree removal cost in Pasco County?
+• Do I need a permit to remove a tree?
+• What qualifications should a tree service have?
+• How quickly can emergency tree removal be done?
+
+Write short, clear answers.
+
+---
+
+FINAL CALL TO ACTION
+
+End every blog post with a short CTA.
+
+Example:
+
+If you're dealing with dangerous trees, storm damage, or overgrown branches, Grand Oaks Property Maintenance can help.
+
+Call (813) 544-3721 today for a free estimate.
+
+---
+
+SEO REQUIREMENTS
+
+Include naturally throughout the article:
+
+• tree removal
+• tree trimming
+• stump grinding
+• Pasco County tree service
+• Wesley Chapel tree removal
+• storm cleanup
+
+Do NOT keyword stuff.
+
+---
+
+WRITING STYLE RULES
+
+• Short paragraphs (2–3 sentences)
+• Use bullet points when possible
+• Avoid larg

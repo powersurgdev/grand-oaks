@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import ReactMarkdown from "react-markdown";
@@ -7,10 +7,9 @@ import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 import MobileStickyCTA from "@/components/landing/MobileCTA";
 import ContactForm from "@/components/landing/ContactForm";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Phone, ChevronRight, ArrowRight } from "lucide-react";
+import { Phone, ChevronRight, ArrowRight, ChevronDown } from "lucide-react";
 import NotFound from "@/pages/not-found";
 import type { BlogPost, BlogCategory } from "@shared/schema";
 
@@ -34,20 +33,6 @@ const categoryHeroImages: Record<string, string> = {
   "safety-diy-vs-pro": "/images/optimized/gallery-climbing.webp",
 };
 
-function extractHeadings(content: string): { id: string; text: string; level: number }[] {
-  const headings: { id: string; text: string; level: number }[] = [];
-  const lines = content.split("\n");
-  for (const line of lines) {
-    const match = line.match(/^(#{2,3})\s+(.+)/);
-    if (match) {
-      const level = match[1].length;
-      const text = match[2].trim();
-      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-      headings.push({ id, text, level });
-    }
-  }
-  return headings;
-}
 
 function BlogPostStructuredData({ post, category }: { post: BlogPost; category?: BlogCategory }) {
   const blogPostingSchema = {
@@ -65,7 +50,7 @@ function BlogPostStructuredData({ post, category }: { post: BlogPost; category?:
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://grandoakspropertymaintenance.com/blog/${post.categorySlug}/${post.slug}/`,
+      "@id": `https://grandoakspropertymaintenance.com/blog/${post.categorySlug}/${post.slug}`,
     },
   };
 
@@ -74,8 +59,8 @@ function BlogPostStructuredData({ post, category }: { post: BlogPost; category?:
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://grandoakspropertymaintenance.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://grandoakspropertymaintenance.com/blog/" },
-      { "@type": "ListItem", position: 3, name: category?.name || post.categorySlug, item: `https://grandoakspropertymaintenance.com/blog/${post.categorySlug}/` },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://grandoakspropertymaintenance.com/blog" },
+      { "@type": "ListItem", position: 3, name: category?.name || post.categorySlug, item: `https://grandoakspropertymaintenance.com/blog/${post.categorySlug}` },
       { "@type": "ListItem", position: 4, name: post.title },
     ],
   };
@@ -127,11 +112,10 @@ export default function BlogPostPage({ categorySlug, postSlug }: { categorySlug:
         canonical.rel = "canonical";
         document.head.appendChild(canonical);
       }
-      canonical.href = `https://grandoakspropertymaintenance.com/blog/${categorySlug}/${postSlug}/`;
+      canonical.href = `https://grandoakspropertymaintenance.com/blog/${categorySlug}/${postSlug}`;
     }
   }, [post, categorySlug, postSlug]);
 
-  const headings = useMemo(() => post ? extractHeadings(post.content) : [], [post]);
   const faqs = (post?.faqs as { question: string; answer: string }[]) || [];
 
   const heroImage = categoryHeroImages[categorySlug] || "/images/optimized/hero-bg.webp";
@@ -172,10 +156,10 @@ export default function BlogPostPage({ categorySlug, postSlug }: { categorySlug:
           />
           <div className="absolute inset-0 bg-black/55" />
           <div className="relative z-10 container mx-auto px-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto [text-shadow:_0_2px_12px_rgba(0,0,0,0.4)]" data-testid="text-post-title">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-snug max-w-3xl mx-auto" data-testid="text-post-title">
               {post.title}
             </h1>
-            <p className="text-white/70 mt-4 text-sm">
+            <p className="text-white/80 mt-3 text-sm">
               {new Date(post.publishedAt).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
             </p>
           </div>
@@ -183,46 +167,58 @@ export default function BlogPostPage({ categorySlug, postSlug }: { categorySlug:
 
         <div className="border-b border-gray-200">
           <div className="container mx-auto px-4">
-            <nav className="max-w-[750px] mx-auto py-4 flex items-center flex-wrap gap-1.5 text-sm" aria-label="Breadcrumb" data-testid="breadcrumbs">
-              <Link href="/" className="text-brand-green hover:underline">Home</Link>
-              <ChevronRight className="w-3 h-3 text-gray-400" />
-              <Link href={`/blog/${categorySlug}/`} className="text-brand-green hover:underline">{category?.name || categorySlug}</Link>
-              <ChevronRight className="w-3 h-3 text-gray-400" />
-              <span className="text-gray-500 truncate max-w-[300px]">{post.title}</span>
+            <nav className="max-w-[680px] mx-auto py-4 flex items-center flex-wrap gap-1.5 text-[13px]" aria-label="Breadcrumb" data-testid="breadcrumbs">
+              <Link href="/blog" className="text-gray-500 hover:text-brand-green">Home</Link>
+              <span className="text-gray-400">›</span>
+              <Link href={`/blog/${categorySlug}`} className="text-gray-500 hover:text-brand-green">{category?.name || categorySlug}</Link>
+              <span className="text-gray-400">›</span>
+              <span className="text-gray-400 truncate max-w-[300px]">{post.title}</span>
             </nav>
           </div>
         </div>
 
         <section className="py-10 md:py-14">
           <div className="container mx-auto px-4">
-            <article className="max-w-[750px] mx-auto">
-              <div className="
-                prose max-w-none
-                prose-p:text-[#444] prose-p:text-[17px] prose-p:leading-[1.85]
-                prose-headings:text-brand-green prose-headings:font-bold
-                prose-h2:text-[22px] prose-h2:mt-10 prose-h2:mb-4
-                prose-h3:text-[19px] prose-h3:mt-8 prose-h3:mb-3
-                prose-a:text-brand-green prose-a:underline prose-a:underline-offset-2
-                prose-strong:text-[#333] prose-strong:font-semibold
-                prose-li:text-[#444] prose-li:text-[17px] prose-li:leading-[1.85]
-                prose-ul:my-4 prose-ol:my-4
-                prose-li:my-1
-                prose-blockquote:border-l-4 prose-blockquote:border-brand-green prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-600
-                prose-hr:border-gray-200
-              " data-testid="post-content">
+            <article className="max-w-[680px] mx-auto">
+              <div data-testid="post-content">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{
-                    h2: ({ children, ...props }) => {
+                    h2: ({ children }) => {
                       const text = typeof children === "string" ? children : String(children);
                       const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-                      return <h2 id={id} className="scroll-mt-24" {...props}>{children}</h2>;
+                      return <h2 id={id} className="scroll-mt-24 text-[22px] font-bold text-[#1a1a1a] mt-10 mb-3 pb-3 border-b border-gray-200">{children}</h2>;
                     },
-                    h3: ({ children, ...props }) => {
+                    h3: ({ children }) => {
                       const text = typeof children === "string" ? children : String(children);
                       const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-                      return <h3 id={id} className="scroll-mt-24" {...props}>{children}</h3>;
+                      return <h3 id={id} className="scroll-mt-24 text-[17px] font-bold text-[#1a1a1a] mt-8 mb-2">{children}</h3>;
                     },
+                    p: ({ children }) => (
+                      <p className="text-[#3a3a3a] text-[15px] leading-[1.85] mb-5">{children}</p>
+                    ),
+                    strong: ({ children }) => (
+                      <strong className="text-[#1a1a1a] font-semibold">{children}</strong>
+                    ),
+                    a: ({ children, href }) => (
+                      <a href={href} className="text-brand-green hover:underline">{children}</a>
+                    ),
+                    ul: ({ children }) => (
+                      <ul className="my-5 ml-1 space-y-2">{children}</ul>
+                    ),
+                    ol: ({ children }) => (
+                      <ol className="my-5 ml-5 space-y-2 list-decimal">{children}</ol>
+                    ),
+                    li: ({ children }) => (
+                      <li className="text-[#3a3a3a] text-[15px] leading-[1.85] flex items-start gap-3">
+                        <span className="mt-[10px] w-[5px] h-[5px] rounded-full bg-[#3a3a3a] shrink-0" />
+                        <span className="flex-1">{children}</span>
+                      </li>
+                    ),
+                    blockquote: ({ children }) => (
+                      <blockquote className="border-l-4 border-gray-300 pl-4 my-5 italic text-gray-500">{children}</blockquote>
+                    ),
+                    hr: () => <hr className="border-gray-200 my-8" />,
                   }}
                 >
                   {post.content}
@@ -230,15 +226,38 @@ export default function BlogPostPage({ categorySlug, postSlug }: { categorySlug:
               </div>
 
               {faqs.length > 0 && (
-                <div className="mt-12 pt-8 border-t border-gray-200">
-                  <h2 className="text-[22px] font-bold text-brand-green mb-6">Frequently Asked Questions</h2>
-                  <Accordion type="multiple" className="space-y-0 divide-y divide-gray-200 border-t border-b border-gray-200">
+                <div className="mt-12 pt-6 border-t border-gray-200">
+                  <div className="flex items-center justify-between mb-2">
+                    <h2 className="text-[20px] font-bold text-[#1a1a1a]">Frequently Asked Questions</h2>
+                    <button
+                      className="text-sm text-gray-500 hover:text-gray-700 underline underline-offset-2"
+                      data-testid="faq-open-all"
+                      onClick={() => {
+                        const allValues = faqs.map((_, i) => `faq-${i}`);
+                        const accordion = document.querySelector('[data-testid="faq-accordion"]');
+                        if (accordion) {
+                          allValues.forEach((val) => {
+                            const trigger = accordion.querySelector(`[data-value="${val}"] button`) as HTMLButtonElement;
+                            if (trigger && trigger.getAttribute("data-state") === "closed") {
+                              trigger.click();
+                            }
+                          });
+                        }
+                      }}
+                    >
+                      Open all
+                    </button>
+                  </div>
+                  <Accordion type="multiple" data-testid="faq-accordion">
                     {faqs.map((faq, i) => (
-                      <AccordionItem key={i} value={`faq-${i}`} className="border-none">
-                        <AccordionTrigger className="text-left font-medium text-[#333] hover:text-brand-green py-4 text-[16px] leading-snug">
-                          {faq.question}
+                      <AccordionItem key={i} value={`faq-${i}`} data-value={`faq-${i}`} className="border-b border-gray-200 last:border-b-0">
+                        <AccordionTrigger className="text-left font-normal text-[#2a2a2a] hover:text-brand-green py-4 text-[15px] leading-snug [&>svg]:hidden">
+                          <span className="flex items-center justify-between w-full">
+                            {faq.question}
+                            <ChevronDown className="w-4 h-4 text-gray-400 shrink-0 ml-4 transition-transform duration-200" />
+                          </span>
                         </AccordionTrigger>
-                        <AccordionContent className="text-[#555] pb-4 text-[15px] leading-relaxed">
+                        <AccordionContent className="text-[#555] pb-4 text-[14px] leading-[1.75]">
                           {faq.answer}
                         </AccordionContent>
                       </AccordionItem>
@@ -249,8 +268,10 @@ export default function BlogPostPage({ categorySlug, postSlug }: { categorySlug:
 
               {post.primaryServiceLink && (
                 <div className="mt-10 pt-6 border-t border-gray-200">
-                  <p className="text-[17px] text-[#444] leading-relaxed mb-4">
-                    Need help with {serviceNames[post.primaryServiceLink]?.toLowerCase() || "your tree care needs"}? Our certified arborists serve Pasco and Hillsborough County. Schedule a free inspection today.
+                  <p className="text-[15px] text-[#3a3a3a] leading-[1.85] mb-4">
+                    {serviceNames[post.primaryServiceLink]
+                      ? `Need ${serviceNames[post.primaryServiceLink].toLowerCase()} service? Don't wait for spring to spot the damage. Schedule a ${serviceNames[post.primaryServiceLink].toLowerCase()} inspection to ensure your trees are on track for a healthy season.`
+                      : "Don't wait — schedule a tree inspection to ensure your property is safe and your trees are healthy."}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button asChild size="lg" className="bg-brand-green hover:bg-brand-green/90 text-white font-bold rounded-md px-6">
@@ -269,13 +290,13 @@ export default function BlogPostPage({ categorySlug, postSlug }: { categorySlug:
 
               {relatedPosts.length > 0 && (
                 <div className="mt-10 pt-6 border-t border-gray-200">
-                  <h2 className="text-[22px] font-bold text-brand-green mb-1 uppercase">Related Articles</h2>
-                  <ul className="space-y-0 divide-y divide-gray-100">
+                  <h2 className="text-[20px] font-bold text-[#1a1a1a] mb-3">Related Articles</h2>
+                  <ul className="space-y-0">
                     {relatedPosts.map((rp) => (
-                      <li key={rp.id}>
+                      <li key={rp.id} className="border-b border-gray-100 last:border-b-0">
                         <Link
-                          href={`/blog/${rp.categorySlug}/${rp.slug}/`}
-                          className="block py-3 text-brand-green hover:underline font-medium text-[16px]"
+                          href={`/blog/${rp.categorySlug}/${rp.slug}`}
+                          className="block py-3 text-brand-green hover:underline text-[15px]"
                         >
                           {rp.title}
                         </Link>
@@ -288,15 +309,7 @@ export default function BlogPostPage({ categorySlug, postSlug }: { categorySlug:
           </div>
         </section>
 
-        <section id="estimate-form" className="bg-[#1a1a1a] py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold text-white text-center mb-2">Request A Free Consultation</h2>
-              <p className="text-gray-400 text-center mb-8">Get a no-obligation estimate from our certified arborists.</p>
-              <ContactForm formSource="blog-post" />
-            </div>
-          </div>
-        </section>
+        <ContactForm formSource="blog-post" />
       </main>
 
       <Footer />
