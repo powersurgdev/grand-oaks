@@ -52,7 +52,7 @@ export default function ServicePageGallery({ slug = "default" }: ServicePageGall
   return (
     <div className="mb-16">
       <h3 className="text-2xl font-bold text-brand-charcoal mb-6">Recent Projects</h3>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[150px] md:auto-rows-[200px]">
         {images.map((image, index) => {
           const delayClasses = ['', 'delay-100', 'delay-200', 'delay-300', 'delay-400', 'delay-500'];
           const delayClass = delayClasses[index % 6] || '';
