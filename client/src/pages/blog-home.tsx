@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Search, Calendar, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { BlogCategory, BlogPost } from "@shared/schema";
-import blogHeroImage from "@assets/IMG_2703_(1)_1770348463187.png";
+const blogHeroImage = "/images/blog-hero.jpg";
 import imgTreeTrimming from "@assets/stock_images/tree_trimming.jpg";
 import imgTreeRemoval from "@assets/stock_images/tree_removal.jpg";
 import imgStumpGrinding from "@assets/stock_images/stump_grinding.jpg";
