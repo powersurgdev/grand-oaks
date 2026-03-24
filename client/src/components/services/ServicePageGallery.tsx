@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import LazyImage from "@/components/ui/lazy-image";
 import { useMemo } from "react";
+import { cn } from "@/lib/utils";
 
 const allGalleryImages = [
   { src: "/images/optimized/gallery-crane-setup.webp", alt: "Crane Operations", position: "center 30%" },
@@ -39,31 +39,47 @@ export default function ServicePageGallery({ slug = "default" }: ServicePageGall
     return seededShuffle(allGalleryImages, seed).slice(0, 6);
   }, [slug]);
 
+  // Masonry-style span pattern for better visual variety (repeats for 6 images)
+  const spanPatterns = [
+    "col-span-1 md:col-span-1 row-span-2", // Tall portrait
+    "col-span-1 md:col-span-1",            // Regular
+    "col-span-1 md:col-span-1",            // Regular
+    "col-span-1 md:col-span-1",            // Regular
+    "col-span-1 md:col-span-1 row-span-2", // Tall portrait
+    "col-span-1 md:col-span-2",            // Wide landscape
+  ];
+
   return (
     <div className="mb-16">
       <h3 className="text-2xl font-bold text-brand-charcoal mb-6">Recent Projects</h3>
-      <div className="grid grid-cols-2 gap-3 auto-rows-[150px] md:auto-rows-[180px]">
-        {images.map((image, index) => (
-          <motion.div
-            key={index}
-            className="relative rounded-xl overflow-hidden shadow-sm group col-span-1 row-span-1"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <LazyImage
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-full transition-transform duration-700 group-hover:scale-110"
-              style={{ objectPosition: image.position }}
-              data-testid={`img-service-gallery-${index}`}
-            />
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span className="text-white font-bold text-sm drop-shadow-md px-2 text-center">{image.alt}</span>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+        {images.map((image, index) => {
+          const delayClasses = ['', 'delay-100', 'delay-200', 'delay-300', 'delay-400', 'delay-500'];
+          const delayClass = delayClasses[index % 6] || '';
+          const spanClass = spanPatterns[index % 6] || 'col-span-1';
+
+          return (
+            <div
+              key={index}
+              className={cn(
+                "relative rounded-xl overflow-hidden shadow-md group animate-fade-in-up",
+                spanClass,
+                delayClass
+              )}
+            >
+              <LazyImage
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full transition-transform duration-700 group-hover:scale-110"
+                style={{ objectPosition: image.position }}
+                data-testid={`img-service-gallery-${index}`}
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span className="text-white font-bold text-sm md:text-base drop-shadow-md px-2 text-center">{image.alt}</span>
+              </div>
             </div>
-          </motion.div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

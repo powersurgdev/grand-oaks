@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useQuery } from "@tanstack/react-query";
 import LazyImage from "@/components/ui/lazy-image";
@@ -46,29 +45,45 @@ export default function Gallery() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]" data-testid="gallery-grid">
-          {galleryImages.map((image, index) => (
-            <motion.div
-              key={image.id || index}
-              className={`relative rounded-xl overflow-hidden shadow-md group ${image.span}`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <LazyImage
-                src={image.src}
-                alt={image.alt}
+          {galleryImages.map((image, index) => {
+            const delayClasses = [
+              '',
+              'delay-100',
+              'delay-200',
+              'delay-300',
+              'delay-400',
+              'delay-500',
+              'delay-600',
+              'delay-700',
+              'delay-800',
+              'delay-900',
+            ];
+            const delayClass = delayClasses[index % 10] || '';
+
+            return (
+              <div
+                key={image.id || index}
                 className={cn(
-                  "w-full h-full transition-transform duration-700 group-hover:scale-110",
-                  image.className
+                  "relative rounded-xl overflow-hidden shadow-md group animate-fade-in-up",
+                  image.span,
+                  delayClass
                 )}
-                data-testid={`img-gallery-${image.id || index}`}
-              />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-white font-bold text-lg drop-shadow-md">{image.alt}</span>
+              >
+                <LazyImage
+                  src={image.src}
+                  alt={image.alt}
+                  className={cn(
+                    "w-full h-full transition-transform duration-700 group-hover:scale-110",
+                    image.className
+                  )}
+                  data-testid={`img-gallery-${image.id || index}`}
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span className="text-white font-bold text-lg drop-shadow-md">{image.alt}</span>
+                </div>
               </div>
-            </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

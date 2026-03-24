@@ -45,9 +45,12 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="/" className="flex-shrink-0">
-          <img 
-            src="/logo-text-cropped.png" 
-            alt="Grand Oaks Property Maintenance" 
+          <img
+            src="/logo-text-cropped.png"
+            alt="Grand Oaks Property Maintenance"
+            width={300}
+            height={88}
+            loading="eager"
             className={cn(
               "w-auto object-contain transition-all duration-300",
               isScrolled ? "h-8 md:h-10" : "h-10 md:h-14 drop-shadow-md"

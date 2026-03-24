@@ -31,14 +31,14 @@ const services = [
     desc: "Efficient lot clearing and forestry mulching for new construction, pasture restoration, or property usage.",
     image: "/images/optimized/service-land-clearing.webp",
     link: "/services/land-clearing",
-    imageStyle: { objectPosition: "50% 25%" }
+    imageStyle: { objectPosition: "center 40%" }
   },
   {
     title: "Emergency Tree Services",
     desc: "24/7 rapid response for storm damage and dangerous fallen trees threatening your home or business.",
     image: "/images/optimized/service-emergency.webp",
     link: "/services/emergency-tree-service",
-    imageStyle: { objectPosition: "50% 25%" }
+    imageStyle: { objectPosition: "center 35%" }
   }
 ];
 

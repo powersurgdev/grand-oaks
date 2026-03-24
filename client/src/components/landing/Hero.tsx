@@ -30,11 +30,16 @@ export default function Hero() {
         {backgroundImages.map((img, index) => {
           const isActive = currentImage === index;
           const isPrev = prevImage === index && prevImage !== currentImage;
+          const isFirst = index === 0;
           return (
             <img
               key={index}
               src={img.src}
               alt="Hero Background"
+              width={1200}
+              height={800}
+              loading={isFirst ? "eager" : "lazy"}
+              fetchpriority={isFirst ? "high" : "low"}
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-in-out"
               style={{
                 objectPosition: img.position,

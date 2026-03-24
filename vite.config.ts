@@ -39,6 +39,20 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Vendor chunks for better caching
+          'react-vendor': ['react', 'react-dom'],
+          'router': ['wouter'],
+          'ui-vendor': ['lucide-react', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+        },
+      },
+    },
+    cssCodeSplit: true,
+    minify: 'esbuild',
+    target: 'es2020',
   },
   server: {
     host: "0.0.0.0",
