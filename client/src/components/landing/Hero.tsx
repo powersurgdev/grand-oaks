@@ -9,7 +9,6 @@ const backgroundImages = [
   { src: "/images/optimized/gallery-team-work.webp", position: "center center" },
 ];
 
-// test comment
 export default function Hero() {
   const [currentImage, setCurrentImage] = useState(0);
   const [prevImage, setPrevImage] = useState(0);
