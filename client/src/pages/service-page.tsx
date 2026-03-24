@@ -1,5 +1,6 @@
 import { servicesData } from "@/data/services";
 import Header from "@/components/landing/Header";
+import StatusBanner from "@/components/landing/StatusBanner";
 import Footer from "@/components/landing/Footer";
 import MobileStickyCTA from "@/components/landing/MobileCTA";
 import ServiceHero from "@/components/services/ServiceHero";
@@ -35,13 +36,15 @@ export default function ServicePage({ slug }: ServicePageProps) {
       <Header />
       
       <main>
-        <ServiceHero 
-          title={service.heroHeadline} 
-          subtitle={service.heroSubheadline} 
+        <ServiceHero
+          title={service.heroHeadline}
+          subtitle={service.heroSubheadline}
           image={service.heroImage}
           imagePosition={(service as any).heroImagePosition}
           formSource={`service-${slug}-hero`}
         />
+
+        <StatusBanner />
 
         <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">

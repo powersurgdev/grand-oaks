@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { useState, useEffect } from "react";
 import HeroContactForm from "./HeroContactForm";
 
@@ -85,21 +85,6 @@ export default function Hero() {
             >
               <a href="#contact">Get Free Estimate</a>
             </Button>
-          </div>
-
-          {/* Trust Indicators - Grid on mobile for better space usage */}
-          <div className="mt-6 md:mt-12 grid grid-cols-2 md:flex md:flex-wrap gap-2 md:gap-6 w-full md:w-auto animate-in fade-in slide-in-from-bottom-12 duration-700 delay-500 text-left md:text-left xl:max-h-[44px] xl:overflow-hidden">
-            {[
-              "Certified Arborist", 
-              "Licensed & Insured", 
-              "Free Estimates",
-              "Local Pasco Team"
-            ].map((item, i) => (
-              <div key={i} className="flex items-center justify-center md:justify-start gap-1.5 bg-white/10 backdrop-blur-md px-3 py-2 rounded-lg border border-white/20 text-white text-xs md:text-base font-semibold">
-                <CheckCircle2 className="w-3.5 h-3.5 md:w-5 md:h-5 text-brand-orange shrink-0" />
-                <span className="whitespace-nowrap">{item}</span>
-              </div>
-            ))}
           </div>
         </div>
 

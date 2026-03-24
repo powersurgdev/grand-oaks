@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import Header from "@/components/landing/Header";
+import StatusBanner from "@/components/landing/StatusBanner";
 import Footer from "@/components/landing/Footer";
 import MobileStickyCTA from "@/components/landing/MobileCTA";
 import LazyImage from "@/components/ui/lazy-image";
@@ -65,6 +66,8 @@ export default function ServicesPage() {
             </p>
           </div>
         </section>
+
+        <StatusBanner />
 
         <section className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4 max-w-5xl">

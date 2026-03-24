@@ -1,5 +1,6 @@
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
+import StatusBanner from "@/components/landing/StatusBanner";
 import Services from "@/components/landing/Services";
 import WhyUs from "@/components/landing/WhyUs";
 import Gallery from "@/components/landing/Gallery";
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <StatusBanner />
         <Services />
         <WhyUs />
         <Gallery />
